@@ -1,4 +1,6 @@
 common_vars:
+  version: 1.0.0
+  kind: common_vars
   validation:
     stages:
       - d
