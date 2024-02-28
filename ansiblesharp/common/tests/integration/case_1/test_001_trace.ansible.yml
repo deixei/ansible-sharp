@@ -1,0 +1,11 @@
+---
+- name: Playbook for testing the trace module
+  tasks:
+  - name: This is a trace message
+    ansiblesharp.common.trace:
+      title: "Ensure apache is at the latest version"
+      event: "warning"
+      data: 
+        version: "{{ common_vars.version }}"
+        kind: "{{ common_vars.kind }}"
+      

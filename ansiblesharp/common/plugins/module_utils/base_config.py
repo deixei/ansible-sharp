@@ -20,11 +20,13 @@ class BaseConfig():
         baseconfig = BaseConfig()
         baseconfig.data
 
-        baseconfig:
-            validation:
-            inventories:
-            central_data:
-                readme: "baseconfig data"
+        common_vars:
+            version: 1.0.0
+            kind: common_vars
+            validation: ...
+            central_data: ...
+
+        data['version'] # 1.0.0
 
     """
 
@@ -34,13 +36,21 @@ class BaseConfig():
     @property
     def data(self):
         if not self._data:
-            self._data = self.get_data().get('baseconfig')
+            self._data = self.get_data().get('common_vars')
         return self._data
 
     @property
     def central_data(self):
         return self.data['central_data']
 
+    @property
+    def stages(self):
+        return self.data["validation"]["stages"]
+    
+    @property
+    def stage_classifications(self):
+        return self.data["validation"]["stage_classifications"]
+    
     def get_data(self):
         current_path = os.path.dirname(os.path.abspath(__file__))
         yaml_path = os.path.join(current_path,"..","vars", "common_vars.yml")
@@ -54,3 +64,10 @@ class BaseConfig():
             raise Exception(f"Failed to load YAML file {yaml_path}: {e}")
         
         return data
+    
+    def validate_stage(self, stage):
+        if stage not in self.stages:
+            return False
+        return True
+
+        

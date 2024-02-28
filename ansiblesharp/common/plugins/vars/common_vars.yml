@@ -3,11 +3,14 @@ common_vars:
   kind: common_vars
   validation:
     stages:
-      - d
-      - q
-      - p
-      - s
-      - g
+      d: ["Development", "dev", 0, "l"]
+      t: ["Testing", "tst", 1, "l"]
+      s: ["Staging", "stg", 2, "h"]
+      p: ["Production", "prd", 3, "h"]
+      g: ["Global", "glb", 4, "h"]
     stage_classifications:
-      - l
-      - h
+      l: ["Lower", "lw", 0]
+      h: ["Higher", "hr", 1]
+
+  central_data:
+    url: "http://localhost:8080"
