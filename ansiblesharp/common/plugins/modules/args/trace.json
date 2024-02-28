@@ -1,0 +1,7 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+        "title": "demo of this trace",
+        "event": "trace",
+        "data": "nothing more"
+    }
+}

@@ -1,0 +1,11 @@
+common_vars:
+  validation:
+    stages:
+      - d
+      - q
+      - p
+      - s
+      - g
+    stage_classifications:
+      - l
+      - h
