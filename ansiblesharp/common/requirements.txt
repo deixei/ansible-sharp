@@ -1,0 +1,3 @@
+opentelemetry-distro
+azure-monitor-opentelemetry
+azure-devops

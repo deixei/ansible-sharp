@@ -24,4 +24,7 @@ def basic_authorization(username, password):
     return "Basic " + encoded_credentials
 
 
+class MonitoringAttributes():
+    INSTRUMENTATION_KEY = "f8ada03ee35b"
+    INSTRUMENTATION_KEY_CONNECTION_STRING = "InstrumentationKey=f8ada03ee35b;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/"
 

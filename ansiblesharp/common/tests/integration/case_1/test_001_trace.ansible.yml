@@ -1,5 +1,6 @@
 ---
 - name: Playbook for testing the trace module
+  hosts: localhost
   tasks:
   - name: This is a trace message
     ansiblesharp.common.trace:
