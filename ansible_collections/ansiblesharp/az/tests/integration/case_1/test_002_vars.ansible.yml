@@ -1,0 +1,30 @@
+---
+- name: Playbook for testing that all vars are working
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: Checking cloud_vars version variable
+    ansible.builtin.assert:
+      that: "cloud_vars.version == '1.0.0'"
+      fail_msg: "The version is not correct"
+      success_msg: "The version is correct"
+
+  - name: Checking cloud_vars kind variable
+    ansible.builtin.assert:
+      that: "cloud_vars.kind == 'cloud_vars'"
+      fail_msg: "The kind is not correct"
+      success_msg: "The kind is correct"
+
+  - name: Checking common_vars version variable
+    ansible.builtin.assert:
+      that: "common_vars.version == '1.0.0'"
+      fail_msg: "The version is not correct"
+      success_msg: "The version is correct"
+
+  - name: Checking common_vars kind variable
+    ansible.builtin.assert:
+      that: "common_vars.kind == 'common_vars'"
+      fail_msg: "The kind is not correct"
+      success_msg: "The kind is correct"
+

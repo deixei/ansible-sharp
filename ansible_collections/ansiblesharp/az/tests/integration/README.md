@@ -3,7 +3,7 @@
 Run Command:
 
 ```bash
-dx ansible test --name "/ansiblesharp/common"
+dx ansible test --name "/ansiblesharp/az"
 ```
 
 The --name will look for folders with that pattern and find the collection and then identify all the test cases there.

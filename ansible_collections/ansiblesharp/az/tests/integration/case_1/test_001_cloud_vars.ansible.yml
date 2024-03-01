@@ -1,0 +1,18 @@
+---
+- name: Playbook for testing the cloud_vars module
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: Checking version variable
+    ansible.builtin.assert:
+      that: "cloud_vars.version == '1.0.0'"
+      fail_msg: "The version is not correct"
+      success_msg: "The version is correct"
+
+  - name: Checking kind variable
+    ansible.builtin.assert:
+      that: "cloud_vars.kind == 'cloud_vars'"
+      fail_msg: "The kind is not correct"
+      success_msg: "The kind is correct"
+

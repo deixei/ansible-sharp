@@ -1,0 +1,31 @@
+Using /home/marcio/repos/deixei/ansible-sharp/ansible_collections/ansiblesharp/az/tests/integration/case_1/ansible.cfg as config file
+
+PLAY [Playbook for testing that all vars are working] **************************
+
+TASK [Checking cloud_vars version variable] ************************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "The version is correct"
+}
+
+TASK [Checking cloud_vars kind variable] ***************************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "The kind is correct"
+}
+
+TASK [Checking common_vars version variable] ***********************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "The version is correct"
+}
+
+TASK [Checking common_vars kind variable] **************************************
+ok: [localhost] => {
+    "changed": false,
+    "msg": "The kind is correct"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
