@@ -1,11 +1,21 @@
 ---
 - name: Playbook for testing the trace module
   hosts: localhost
+  connection: local
+  gather_facts: false
   tasks:
   - name: This is a trace message
     ansiblesharp.common.trace:
-      title: "Ensure apache is at the latest version"
+      title: "Test trace command"
       event: "warning"
+      data: 
+        version: "{{ common_vars.version }}"
+        kind: "{{ common_vars.kind }}"
+      
+  - name: This is a info message
+    ansiblesharp.common.trace:
+      title: "My default information"
+      event: "debug"
       data: 
         version: "{{ common_vars.version }}"
         kind: "{{ common_vars.kind }}"

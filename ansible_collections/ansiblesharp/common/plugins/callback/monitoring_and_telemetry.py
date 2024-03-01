@@ -20,10 +20,10 @@ DOCUMENTATION = '''
       - See as reference U(https://opentelemetry-python.readthedocs.io/en/latest/sdk/environment_variables.html#opentelemetry-sdk-environment-variables).
     options:
       MON_ECOSYSTEM:
-        default: "asc-ecosystem-unkown"
+        default: "ecosystem-unknown"
         type: str
         description:
-          - The asc ecosystem code name.
+          - The ecosystem code name.
         var:
           - name: MON_ECOSYSTEM
         env:
@@ -32,10 +32,10 @@ DOCUMENTATION = '''
           - section: callback_monitoring_and_telemetry
             key: MON_ECOSYSTEM
       MON_PROJECT:
-        default: "asc-project-unkown"
+        default: "project-unknown"
         type: str
         description:
-          - The asc project code name.
+          - The project code name.
         var:
           - name: MON_PROJECT
         env:
@@ -44,7 +44,7 @@ DOCUMENTATION = '''
           - section: callback_monitoring_and_telemetry
             key: MON_PROJECT            
       MON_WORKLOAD:
-        default: "asc-workload-unkown"
+        default: "workload-unknown"
         type: str
         description:
           - The asc workload code name.
@@ -151,10 +151,12 @@ from ansible.plugins.callback import CallbackBase
 from urllib.parse import urlparse
 
 try:
-    import opentelemetry.trace as trace
+    from opentelemetry import trace
+
     from azure.monitor.opentelemetry import configure_azure_monitor   
-    from opentelemetry.propagate import extract
     from azure.monitor.opentelemetry.exporter import AzureMonitorTraceExporter
+    
+    from opentelemetry.propagate import extract
     from opentelemetry.semconv.resource import ResourceAttributes
     from opentelemetry.instrumentation.requests import RequestsInstrumentor
     from opentelemetry.trace import SpanKind
@@ -602,7 +604,7 @@ class CallbackModule(CallbackBase):
 
     CALLBACK_VERSION = 2.0
     CALLBACK_TYPE = 'notification'
-    CALLBACK_NAME = 'asc.common.monitoring_and_telemetry'
+    CALLBACK_NAME = 'ansiblesharp.common.monitoring_and_telemetry'
     CALLBACK_NEEDS_ENABLED = True
 
     def __init__(self, display=None):

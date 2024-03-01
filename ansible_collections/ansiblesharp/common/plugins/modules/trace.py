@@ -11,7 +11,6 @@ version_added: "1.0.0"
 short_description: does a remote trace to whatever is registered
 description:
     - Send a display information about the trace
-    - Send to an external url the event
 author:
     - Marcio Parente
 '''
@@ -28,14 +27,14 @@ EXAMPLES = '''
 RETURN = '''
 start_info:
     description:
-        - plug for all plays. Serves as a validator on integrity 
+        - plug for all plays. Serves as a validator on integrity
     returned: always
     type: dict
 
 '''
 from ansible.module_utils.basic import AnsibleModule
-from ansiblesharp.common.plugins.module_utils import common as Common
- 
+from ansible_collections.ansiblesharp.common.plugins.module_utils import common as Common
+
 
 class Trace(AnsibleModule):
     def __init__(self):
@@ -46,22 +45,22 @@ class Trace(AnsibleModule):
                 "data": {"type": "str", "required": True}
             }
         )
-               
+
 
         self.title = self.params["title"]
-        self.event = self.params["event"]
+        self.event = self.params["event"].upper()
         self.data = self.params["data"]
 
         self.result = dict(
-            changed=False, 
-            title=self.title, 
+            changed=False,
+            title=self.title,
             event=self.event,
             data=self.data,
             )
-        
 
     def exec_module(self):
-        self.warn('_execute_module is being executed')
+        msg = f"[{self.event}]: {self.title}; Data: {self.data}"
+        self.warn(msg)
 
         self.exit_json(**self.result)
 

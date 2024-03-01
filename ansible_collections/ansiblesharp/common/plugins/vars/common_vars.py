@@ -31,7 +31,7 @@ class VarsModule(BaseVarsPlugin):
 
         try:
             cfg = BaseConfig()
-            data = cfg.data()
+            data = cfg.data
 
         except Exception as e:
             raise AnsibleError(f"Failed to load YAML file: {e}")

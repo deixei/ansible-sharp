@@ -3,14 +3,14 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./ansiblesharp",
+        "${workspaceFolder}/ansible_collections",
         "-p",
         "test_*.py"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.testing.pytestArgs": [
-        "ansiblesharp"
+        "ansible_collections"
     ],
     "cSpell.words": [
         "ansiblesharp"
