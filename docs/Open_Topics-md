@@ -1,0 +1,289 @@
+  
+  
+# TODO
+  Putting all together
+  All these topics come together to form your product delivery framework of the future.
+  Mainframe: 1960s
+  COBOL: 1960
+  Objective-C: 1983
+  C++: 1983
+  Java: 1995
+  C#: 2000
+  Linux: 1991
+  Azure: 2010
+  Ansible: 2012
+  
+  Select your key technology stack and heavily invest on them.
+  
+  There is a lot more to detail about the topics of this book, thus will be future books coming to 
+you.
+  
+  As you can now realize by implementing a factory style for product delivery, optimizing your 
+company to produce more value out of technology, allowing space to invest in the next new thing. 
+By getting your basics right you are creating a stable but flexible ecosystem to produce high quality 
+software products.
+  
+  Can you select a different technology stack, absolutely you can, you will have to compensate all 
+missing capabilities, then you will be able to get a very stable ecosystem.
+  Annexes 
+  
+  Do note that all this book can be rewritten with a different technology stack, the essence will still 
+be the same. 
+  
+  Open points to write about
+  
+  Service principles strategy
+  Global SP
+  Emergency SP
+  DevOps global SP
+  DevOps high SP
+  DevOps low SP
+  Project Environment level SP's
+  Azure provides several options for managing service principals (SPs), which are identities used by 
+applications, services, and other entities to authenticate and access resources in Azure. Here is a 
+strategy for managing the SPs you have described:
+  
+  Define roles and responsibilities: Assign roles and responsibilities for managing SPs to ensure 
+that the right people have access to the right resources. For example, assign the responsibility of 
+managing the Global SP to a central IT team, while assigning the responsibility of managing DevOps 
+SPs to a DevOps team.
+  
+  Use Entra ID for managing SPs: Azure Active Directory (AD) is a cloud-based identity and access 
+management service that can be used to manage SPs. Use Entra ID to create and manage SPs for 
+your applications, services, and other entities.
+  
+  Use Azure RBAC for managing access: Use Azure Role-Based Access Control (RBAC) to manage 
+access to your SPs. Define roles with appropriate permissions and assign those roles to the 
+appropriate users or groups.
+  
+  Implement a naming convention: Implement a naming convention for your SPs to make them 
+easily identifiable and manageable. For example, use prefixes such as "global," "emergency," 
+"devops," and "project" to indicate the purpose of the SP.
+  
+  Create separate SPs for different environments: Create separate SPs for each environment, such 
+as development, staging, and production. This will help ensure that each environment has its own 
+set of SPs with appropriate access.
+  
+  Use Azure Key Vault for storing secrets: Azure Key Vault is a cloud-based service that can be used 
+to securely store and manage cryptographic keys, certificates, and secrets. Use Key Vault to store 
+secrets used by your SPs, such as passwords and API keys.
+  
+  Regularly review and update SPs: Regularly review and update your SPs to ensure that they are 
+still necessary and that the appropriate permissions are assigned. Remove SPs that are no longer 
+needed and update the permissions for SPs that require changes.
+  
+  By following this strategy, you can effectively manage your SPs in Azure and ensure that your 
+applications, services, and other entities have secure and appropriate access to the resources they 
+need.
+  
+  
+## Users' strategy
+  Humans, bots, office accounts, tech account, admin account
+  An effective user strategy is essential for efficient management of identities and access to 
+resources in Azure. Here are some ideas for a user strategy that includes humans, bots, office 
+accounts, tech accounts, and admin accounts:
+  
+  Define user roles and responsibilities: Assign roles and responsibilities for managing users to 
+ensure that the right people have access to the right resources. For example, assign the 
+responsibility of managing office accounts to the HR team, while assigning the responsibility of 
+managing tech accounts to the IT team.
+  
+  Use consistent naming conventions: Implement consistent naming conventions for users to 
+make them easily identifiable and manageable. Use prefixes or suffixes to indicate the type of user, 
+such as "bot-" for a bot user, "svc-" for a service account, or "adm-" for an administrative account.
+  
+  Use Entra ID for user management: Use Entra ID to create and manage user accounts. Entra ID 
+provides a central location to manage user identities and access to resources.
+  
+  Organize users by function: Organize users by function, such as by department or role. This will 
+help ensure that each user has the appropriate access to resources.
+  
+  Use Entra ID groups to manage access: Use Entra ID groups to manage access to resources in 
+Azure. Assign users to appropriate groups based on their function or role and assign group 
+membership to control access to resources.
+  
+  Use conditional access policies: Use conditional access policies to enforce security policies and 
+control access to resources based on user location, device, or other factors.
+  
+  Regularly review and update user accounts: Regularly review and update user accounts to 
+ensure that they are still necessary and that the appropriate access is assigned. Remove user 
+accounts that are no longer needed and update the access for user accounts that require changes.
+  
+  By following these ideas for a user strategy, you can efficiently manage identities and access to 
+resources in Azure and ensure that the right people and bots have the right access to the right 
+resources.
+  
+  AAD Group strategy
+  An Azure Active Directory (AAD) group strategy is essential for efficient management of 
+identities and access to resources in Azure. Here are some ideas for an AAD group strategy:
+  
+  Define roles and responsibilities: Assign roles and responsibilities for managing AAD groups to 
+ensure that the right people have access to the right resources. For example, assign the 
+responsibility of managing the global AAD group to a central IT team, while assigning the 
+responsibility of managing project-level AAD groups to project managers.
+  
+  Use a consistent naming convention: Implement a consistent naming convention for AAD groups 
+to make them easily identifiable and manageable. For example, use a prefix to indicate the type of 
+group, such as "grp-" for a regular group, "dl-" for a distribution list, or "sg-" for a security group. 
+You can also include the name of the team, project, or department in the group name.
+  
+  Organize groups by function: Organize AAD groups by function, such as by department, project, 
+or role. This will help ensure that each group has the appropriate members and access to resources.
+  
+  Implement a group lifecycle management process: Implement a process for managing the 
+lifecycle of AAD groups, including creating, modifying, and deleting groups. Use automation and 
+workflows to streamline the process and ensure consistency.
+  
+  Use dynamic groups where possible: Use dynamic groups to automatically assign members 
+based on predefined criteria, such as job title, department, or location. This will help ensure that 
+groups are always up-to-date and that members have the appropriate access to resources.
+  
+  Use AAD group membership to control access to resources: Use AAD group membership to 
+control access to resources in Azure, such as virtual machines, applications, and databases. Assign 
+appropriate permissions to AAD groups to control access to resources based on function or role.
+  
+  Regularly review and update AAD groups: Regularly review and update AAD groups to ensure 
+that they are still necessary and that the appropriate members and access are assigned. Remove 
+AAD groups that are no longer needed and update the membership and access for AAD groups that 
+require changes.
+  
+  By following these ideas for an AAD group strategy, you can efficiently manage identities and 
+access to resources in Azure and ensure that the right people have the right access to the right 
+resources.
+  
+  
+## Landing Zones collection
+  
+  Dynamics of developers and operations teams
+  When developers and operations teams transition to the cloud, they often bring their own 
+established working dynamics and practices. This can sometimes lead to tensions and conflicts 
+between the two groups as they navigate their respective roles and responsibilities in the cloud 
+environment. However, by fostering effective collaboration and adopting certain strategies, these 
+tensions can be resolved, and the teams can work together efficiently. Let's explore the normal 
+tensions and dynamics between developers and operations teams in the cloud and discuss ways to 
+promote effective collaboration.
+  
+  Different Priorities
+  Developers primarily focus on building and deploying applications quickly, while operations 
+teams prioritize stability, security, and scalability. This difference in priorities can lead to conflicts, 
+with developers pushing for rapid changes and operations teams advocating for caution and risk 
+mitigation.
+  
+  Solution: Establishing open communication channels and regular meetings between the teams is 
+crucial. Encouraging both groups to share their goals and concerns openly helps foster a shared 
+understanding of each other's priorities. It enables the teams to find common ground and work 
+towards a balanced approach that satisfies both speed and stability requirements.
+  
+  Communication Gaps
+  Communication breakdowns can occur due to varying technical backgrounds and terminologies 
+used by developers and operations teams. Misunderstandings and lack of clarity in requirements 
+can result in delays and suboptimal outcomes.
+  
+  Solution: Encouraging cross-team training sessions or workshops can bridge the communication 
+gap. Developers can gain a better understanding of operational concerns, and operations teams can 
+familiarize themselves with development processes and workflows. Establishing a shared glossary 
+of terms and maintaining clear documentation also helps align the teams' understanding.
+  
+  Siloed Mindset
+  Developers and operations teams may have traditionally worked in silos, leading to a lack of 
+collaboration and transparency. Siloed mindsets can hinder effective problem-solving and hinder 
+the ability to innovate.
+  
+  Solution: Foster a culture of collaboration and shared ownership. Encourage joint planning and 
+decision-making processes, such as involving operations teams in the early stages of application 
+design and development. Implementing cross-functional teams or DevOps practices that integrate 
+both development and operations functions can also break down silos and promote a collaborative 
+mindset.
+  
+  Tooling and Automation
+  Developers often embrace new technologies and tools to accelerate development, while 
+operations teams focus on stability and reliability. This divergence in tooling preferences and 
+automation practices can cause friction and compatibility issues.
+  
+  Solution: Seek opportunities for tooling standardization and automation alignment. Identify 
+common tools and technologies that work well for both developers and operations teams. 
+Encourage the teams to collaborate on the selection and implementation of shared tools, ensuring 
+they meet the requirements of both groups. Continuous integration and continuous deployment 
+(CI/CD) pipelines can also help streamline processes and foster consistency.
+  
+  Feedback Loops and Continuous Improvement
+  Developers and operations teams may not have well-established feedback loops, leading to a 
+lack of learning and continuous improvement. This can hinder the evolution of efficient and reliable 
+cloud-based systems.
+  
+  Solution: Implement mechanisms for regular feedback and retrospective sessions. Encourage the 
+teams to review and reflect on their collaborative processes, identify areas of improvement, and 
+iteratively refine their practices. Embracing a culture of learning, where feedback is valued and 
+acted upon, helps both developers and operations teams evolve and work together more 
+effectively.
+  
+  In summary, when developers and operations teams move to the cloud, tensions can arise due 
+to differing priorities, communication gaps, siloed mindsets, tooling discrepancies, and feedback 
+loop deficiencies. By fostering open communication, promoting collaboration, bridging knowledge 
+gaps, establishing shared goals, and embracing continuous improvement, these tensions can be 
+resolved, enabling the teams to work efficiently and effectively together in the cloud environment.
+  
+  Dynamics between centralized manged services and decentralization of capabilities
+  During a cloud transformation in a company, one of the key discussions revolves around the 
+dynamics between centralized managed services and the decentralization of capabilities. These two 
+approaches represent contrasting strategies for organizing and managing cloud resources within 
+the organization. Let's explore the benefits and disadvantages of each approach:
+  
+  Centralized Managed Services:
+     Benefits:
+     a. Standardization: Centralizing managed services enables the organization to establish 
+consistent standards, configurations, and best practices across the entire cloud infrastructure. This 
+promotes uniformity, simplifies management, and enhances security.
+     b. Cost Efficiency: By consolidating resources and expertise, centralized managed services can 
+optimize resource utilization and reduce costs. Central teams can negotiate favourable pricing, 
+achieve economies of scale, and implement cost-saving measures effectively.
+     c. Expertise and Specialization: A centralized team can focus on building specialized skills and 
+deep expertise in managing cloud infrastructure. They can stay updated with the latest trends, 
+technologies, and security practices, ensuring efficient operations and better support for the entire 
+organization.
+     d. Risk Mitigation: Centralized management allows for better control and governance over 
+cloud resources. It enables robust monitoring, compliance enforcement, and rapid response to 
+security incidents or operational issues.
+  
+     Disadvantages:
+     a. Bottlenecks: A centralized approach may introduce bottlenecks and delays in accessing and 
+provisioning resources. Teams may have to rely on a central team for resource allocation, leading to 
+potential delays in development or deployment.
+     b. Lack of Flexibility: Centralized management can limit the flexibility and agility of individual 
+teams or business units. They may face restrictions in terms of resource allocation, customization, 
+or experimenting with new technologies or tools.
+     c. Communication Overhead: Coordinating with a central team for every decision or change 
+can introduce communication overhead and increase response times. This can slow down decision-
+making processes and hinder the ability to quickly respond to evolving business needs.
+  
+  Decentralization of Capabilities:
+     Benefits:
+     a. Agility and Autonomy: Decentralizing capabilities empowers individual teams or business 
+units to have more control over their cloud resources. They can quickly provision, configure, and 
+manage their own environments, fostering agility, experimentation, and innovation.
+     b. Customization: With decentralized capabilities, teams can tailor their cloud infrastructure to 
+meet specific requirements and preferences. This flexibility allows them to choose tools, 
+configurations, and deployment models that align with their unique needs and optimize 
+performance.
+     c. Faster Response Time: Decentralized teams can respond swiftly to business needs, as they 
+have direct control over their resources. This reduces dependencies and enables faster 
+development, deployment, and scaling of applications or services.
+  
+     Disadvantages:
+     a. Inconsistency: Decentralization may lead to inconsistencies in configurations, security 
+practices, and governance standards across the organization. This can increase the complexity of 
+managing and securing cloud resources and potentially introduce vulnerabilities.
+     b. Duplication of Effort: Without proper coordination, decentralized teams may end up 
+duplicating efforts and investing in similar capabilities or tools. This can result in inefficiencies, 
+higher costs, and difficulties in collaboration or knowledge sharing.
+     c. Skill Variance: Decentralization assumes that teams possess the necessary skills and 
+knowledge to manage their cloud resources effectively. However, skill variance across teams can be 
+a challenge, leading to disparities in operational efficiency, security practices, and overall cloud 
+maturity.
+  
+  Ultimately, the choice between centralized managed services and decentralization of capabilities 
+depends on various factors such as organizational structure, size, complexity, and specific business 
+requirements. A balanced approach that combines centralized governance and expertise with 
+decentralized autonomy and agility can often yield the best results, leveraging the strengths of both 
+strategies while mitigating their disadvantages.
+

@@ -1,4 +1,63 @@
-# Green software development
+
+# Sustainable Technology
+  Sustainable technology refers to the use of technology to create products, systems, and 
+processes that are environmentally and socially sustainable. This means that the technology is 
+designed and developed with a focus on minimizing its negative impact on the environment and 
+society, while maximizing its positive impact.
+  
+  Sustainable technology encompasses a wide range of applications and industries, including 
+renewable energy, clean transportation, sustainable agriculture, green building, waste reduction 
+and recycling, and sustainable manufacturing. Some examples of sustainable technology include 
+solar panels, wind turbines, electric cars, green buildings, biodegradable plastics, and sustainable 
+packaging.
+  
+  One of the key principles of sustainable technology is the idea of "cradle-to-cradle" design, 
+which means that products are designed to be recycled, reused, or composted at the end of their 
+life cycle, rather than being disposed of in landfills or incinerators. This approach minimizes waste 
+and pollution and promotes the circular economy.
+  
+  Sustainable technology also aims to promote social sustainability by ensuring that technology is 
+accessible, affordable, and equitable for all people, regardless of their income, gender, or location. 
+This includes developing technologies that can be used in developing countries and marginalized 
+communities, such as low-cost water purification systems or renewable energy solutions.
+  
+  Sustainable technology is an important tool for addressing the environmental and social 
+challenges facing our planet. By harnessing the power of technology to promote sustainability, we 
+can create a more equitable and resilient future for all.
+  Microsoft has made a commitment to integrate sustainability into every aspect of their business, 
+including software product development. Here are some examples of how Microsoft is proposing to 
+handle sustainable technology from a software product development point of view:
+  
+  Green software development: Microsoft is focusing on developing software in a way that 
+minimizes its environmental impact. This includes optimizing code for energy efficiency, reducing 
+the size of software updates to minimize their carbon footprint, and using cloud-based technologies 
+to reduce the need for on-premises servers.
+  
+  Sustainable data centers: Microsoft is also working to make its data centers more sustainable. 
+This includes using renewable energy to power its data centers, implementing energy-efficient 
+designs, and using AI to optimize energy usage.
+  
+  Sustainable cloud computing: Microsoft is promoting sustainable cloud computing by 
+encouraging customers to use its Azure cloud platform, which is designed to be energy efficient and 
+uses renewable energy sources. Additionally, Microsoft is developing tools to help customers 
+measure and reduce their carbon footprint.
+  
+  Sustainable supply chain: Microsoft is working with its suppliers to promote sustainability 
+throughout its supply chain. This includes setting sustainability targets for suppliers, promoting 
+ethical sourcing practices, and reducing the use of hazardous materials in product development.
+  
+  Sustainability reporting: Microsoft is committed to transparency and reporting on its 
+sustainability efforts. The company publishes an annual sustainability report that details its 
+progress and goals in areas such as carbon emissions, renewable energy, and waste reduction.
+  
+  Microsoft is taking a holistic approach to sustainability, integrating it into every aspect of its 
+business, including software product development. By prioritizing sustainability, Microsoft is 
+demonstrating its commitment to creating a more sustainable future for all.
+  
+  This is another reason of my preference to leverage Azure.  
+
+
+## Green software development
   
   Green software development can have a significant impact on the day-to-day activities of a 
 software engineer. Here are some ways that green software development practices may affect a 
@@ -69,7 +128,7 @@ descriptor followed by a cardinal direction - for example, West Europe and North
 However, in recent years, Microsoft has shifted to a new naming convention in which the major 
 region comes first - for example, Switzerland North and Switzerland West.
   
-  Small change great impact
+ ## Small change great impact
   While this change may seem insignificant, it actually has a significant impact on energy 
 consumption. When the regions were named with the cardinal direction first, the compute required 
 to display the regions together in a list was much greater. This is because the compute had to sort 

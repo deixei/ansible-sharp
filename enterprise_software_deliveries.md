@@ -58,7 +58,7 @@ concepts, I would like to explain how I personally perceive them.
   By going thru these topics, you will start to get familiar with the necessary concepts that will 
 make our production line work.
   
-## DevOps
+### DevOps
   The interaction and collaboration between software developers and specialists in information 
 technology operations is the core emphasis of the DevOps technique for the creation of software. 
 With the intention of increasing both speed and efficiency while also improving stability and 
@@ -194,7 +194,7 @@ development process with the overall vision and goals of the company, which can 
 development strategy that is more cohesive and efficient. This can be accomplished by 
 incorporating the company into its own supply chain.
   
-## Build of materials and recipes
+### Build of materials and recipes
 
   The Build of Materials (BOM) and recipes are essential elements of the software development 
 process and play a vital role in the production process. The bill of materials (BOM) is a complete 
@@ -233,7 +233,7 @@ correctly recognised and handled, as well as that all necessary components are m
   Take, for instance: I need a database and a web application that can be deployed in one area at 
 each of the following stages: development, testing, staging, and production.
   
-## My expectations are that you will provide me with the following: 
+My expectations are that you will provide me with the following: 
 
 -	four repositories containing the source code for the web application, database, 
 infrastructure as code, and test cases; four build processes for each repository, each of 
@@ -303,7 +303,7 @@ and effective production of commodities. Standardization, efficiency, and qualit
 all benefits that are shared by the manufacturing and software development industries, even 
 though the products themselves are distinct.
   
-## Cross-platform, cross-technology
+### Cross-platform, cross-technology
   
   Although the use of languages that are compatible with several platforms and technologies may 
 make it possible to create software more quickly, it is essential to bear in mind that this does not 
@@ -411,7 +411,7 @@ migration tools. The difficulty of the code and the disparities between the many
 technologies that are being utilised. Both have a role in determining how successful an endeavour 
 that crosses multiple platforms or technologies will be.
   
-## Moving from one cloud provider to another
+### Moving from one cloud provider to another
 
   Switching between different cloud providers may also affect the production pipelines, 
 depending on the range of technologies required to deliver your software product. If you are 
@@ -530,7 +530,7 @@ flexible, efficient, and responsive to the needs of the market, ultimately reali
 this powerful instrument for attaining strategic business objectives.
   
   
-## Segmented service architectures vs microservice architectures
+### Segmented service architectures vs microservice architectures
 
   What exactly are segmented service architectures and how do they work? How does it stack up 
 against designs that are comprised of microservices?
@@ -644,7 +644,7 @@ breaking down complicated operations into smaller, more manageable bits, with th
 increasing productivity, lowering costs, and reacting more swiftly to shifting customer 
 requirements.
   
-## Everything as code
+### Everything as code
   The concept known as "Everything as code" proposes that the technological stack of an 
 organisation, which includes the business infrastructure, applications, and procedures, should be 
 controlled and configured entirely via the use of code and automation. The management of 
@@ -791,7 +791,8 @@ products might get important insights from Ford's tactics for reducing risks in 
 process. 
   
   
-## Keeping application records
+### Keeping application records
+
   What information must I record and keep track regarding my applications, and what can be 
 entered and when?
   It is essential to maintain a comprehensive database of information on your applications, 
@@ -851,6 +852,7 @@ finding.
   
   
 ## Technology façade
+
   Why is it necessary to have a technology façade to continue improving my components without 
 having to perform a significant refactoring?
   Having a technological façade enables us to do cross-technology and cross-platform evolution. 
@@ -892,6 +894,7 @@ dependability if they first isolate the complexity of the system and then provid
 make modifications.
   
 ## Vendor lock opens and closes your innovative growth
+
   The term "vendor lock-in" refers to the situation in which an organisation becomes dependent 
 on a particular vendor or technology, making it difficult or expensive to switch to a different vendor 
 or technology. This is because the organisation has welcome locked in to using that vendor or 
@@ -986,7 +989,7 @@ meticulously document the build of material and recipe setup, and select a cloud
 that has flexible service agreements.
  
   
-## Open source
+### Open source
 
   Is it possible for my organisation to get a competitive advantage by using open-source software?
   One of the many ways in which a business that uses open-source software can gain an 
@@ -1077,7 +1080,7 @@ they are aligned with the values and goals of your business.
 process and drive higher efficiency and effectiveness in your software development and delivery 
 endeavours if you give these considerations due consideration and choose the best ones.
   
-## Business value
+### Business value
 
   How should one "define business value" in relation to an information technology solution? The 
 benefits or advantages that an IT solution delivers to a company are referred to as having business 
@@ -1126,7 +1129,7 @@ will determine the strategy that is most appropriate to take. To guarantee that 
 taken into consideration throughout the rating process, it may be beneficial to include numerous 
 stakeholders, such as members of the IT staff, business executives, and users.
   
-## Automation
+### Automation
   Should the tools used in automation be adaptable or should they be dedicated? It depends 
 entirely on the stage of the procedure you are currently in. In any event, you are going to want the 
 assistance of an orchestrator all during the procedure of software distribution.
@@ -1220,7 +1223,7 @@ only makes our software products better in terms of quality and dependability, b
 deliver them more quickly and effectively.
   
   
-## Inner-Source
+### Inner-Source
   The ideas and methods of open-source software development are adapted for usage within 
 enterprises using a methodology known as "Inner Source", which is a software development 
 technique. It requires the establishment of open, cooperative development communities within an 
@@ -1257,7 +1260,7 @@ accepting, and it encourages participation from all members of the organisation.
 environment in which software is developed within enterprises more open, collaborative, and 
 effective.
   
-## Definition of done
+#### Definition of done
 
   A definition of done, abbreviated as DoD, is a predetermined list of conditions that must be 
 satisfied before the development of a product or feature can be regarded as finished. The following 
@@ -1279,7 +1282,7 @@ on the requirements of the project as well as the requirements of the organisati
 objective of a DoD is to fulfil its responsibility of ensuring that every work is finished to an 
 acceptable level before it is made available to end users.
   
-## Code of Conduct
+#### Code of Conduct
   As contributors to and maintainers of this project, we make a commitment to respect all 
 individuals who contribute to any capacity, including but not limited to bringing issues to our 
 attention, requesting new features, bringing documentation up to date, submitting pull requests or 
@@ -1324,7 +1327,7 @@ mind that the preceding is but one illustration, and that the precise terminolog
 code of conduct will change based on the requirements of the project and the requirements of the 
 community.
   
-## Importance of Inner-Source
+#### Importance of Inner-Source
 
   It encourages collaboration among developers, which not only improves the quality of the code 
 but also speeds up the rate of invention. The relevance of an organization's inner source resides in 
@@ -1363,7 +1366,7 @@ code, faster innovation, and a developer community that is more involved in thei
 productive.
   
   
-## Pipeline
+### Pipeline
   A manufacturing pipeline is a set of devices that have been put together to provide consistent 
 results. This leads one to believe that one device can connect to or communicating with another, 
 which is evidence that the input and output are compatible with one another. This is the same 
@@ -1444,7 +1447,8 @@ principles and methods that are applied in both have led to major breakthroughs 
 areas.
   
   
-## Artificial Intelligence in Automation
+### Artificial Intelligence in Automation
+
   Is it possible to employ natural languages to make the DevOps machinery better? Natural 
 language processing (NLP), which is also known as linguistic processing, may, in fact, be utilised to 
 make DevOps operations more efficient. The following is a list of some of the possible applications 
@@ -1513,7 +1517,7 @@ become available.
   
   
   
-## Configurations
+### Configurations
 
   How exactly should configurations, including feature flags, be maintained in the appropriate 
 manner?
@@ -1672,7 +1676,8 @@ them through a rigorous change management process, organisations can ensure that
 made in a consistent, controlled, and documented manner, thereby lowering the risk of disruptions, 
 and improving the system's reliability. 
   
-## Hyper compute
+### Hyper compute
+
   The term "hyper compute" is most used to refer to a high-performance computing system. Such 
 a system typically makes use of innovative hardware and software technologies to handle massive 
 and complicated datasets in a quick and effective manner. This method of computing is frequently 
@@ -1785,7 +1790,7 @@ and high-performance computing.
 to a different component of cloud computing. The following is a list of some of the differences and 
 similarities between these two concepts:
   
-## Cloud computing platform and hyper compute differences
+#### Cloud computing platform and hyper compute differences
 
   A cloud computing platform is a comprehensive suite of services that provides customers with 
 resources such as computing power, storage, networking, and applications over the internet. These 
@@ -1804,7 +1809,7 @@ pay only for the resources that they actually employ. On the other hand, due to 
 hardware and software that is necessary for high-performance computing, Hyper Compute may 
 have a higher price tag.
   
-  Cloud computing platform and hyper compute similarities
+#### Cloud computing platform and hyper compute similarities
   Both cloud computing platforms and Microsoft's Hyper Compute have been intended to have a 
 high degree of scalability. This enables customers to easily provision and scale their computing 
 resources according to their specific requirements.
@@ -1821,9 +1826,13 @@ significant variations between the two in terms of their scope, architecture, an
 computing platforms offer a comprehensive set of services that can be applied to a wide variety of 
 different use cases, whereas Hyper Compute is a specialised architecture that has been developed 
 specifically for high-performance computing applications.
-  
-  
-  
+
+
+
+
+
+
+
 ## Technology's choices
   
   Technology's choices refer to the decisions that businesses and organisations make when it 
@@ -1932,7 +1941,8 @@ of the software that is generated by reducing the amount of time and resources r
 develop and deploy the software by making the appropriate choices regarding technical matters.
   
   
-## YAML rather than JSON
+### YAML rather than JSON
+
   YAML, which stands for "YAML Ain't Markup Language," is a data serialisation language that is 
 legible by humans and is widely used for configuration files. However, YAML may also be used for 
 data storage. It is comparable to JSON (JavaScript Object Notation) in that it is a method for 
@@ -1993,7 +2003,8 @@ variety of domains.
 other: anything you can do with JSON you can do with YAML (but not the opposite).
   
   
-## Azure rather than AWS
+### Azure rather than AWS
+
   Amazon Web Services (AWS) and Microsoft Azure (Azure) are both examples of cloud computing 
 platforms that provide a broad variety of services to its customers. These services include 
 computation, storage, and networking. Deciding between the two might be challenging because 
@@ -2068,14 +2079,15 @@ United States.
 -	EU (Ireland): The headquarters of the EU are in Dublin, Ireland.
 -	The Asia Pacific headquarters are in Tokyo, which is in Japan.
 -	Singapore is the location of the Asia Pacific division of the company.
--	South America (S�o Paulo): Located in S�o Paulo, Brazil.
+-	South America (S o Paulo): Located in S o Paulo, Brazil.
   
   The fact that there is not a significant difference in the offerings between regions means that 
 this is not a deciding factor. In most circumstances, the answer will rely on how you personally 
 consider the procedures of your internal network and security. As well as the global footprint of 
 your organisation.
   
-## Other tools
+#### Other tools
+
   Microsoft Office 365 is an online suite of productivity tools that is available via subscription and 
 contains a variety of programmes and services. The suite was developed by Microsoft. It is intended 
 to assist individuals and organisations in working more successfully together and collaborating 
@@ -2134,7 +2146,8 @@ software. By coming to this conclusion, I will be able to free up resources for 
 that it may handle matters of a higher priority.
   
   
-## Use of Python
+### Use of Python
+
   Python is a robust programming language that can be used for a variety of purposes and has 
 gained a lot of popularity in the field of information technology. When applied within the context of 
 Ansible and other command line tools, it possesses a number of benefits that make it an ideal 
@@ -2168,7 +2181,8 @@ and straightforward to incorporate with other Python-based applications and util
 CLI to create scripts and automate processes may become less difficult.
   
   
-## Use of Ansible
+### Use of Ansible
+
   Python is the language used to write Ansible. It is an open-source configuration management 
 and automation application that may assist businesses in automating their operations and 
 infrastructure. The product was created to aid corporations. Ansible was designed to be user-
@@ -2308,7 +2322,7 @@ attaining these objectives.
   In the subsequent parts of this book, I will illustrate how to practically put all the information 
 that was presented above into action.
   
-  Preference for the Bicep over the ARM
+  ### Preference for the Bicep over the ARM
   An application programming interface (API) for controlling Azure resources is made available 
 through the Azure Resource Manager (ARM) service. Using a REST API or Azure Resource Manager 
 templates, it is possible to create, update, and remove Azure resources.
@@ -2348,7 +2362,7 @@ debugging Bicep files. You can set breakpoints in your code, and then use the bu
 step through your code.
   
   
-## Utilization of Azure DevOps
+### Utilization of Azure DevOps
 
   Azure DevOps is a collection of tools and services that can be used to manage the entirety of the 
 software development lifecycle. This includes all stages of the process, from planning to 
@@ -2410,7 +2424,7 @@ demands placed on it.
   
   
   
-## Utilization of Power BI
+### Utilization of Power BI
 
   Microsoft Power BI is a business intelligence and data visualisation platform that enables users 
 to build interactive reports and dashboards based on several data sources. Users may access this 
@@ -2486,7 +2500,7 @@ system that is more efficient and effective. Because of this requirement, we hav
 Azure and App Insights as our primary technology. This provides us with a reliable system that is 
 capable of real-time viewing and monitoring. 
   
-## Preference of Command Line Tools (CLI)
+### Preference of Command Line Tools (CLI)
 
   Command line tools are computer applications that are initiated using the command line 
 interface (CLI), as opposed to the graphical user interface (GUI), which is activated by clicking on an 
@@ -2503,7 +2517,7 @@ should be something you think about. You'll see that Python is used later on in 
 construct a command line interface (CLI) that also includes modules for Ansible. The increased 
 reusability of my code is a direct result of my decision to go this route.
   
-## .NET preference over Java
+### .NET preference over Java
   The answer to this issue cannot be definitively determined because deciding between Java and 
 .NET is going to be determined by the precise demands and requirements that you have. Both .NET 
 and Java are popular options when it comes to the development of cloud apps; yet each has its own 
@@ -2565,7 +2579,7 @@ ability to encourage their development teams to investigate new technologies and
 effective solutions for each project if they foster a culture that encourages open debate and 
 collaboration.
   
-## Utilization of backstage
+### Utilization of backstage
   Backstage is a platform that is open source and may be used to construct developer portals. Its 
 purpose is to provide assistance to businesses in the process of centralising and documenting the 
 tools and services that software engineers require in order to be productive. The following is a list 
@@ -2600,7 +2614,12 @@ to be fully customizable and extendable via plugins, and its primary focus is on
 requirements of developers. Backstage is also designed to be fully customizable.
 -	Backstage provides a job board and a feedback system, both of which are absent from 
 Azure DevOps. Additionally, Backstage provides a library of products and services.
-   
+
+
+
+
+
+
 ## Understanding the concepts
   
   In this section, we go over some basic ideas that are important for putting what you know to use 
@@ -2657,7 +2676,7 @@ effectively. This makes it easier and requires less time to build and launch new
 there may be a reduction in the amount of time it takes to bring a product to market, an 
 improvement in the product's quality, and an increase in customer happiness.
    
-## Reference Architecture
+### Reference Architecture
 
   Reference architecture is a set of best practises, design patterns, and instructions for how to put 
 them into action that have been shown to be effective at using technology to solve certain business 
@@ -2759,7 +2778,7 @@ workload. The landing zone should provide a stable and secure base for future de
 making it easy to add new parts or services as needed. It should also be able to adapt to changes in 
 your needs or infrastructure as time goes on.
    
-## Landing zone, or drop zone
+### Landing zone, or drop zone
   A landing zone is a term used to describe a well-architected reference architecture that allows a 
 business to build and operate secure, efficient, and scalable workloads in the cloud. In other words, 
 it is the starting point for deploying cloud resources, and it sets up the foundation for everything 
@@ -2887,7 +2906,7 @@ sets of resources and policies that can be used to deploy specific workloads or 
 blueprint is built on top of the landing zone, which gives the blueprint the infrastructure and 
 resources it needs to work.
    
-## Blueprint
+### Blueprint
   A blueprint is a document that, in addition to containing code, explains the design as well as the 
 implementation of a particular component or use case that is contained within a Landing Zone. It 
 offers an in-depth description of the components, services, and configurations that are necessary to 
@@ -3006,7 +3025,7 @@ blueprint updated. Before you can move on to the next phase, you will need to fi
 for administering and preserving the blueprint over the course of time. This plan should include 
 procedures for updating and altering the blueprint as circumstances demand.
    
-## Code templates
+### Code templates
 
   A piece of pre-written code that has been specifically designed to serve as a foundation for 
 developing new software is known as a code template. It is common practise to use code templates 
@@ -3023,7 +3042,7 @@ framework created specifically for the task. They may be used to provide a start
 projects, which can be used to hasten the process of development. They can also be used to help 
 ensure that common coding patterns are consistently followed.
    
-## Scaffolding vs. code templates
+### Scaffolding vs. code templates
   A form of code template known as a scaffolding template is one that can rapidly provide the 
 fundamental framework of a new programming project when it is employed. Scaffolding templates 
 often include code for common tasks like setting up a project structure, making basic user 
@@ -3056,12 +3075,12 @@ typically more automatic and all-encompassing, whereas templates are typically m
 and customised.
    
    
-## Branching - Release Flow
+### Branching - Release Flow
   Release flow is a branching strategy that is designed to be used in a continuous delivery 
 environment. The goal of release flow is to minimize the amount of time it takes to release new 
 features to customers, while still maintaining a high degree of stability and reliability.
   
-## Git
+#### Git
   Git is a distributed version control system that offers software development teams with a 
 powerful and efficient way to manage source code and collaborate on software projects. It was 
 created by Linus Torvalds in 2005 to manage the development of the Linux kernel. The following 
@@ -3197,21 +3216,21 @@ reliability of software deployments. Branching, artefact publishing, and CI are 
 can be used to make release management more structured, predictable, and reliable.
    
   
-  Trunk-Based Development
+  #### Trunk-Based Development
   The trunk-based development methodology promotes the use of a single mainline branch, which 
 is also frequently referred to as "main." This branch acts as the central hub for cutting-edge 
 development, and it is in this branch that the most recent features are continuously added and 
 integrated. The goal of this methodology is to reduce the number of long-lived branches while 
 ensuring that the mainline branch is always stable and ready for deployment.
   
-  Develop on Mainline
+  #### Develop on Mainline
   This eliminates the need for feature branches and promotes continuous integration, as 
 developers regularly merge their changes into the mainline. It also promotes collaboration and 
 enables rapid feedback, which allows teams to quickly identify and resolve integration issues. In line 
 with the trunk-based development philosophy, the "develop on mainline" approach encourages 
 developers to work directly on the mainline branch.
   
-  Release Flow 
+  #### Release Flow 
   An agile method called Release Flow Branching Strategy is used for software development, also 
 known as "Development on the Mainline" and "Truck-Based Development".
   
@@ -3227,21 +3246,21 @@ and the "develop on mainline" methodology. It recognises the necessity for parti
 to cater to varied development circumstances, hence assuring a controlled and organised release 
 process.
   
-  Mainline Branch
+  ##### Mainline Branch
   The mainline branch, sometimes known as "master," is the primary branch for ongoing 
 development. Continuous integration best practises are constantly implemented to this branch at 
 the build server, and it serves as a trustworthy source of the most recent stable codebase.
   
    
   
-  Feature Branches
+  ##### Feature Branches
   These branches are typically named after the specific feature being worked on, which allows 
 developers to collaborate efficiently. Once a feature is finished, the changes are merged back into 
 the mainline branch. Short-lived feature branches play a crucial role in isolating the development of 
 new features without disrupting the mainline branch.
    
   
-  Release Branch
+  ##### Release Branch
   Releases are typically performed from their own release branch, named after the major and 
 minor version they manage, followed by a "x" for the patch version (for example, 1.1.x). Long-lived 
 release branches are created specifically for release activities. They provide isolation and stability, 
@@ -3251,27 +3270,27 @@ merged back into the mainline branch.
   
    
   
-  Fix Branches
+  ##### Fix Branches
   Fix branches are created from the corresponding release branch when addressing defects or 
 issues found in a specific release. These branches enable focused and controlled bug-fixing activities 
 without affecting ongoing development. Once the fixes are complete, a pull request is raised to 
 merge the changes into the target release branch, which allows for a smooth and controlled release 
 process.
    
-  Tags
+  ##### Tags
   Tags are an essential component of the Release Flow Branching Strategy. A tag is generated for 
 each release to serve as a distinct and enduring reference point for that particular version. Tags 
 enable teams to easily track and manage various iterations of the software, which in turn ensures 
 accurate documentation and traceability.
   
-  Conclusion
+  ##### Conclusion
   By using short-lived feature branches, long-lived release branches, fix branches, and tags, 
 development teams can streamline collaboration, ensure stable releases, and achieve continuous 
 integration. This strategy also promotes faster iterations, reduces merge conflicts, and facilitates a 
 controlled environment. 
   
-  Assumptions
-  The mistaken belief that "main" equals "production"
+  #### Assumptions
+  ##### The mistaken belief that "main" equals "production"
   This fallacy is based on the assumption that by maintaining a separate branch within the version 
 control system, teams can easily locate the code that is running in production. However, this 
 approach is flawed because it overlooks the intended purpose of branches and their relationship to 
@@ -3284,7 +3303,7 @@ can easily locate the desired code version by checking out the corresponding tag
 situations where multiple production environments require different versions, mapping a mainline 
 branch to a specific environment can be helpful.
   
-  The strategy based on the unstable trunk
+  ##### The strategy based on the unstable trunk
   However, this does not imply that engineers recklessly commit breaking changes to the 
 mainline. Instead, a healthy engineering team should strive to keep the mainline branch in a state 
 where it compiles, passes tests, and remains deployable at all times. This is in contrast to the 
@@ -3303,7 +3322,7 @@ integration, where early detection and resolution of integration issues lead to 
 reliable software. The approach known as unstable trunk encourages early integration, recognising 
 that some issues may arise during the development process.
   
-  The Strategy of Branching Off the Release Flow
+  ##### The Strategy of Branching Off the Release Flow
   The unstable trunk strategy is where the Release Flow Branching Strategy originated; it 
 encourages the usage of short-lived feature branches, release branches, and fix branches, and it 
 allows development teams to keep a controlled and organised release process by utilising these 
@@ -3320,7 +3339,7 @@ Branching Strategy. Tags offer a distinct reference point for the code that is d
 which facilitates version control and ensures that all changes can be traced back to their original 
 source.
   
-  Conclusion
+  #### Conclusion
   The Release Flow Branching Strategy challenges the notion of a stable trunk and argues for the 
 usage of an unstable trunk approach. Teams can maintain a stable mainline branch while also 
 cultivating practises of continuous integration if they embrace early integration and fix issues as 
@@ -3346,9 +3365,9 @@ delivering features, and the representation of software components through repos
   
   
   
-## Examples and use cases
+#### Examples and use cases
   
-  Static Website
+  ##### Static Website
   To create a static website, we require the expertise of one individual skilled in HTML and CSS. 
 The deployment process involves three environments: development (dev), testing (test), and 
 production (prod). Test cases are implemented using PyTest, which involves making HTTP calls and 
@@ -3363,7 +3382,7 @@ for unnecessary complexity.
 from development to testing and ultimately production, with a straightforward and consolidated 
 workflow.
   
-  Corporate Static Website
+  ##### Corporate Static Website
   Now let's delve into the same example, but this time focusing on a corporate website that 
 encompasses various features and serves as the central hub for all communications within the 
 organization. Given the complexity and scale of this website, a larger team is required, consisting of 
@@ -3510,7 +3529,7 @@ Environment
    v1.2
   
   
-  ## Todo Sample App
+  ##### Todo Sample App
   This application serves as a basic web application with a database for persistent storage. Its 
 primary functionality allows users to create, update, read, and delete information via the web 
 interface. However, as the application evolves, it may require additional components such as a 
@@ -3579,7 +3598,7 @@ evident.
    
   
    
-## The Crucial Role of a Branching Strategy
+#### The Crucial Role of a Branching Strategy
   I have no doubt in my mind that the branching strategy is the most important part of our 
 software product delivery process, particularly for large businesses that are responsible for the 
 management of several software products in their portfolio. The ramifications of the branching 
@@ -3627,10 +3646,15 @@ infrastructure, the testing capabilities, the management of the change risk, and
 quality and compliance. Our company's capacity to create high-quality software products in an 
 efficient and effective manner can be significantly improved if we take the time to carefully define 
 and implement a robust branching strategy.
-  
+
+
+
+
+
+
 ## Practices I care about
   
-  Define and measure reliability
+  ### Define and measure reliability
   In the fields of engineering and manufacturing, the practise of "define and measure reliability" 
 refers to the process of determining the reliability requirements of a product or system, followed 
 by the process of designing and testing the product or system to ensure that it satisfies those 
@@ -3662,7 +3686,7 @@ procedure may be carried out again and again until the criteria are satisfied.
 intended, the process of defining and measuring reliability is significant because it may assist to 
 decrease costs associated with product failures and enhance customer satisfaction.
   
-  Continuously reduce toil and increase automation
+  ### Continuously reduce toil and increase automation
   "Continuously reduce toil and increase automation" is the practise of reducing the amount of 
 manual, repetitive, and time-consuming tasks that need to be performed to operate and maintain a 
 system or service and replacing them with automated processes whenever it is possible to do so. 
@@ -3699,7 +3723,7 @@ while at the same time more time and resources are liberated to be put toward mo
 strategic endeavours. This can be accomplished by continually cutting manual labour and increasing 
 the amount of automation used.
   
-  Enable education and encourage adoption
+  ### Enable education and encourage adoption
   "Enable education and encourage adoption" is the practise of giving tools and assistance to 
 enable individuals and teams within an organisation learn about and embrace new technologies, 
 processes, or practises. It is common practise to use this procedure with the goals of enhancing the 
@@ -3725,7 +3749,7 @@ resources and assistance in addition to what has already been mentioned.
 adopt new technologies, processes, or practises by facilitating education and promoting adoption. 
 This can help to enhance the overall effectiveness and efficiency of the company as a whole.
   
-  Build in security and compliance
+  ### Build in security and compliance
   The phrase "build in security and compliance" refers to the process of incorporating security and 
 compliance considerations into the design and development of a product, system, or service rather 
 than treating them as an afterthought during the creation process. This contrasts with the more 
@@ -3755,7 +3779,7 @@ fines and penalties by incorporating security and compliance from the very begin
 development process of their products, systems, and services. This can help to ensure that their 
 products, systems, and services are secure and compliant.
   
-  Build internal communities through advocacy
+  ### Build internal communities through advocacy
   The process of fostering a sense of community and connection within an organisation by 
 encouraging and supporting the advocacy of individuals and teams for their work, ideas, and 
 experiences is referred to as "Build internal communities through advocacy". This method is 
@@ -3786,7 +3810,7 @@ organisations can make a difference.
 and connection within the organisation. This, in turn, may assist to stimulate cooperation and 
 creativity, as well as creating a culture that is positive and encouraging.
   
-  Provide a delightful developer experience
+  ### Provide a delightful developer experience
   When referring to the process of making a platform, tool, or service more user-friendly and 
 pleasurable for software developers, the phrase "provide a wonderful developer experience" is 
 often what is meant to be understood. This practise is significant since it has the potential to help 
@@ -3814,7 +3838,7 @@ members of that community to share their expertise, ideas, and experiences with 
 motivate them to continue using the platform, tool, or service, if they provide a pleasant 
 environment for developers to work in.
   
-  Employ pragmatic standardization
+  ### Employ pragmatic standardization
   Instead of mindlessly or strictly following to standards and best practises, the "Employ Pragmatic 
 Standardization" phrase refers to the technique of utilising standards and best practises in a way 
 that is both practical and successful. This practise is important because it helps to ensure that 
@@ -3850,7 +3874,7 @@ best practises in a manner that is appropriate and beneficial to the organisatio
 able to adapt and respond to changing needs and circumstances. This can be accomplished by 
 ensuring that the organisation uses pragmatic standardisation.
   
-  Optimize costs with "chargebacks" and "showbacks"
+  ### Optimize costs with "chargebacks" and "showbacks"
   The phrase "optimise expenses through "chargebacks" and "showbacks" is a reference to the 
 process of utilising "chargebacks" and "showbacks" as a technique of optimising costs inside an 
 organisation.
@@ -3890,7 +3914,7 @@ manner that is both fair and transparent.
 accomplished by ensuring that the costs of certain goods and services are apportioned or revealed 
 in a fair manner, as well as by promoting more cost-effective decision-making.
   
-  Align goals to business outcomes
+  ### Align goals to business outcomes
   The process of establishing goals for an organisation or a team that are linked with the intended 
 business results or objectives is referred to as "aligning goals to business outcomes" (or simply 
 "aligning goals"). This practise is important because it helps to ensure that the efforts and resources 
@@ -3922,7 +3946,7 @@ resources of the organisation or team are focused on achieving the outcomes that
 important to the success of the business. This allows organisations to maximise their chances of 
 achieving their goals.
   
-  Summary
+  ### Summary
   Enable education and encourage adoption is the practise of giving tools and assistance to enable 
 individuals and teams within an organisation learn about and embrace new technologies, 
 processes, or practises.
@@ -3935,7 +3959,12 @@ process.
 resources of the organisation or team are focused on achieving the outcomes that are most 
 important to the success of the business.
   This allows organisations to maximise their chances of achieving their goals.
-  
+
+
+
+
+
+
 ## Drafting the future
   
   Getting the company ready for such a transformation, which has to be managed from two 
@@ -3963,7 +3992,7 @@ with your team members upward spiral of inspiration starts to happen.
 technology strategies that will burst your organization, refer to the technology choices section of 
 the book.
   
-  Coding Dojo and Code Kata
+  ### Coding Dojo and Code Kata
   A "Dojo" is a gathering place for computer engineers in the field of software development, 
 where they may work together to hone their programming abilities. It is often a venue for learning, 
 experimentation, and cooperation.
@@ -4057,7 +4086,7 @@ the dashboards and data offered by Azure DevOps. This will provide you the abili
 progression of your team over time and determine the areas in which they can benefit from further 
 support or training.
   
-  Communication
+  ### Communication
   You may follow these steps in order to establish a communication channel using Microsoft 
 Teams and SharePoint that is used to share a common understanding of words that are used in the 
 creation of software products:
@@ -4134,7 +4163,7 @@ They might be engaged in the process of migrating to the cloud in order to make 
 that the migration is in line with the organization's goals and that it satisfies the 
 organization's requirements.
   
-### Spotify model
+#### Spotify model
   The responsibilities that I stated previously may be characterised as follows inside the 
 framework of the Spotify model, if we consider them in context:
   
@@ -4214,7 +4243,7 @@ develop and maintain the required skills and experience to support the migration
 the responsibility of the Streams to coordinate the work of the Pods and ensure that they are 
 aligned with the overarching plan for the migration.
   
-### Spotify model in Azure DevOps
+##### Spotify model in Azure DevOps
   You may apply the Spotify approach in Azure DevOps by utilising a combination of the Azure 
 DevOps capabilities and custom processes in the following ways:
   
@@ -4239,7 +4268,7 @@ are performing by using the built-in dashboards and reports, and you are also ab
 develop custom dashboards and reports in order to track your own metrics and 
 indications.
   
-## Build and Release Roles
+#### Build and Release Roles
   To properly create, deploy, and release your software product in production, in addition to the 
 roles I described previously, you may additionally require the roles listed below:
 -	This individual oversees organising and overseeing the release process, and their title is 
@@ -4271,7 +4300,7 @@ software's associated technical documentation. They will be responsible for deve
 user guides, technical manuals, and other forms of documentation in addition to working 
 with the development team to ensure that the documentation is correct and up to date.
   
-  Site Reliability Engineer (SRE)
+  ##### Site Reliability Engineer (SRE)
   Site Reliability Engineering, often known as SRE, is a subfield of software engineering that 
 integrates software and systems engineering in order to construct and maintain highly available, 
 scalable, and self-healing systems. SREs are accountable for implementing procedures and tools to 
@@ -4286,7 +4315,7 @@ one or more SREs may help your company. On the other hand, if your system is sma
 straightforward and your needs for its dependability aren't particularly high, you might not need a 
 specialised SRE.
   
-## Creating reference architectures
+#### Creating reference architectures
   A RACI matrix is a tool that is used to identify the roles and responsibilities of team members in a 
 project or process. RACI stands for Responsibility, Authority, Competence, and Information. The 
 matrix establishes the following four roles: Responsible, Accountable, Consulted, and Informed.
@@ -4374,7 +4403,7 @@ ensuring that there is adequate space and margins.
   Reference: Microsoft Azure Well-Architected Framework - Azure Architecture Center | Microsoft 
 Learn
   
-###  Microsoft Azure Well-Architected Framework
+#####  Microsoft Azure Well-Architected Framework
   
   The Microsoft Azure Well-Architected Framework (WAF) is a collection of best practises and 
 guidelines for the design and operation of cloud-based systems that are dependable, secure, 
@@ -4477,7 +4506,7 @@ guarantee that systems and environments are of an appropriate scale to fulfil th
 requirements of users.
   
   
-## Basic Web Application reference architecture
+##### Basic Web Application reference architecture
   It is necessary for us to begin with relatively straightforward scenarios, or examples, if we are to 
 make progress together on the path toward the industrialization of product distribution. Expect to 
 develop your understanding as you continue reading the book; but do not anticipate that it will be 
@@ -4603,8 +4632,8 @@ compliance requirements.
   The fact that everything is built on YAML is another key basis; this means that it can be 
 composed automatically, and it can also be produced as a text template. Both options are available.
   
-  
-  ## Cloud Governance
+
+#### Cloud Governance
 
   Cloud governance is a framework that organizations establish to manage their cloud computing 
 environment effectively. It comprises policies, processes, and controls that ensure that cloud 
@@ -4762,7 +4791,7 @@ aware of the organization's policies and processes pertaining to cloud governanc
 necessary in order to maintain a cloud environment that is both compliant and secure.
   
   
-## Compliance
+#### Compliance
 
   Compliance is an essential component of every successful business operation, and it is not 
 limited to only the software items a company sells. To ensure that their businesses are run in a 
@@ -4841,37 +4870,37 @@ for identifying, protecting, detecting, responding to, and recovering from cyber
   Software developers must be aware of many other regulations and standards that may apply 
 depending on the nature of the software and the industry it operates in.
   
-## Controls
-  Control Goal No. 1: Security Organization
+##### Controls
+###### Control Goal No. 1: Security Organization
   Controls deliver a level of assurance that is commensurate with the risk that information security 
 rules are developed, carried out, and communicated. This guarantees that information security 
 rules are implemented and adhered to across the entirety of the firm.
   
-  Control Goal No. 2: Operator Access
+###### Control Goal No. 2: Operator Access
   Controls give a reasonable guarantee that authorised workers only have logical access to 
 production infrastructure by preventing unauthorised users from gaining access. This ensures that 
 only authorised workers are able to access the production infrastructure, which in turn reduces the 
 risk of illegal access and misuse.
   
-  Control Goal No. 3: Operator Access
+###### Control Goal No. 3: Operator Access
   Controls offer a level of assurance that is commensurate with the risk that only authorised 
 individuals will have logical access to the production platform as well as the network infrastructure. 
 This reduces the risk of unauthorised access and misuse by ensuring that only authorised 
 individuals are able to access production platforms and network infrastructure.
   
-  Control Goal No. 4: Data Security
+###### Control Goal No. 4: Data Security
   Controls offer a level of assurance that is commensurate with the risk that the data and secrets 
 linked with the service are safeguarded both while in motion and while they are at rest. This helps 
 to reduce the risk of data breaches and leaks by ensuring that data and secrets are safeguarded 
 both while they are being transferred and while they are being stored.
   
-  Control Goal No. 5: Change Management
+###### Control Goal No. 5: Change Management
   Policies and processes for controlling access provide some level of assurance that any changes 
 made to the production platform will be properly recorded, authorised, and tested. This reduces 
 the likelihood of problems and vulnerabilities occurring on the production platform because any 
 modifications made to it are properly documented, authorised, and tested.
   
-  Control Goal No. 6: Software Development
+###### Control Goal No. 6: Software Development
   Controls give a fair level of confidence that the creation of new features or substantial changes 
 to the production platform are carried out in accordance with a formal software development life 
 cycle (SDLC) procedure and that they are documented, authorised, and tested. This guarantees that 
@@ -4879,26 +4908,26 @@ any new features or substantial changes to the production platform adhere to a f
 development life cycle (SDLC) procedure and are appropriately documented, authorised, and 
 tested, hence lowering the chance of errors and vulnerabilities.
   
-  Control Goal No. 7: Vulnerability Management
+###### Control Goal No. 7: Vulnerability Management
   Controls give a reasonable guarantee that the production platform is monitored for potential 
 unauthorised behaviour as well as known security vulnerabilities. This helps to reduce the 
 likelihood of security breaches and assaults by ensuring that the production platform is monitored 
 for potential instances of unauthorised activity as well as security flaws.
   
-  Control Goal No. 8: Incident Management
+###### Control Goal No. 8: Incident Management
   Controls give a reasonable assurance that production events are discovered and responded to in 
 accordance with specified processes for prompt resolution. This is what the phrase "reasonable 
 assurance" means. This guarantees that production events are discovered, and responses are 
 provided in a timely and efficient manner, lowering the risk of downtime as well as the possibility of 
 data loss.
   
-  Control Goal No. 9: Physical and Environmental Security
+###### Control Goal No. 9: Physical and Environmental Security
   Control policies and procedures give a level of assurance that is reasonable that systems and 
 data are protected from illegal physical access as well as environmental dangers. This helps to 
 reduce the likelihood of theft, damage, and disruption by ensuring that both the systems and the 
 data are protected against unauthorised physical access as well as environmental hazards.
   
-  Control Goal No. 10: Logical Access
+###### Control Goal No. 10: Logical Access
   Controls offer some degree of assurance that logical access to client data and systems within the 
 Service is controlled. This assurance is reasonable. This ensures that logical access to client data and 
 systems is restricted, which in turn reduces the risk of illegal access and misuse of the data and 
@@ -5082,7 +5111,7 @@ reduces the number of errors that might occur. When organisations automate their
 delivery processes with the help of metadata schemas, they can achieve improved levels of 
 efficiency, consistency, and scalability in those processes.
   
-## Metadata
+### Metadata
   The term metadata refers to data that contains information about other types of data. The term 
 "data about data" or "information about information" is frequently used to refer to this concept.
   
@@ -5214,7 +5243,7 @@ automation and resource reuse can be accomplished if the business establishes a 
 systematic strategy for managing its processes and its resources.
   
   
-## Tenant classification
+### Tenant classification
   To get started, let's define tenant classification according to production and non-production 
 workloads (NP) (PR). Workloads in the context of Microsoft Azure can be categorised as either Non-
 production (NP) or Production (PR), and this distinction is based on how Azure resources are 
@@ -5293,7 +5322,7 @@ allocate subscriptions to the appropriate category based on the classification o
 since it plays an important role in ensuring that resources are effectively organised and managed in 
 accordance with their intended purpose and application.
   
-## Subscription classification
+### Subscription classification
   Subscription Classification is the name given to the system that we use to organise subscriptions 
 in accordance with the type of data that each one uses.
   The "np" and the "pr" categories are the two different kinds of subscriptions that are included in 
@@ -5308,7 +5337,7 @@ category will therefore have broad access to production data to use however they
 Additionally, an unlimited number of stages and environments can be accessed through a 
 subscription of this type.
   
-## Subscription type
+### Subscription type
   When working as a cloud architect, it is essential to have a thorough understanding of the 
 various subscription types we should define. Users are able to manage resources in accordance 
 with their purpose, usage, and longevity thanks to these subscriptions, which allow for classification 
@@ -5345,7 +5374,7 @@ both more efficient and effective. There is a form of subscription that is suita
 of whether you require it for the purpose of experimentation or the management of production 
 workloads.
   
-## Environments, stages, and instances
+### Environments, stages, and instances
   The organisation and management of resources is done using environments, stages, and 
 instances, respectively, based on the resource'' purposes and uses.
   
@@ -5436,7 +5465,7 @@ well as the testing and deployment of security patches and upgrades, can be carr
 settings.
   
   
-## Regions and locations
+### Regions and locations
 
   When developing a taxonomy for a cloud transformation strategy, it is essential to take into 
 account the geographic regions and locations that are pertinent to your organisation. It is 
@@ -5602,7 +5631,7 @@ while the data is at rest and while it is in transit, access limits, and threat 
 this, it possesses compliance certifications for a range of regulatory frameworks such as ISO 27001, 
 HIPAA, and GDPR.
   
-## Segmentation in Azure
+### Segmentation in Azure
 
   In Azure, the terms segmentation and segregation relate to the separation of resources and 
 access restrictions based on identity, network, and role-based access control respectively. 
@@ -5644,7 +5673,7 @@ security of your Azure environment.
 that is more secure and under your control for your resources, as well as to exercise greater control 
 over who has access to what.
   
-## Network
+#### Network
   In Azure, network segregation is accomplished by the utilization of virtual networks, subnets, 
 and many other restrictions at the network level in order to isolate and segment resources as well 
 as access to them. The process of breaking resources into logical groupings or segments based on 
@@ -5705,7 +5734,7 @@ allocations across a variety of contexts and regions, assure the efficient and e
 space, and minimise the danger of IP address conflicts and shortages.
   
   
-### Azure Active Directory (AAD) Groups
+#### Azure Active Directory (AAD) Groups
   Azure Active Directory (AAD) is a cloud-based identity and access management service provided 
 by Microsoft. AAD Groups are used to manage access to Azure resources and services by assigning 
 permissions to a group of users rather than to individual users. AAD groups are created and 
@@ -5713,7 +5742,7 @@ managed in the Azure portal and can be used to grant access to Azure resources l
 resource groups, and individual resources. With AAD Groups, you can manage access to resources 
 based on a user's role or responsibility, making it easier to manage access at scale.
   
-### Azure Roles
+#### Azure Roles
 
   Azure roles are a set of permissions that allow users or groups to access Azure resources and 
 services. Azure offers four built-in roles: Owner, Contributor, Reader, and User Access 
@@ -5722,7 +5751,7 @@ read-only access. Custom roles can also be created to provide more granular acce
 on specific needs. Azure roles can be assigned at different levels of the Azure hierarchy, including 
 the subscription level, resource group level, and individual resource level.
   
-### Subscriptions
+#### Subscriptions
   Azure subscriptions are used to organize and manage resources in Azure. A subscription is a 
 logical container for resources and services, and it defines the billing and account information for 
 those resources. Within a subscription, resources can be grouped into resource groups for better 
@@ -5730,7 +5759,7 @@ organization and management. Subscriptions are also used to manage access contro
 resources, as Azure roles and policies can be applied at the subscription level to control who can 
 access and manage resources within the subscription.
   
-### Azure Policies
+#### Azure Policies
   Azure policies are used to enforce rules and standards for Azure resources and services. Policies 
 can be used to enforce compliance with regulatory standards or internal policies, such as requiring 
 specific tags on resources or prohibiting the use of certain resource types. Policies can be assigned 
@@ -5738,7 +5767,7 @@ at different levels of the Azure hierarchy, including the subscription level, re
 individual resource level. When a policy is assigned, it is evaluated against the resources in the 
 target scope, and any resources that are found to be non-compliant are flagged for remediation.
 
-### Azure Management Groups
+#### Azure Management Groups
 
   Azure management groups are used to organize and manage subscriptions and resources in 
 Azure. Management groups provide a hierarchy that allows for centralized management and 
@@ -5749,7 +5778,7 @@ boundaries for resources, making it easier to track and manage costs across an o
 environment.
   
   
-## Control, Data and Management plane
+### Control, Data and Management plane
   I would like to introduce the concept of governance planes in Azure. A company managing Azure 
 platform must consider three governance planes: the Control Plane, the Data Plane, and the 
 Management Plane. Each of these planes has specific responsibilities and functions.
@@ -5877,7 +5906,7 @@ to enforce governance policies across both the control plane and management plan
 user's role. There are several built-in RBAC roles in Azure that can be defined for the control plane 
 and data plane:
   
-### Control plane
+#### Control plane
   Global Administrator: This role has full access to all Azure resources and services, including the 
 ability to manage resource providers and manage billing and subscriptions.
   User Access Administrator: This role has the ability to manage user access to Azure resources 
@@ -5887,7 +5916,7 @@ roles to users.
 including the ability to create and manage service-level resources such as virtual machines and 
 storage accounts, and to manage service-level operations such as backups and monitoring.
   
-  Data plane
+  #### Data plane
   Storage Account Contributor: This role has the ability to manage storage accounts, including the 
 ability to create and manage storage accounts, as well as to read and write data to storage 
 accounts.
@@ -5922,7 +5951,7 @@ much, as the base features will be sufficient for the large cases out there.
 integrated. This implies that we need to build a list of resources we want to use in azure and 
 validate if their features meet our enterprise requirements.
   
-  Management plane or sub control plane
+  #### Management plane or sub control plane
   While the management plane roles can vary depending on the specific needs and goals of the 
 organization, there are a few roles that can complement RBAC in the management plane:
   
@@ -5990,7 +6019,7 @@ Additionally, custom roles can also be created to meet the specific needs of an 
   
   
   
-## Common capabilities definition
+### Common capabilities definition
   Common capabilities are features or functionality that are shared across multiple projects or 
 teams. Defining common capabilities can help to ensure that teams are working towards a common 
 set of goals and objectives and can also help to streamline the development process by reducing 
@@ -6048,7 +6077,7 @@ software in a compliant and secure manner and can identify and address any issue
   There capabilities become referenced in as metadata, allowing the automation to understand to 
 which endpoint it need to communicate.
   
-  Data management, movement of data and data transformation
+  #### Data management, movement of data and data transformation
   Capabilities that provide a functional benefit refer to features or tools that offer practical 
 advantages to users or organizations. In the context of data management, movement of files and 
 file transformation are two critical capabilities that can enable effective data processing and 
@@ -6079,7 +6108,7 @@ transformation, are essential for effective data management and analysis, and to
 Factory and Databricks provide organizations with the means to efficiently perform these critical 
 tasks.
   
-## API Management
+#### API Management
   API Management is one such capability that provides numerous functional benefits to 
 businesses and organizations.
   
@@ -6114,7 +6143,7 @@ over API access, and improving the scalability and performance of APIs. These fu
 make API Management a critical tool for organizations that rely on APIs to integrate their systems 
 and enable communication between applications.
   
-  Secure application configuration management
+  #### Secure application configuration management
   Application configuration management and secure storage of sensitive data are two critical 
 capabilities that can enable effective application development and management.
   
@@ -6145,7 +6174,7 @@ effective application development and management. By leveraging these capabiliti
 can reduce the risk of errors and security breaches, streamline their development and deployment 
 processes, and improve the overall reliability and security of their applications.
   
-  DNS and certificate management
+ #### DNS and certificate management
   DNS and certificate management are two critical capabilities that can enable effective 
 application development and management.
   
@@ -6181,7 +6210,7 @@ securely and reliably. These capabilities can help to reduce the risk of securit
 downtime, while improving the overall performance and scalability of applications and services.
   
   
-  IP Address spaces allocation
+  #### IP Address spaces allocation
   IP address space allocation is a crucial aspect of managing network resources, especially when it 
 comes to cloud infrastructure. Regardless of your primary cloud strategy, there will come a time 
 when you require network resources, whether it is for deploying virtual machines (VMs) in support 
@@ -6231,7 +6260,7 @@ automated process, you can ensure efficient utilization of IP address space, red
 improve scalability, and enhance overall network management capabilities.
   
   
-## Distribution of Metadata
+#### Distribution of Metadata
   The availability and accessibility of metadata are crucial for the smooth functioning of various 
 systems and processes. While it is essential to ensure practical access to metadata, it does not 
 mean that it cannot be centralized. To achieve this, I prefer implementing a golden source of 
@@ -6272,11 +6301,11 @@ binds to the Cosmos DB API. This allows us to expose the data in a highly effici
 quick and reliable access. In cases where computation is required, we create and expose an Azure 
 Function, enabling seamless integration of processing capabilities within the API infrastructure.
   
-  ## Cloud DMZ
+  #### Cloud DMZ
   
   TODO: describe the fundamental of having a DMZ in your cloud environment.
   
-  ## CMDB
+  #### CMDB
   A Configuration Management Database (CMDB) is a centralized repository that stores and 
 manages information about the various components, configurations, and relationships within an IT 
 infrastructure. It serves as a comprehensive record of the organization's hardware, software, 
@@ -6332,7 +6361,7 @@ and attributes. This ensures effective management of IT assets, facilitates deci
 supports various IT service management processes, ultimately contributing to the stability, 
 efficiency, and compliance of the organization's IT infrastructure.
   
-  ## ServiceNow
+  ##### ServiceNow
   In an enterprise setup, ServiceNow is often utilized as a powerful and comprehensive IT Service 
 Management (ITSM) platform that includes robust CMDB capabilities. ServiceNow's CMDB serves 
 as a centralized repository to store and manage information about the organization's IT assets, 
@@ -6388,7 +6417,7 @@ management. By leveraging ServiceNow CMDB, organizations can establish a sole so
 for their IT infrastructure, enabling efficient decision-making, improved operational efficiency, and 
 enhanced service quality.
   
-  ## Being creative
+  ##### Being creative
   Creating a custom version of ServiceNow would involve building a tailored ITSM solution with 
 similar functionalities. To implement such a solution in Azure, you would need to utilize various 
 Azure resources and services. Here are some key components you would require:
@@ -6438,7 +6467,12 @@ configuration of these resources would depend on your requirements, scalability 
 budget. I''s important to carefully plan and architect your solution, considering factors like security, 
 scalability, and performance to ensure the successful implementation of your custom ITSM 
 application in Azure.
-   
+
+
+
+
+
+
   ## Enterprise requirements
   
   Enterprise requirements refer to the needs and expectations of an organization, particularly in 
@@ -6464,7 +6498,7 @@ and features, in order to respond quickly to changing business needs.
 operations teams, and other stakeholders throughout the software development and delivery 
 process.
   
-  Measurable metrics
+  ### Measurable metrics
   Here are some potential measurable metrics for each of the enterprise requirements mentioned 
 earlier:
   
@@ -6510,7 +6544,7 @@ process.
 *	Time to resolve conflicts or issues that arise during the software development and delivery 
 process.
   
-  ## Architectural enterprise requirements
+  ### Architectural enterprise requirements
   Architectural enterprise requirements refer to the specific technical and design requirements 
 that an organization has for the architecture of its software. These requirements can influence the 
 overall design and structure of the software, and may include considerations such as:
@@ -6532,7 +6566,7 @@ technologies.
   Resilience: The ability of the software to recover from failures or disruptions.
   
   
-  Measurable metrics
+  #### Measurable metrics
   Here are some potential measurable metrics for each of the architectural enterprise 
 requirements mentioned earlier:
   
@@ -6580,7 +6614,7 @@ software architecture.
 *	Number of failures or disruptions that the software can withstand before requiring 
 intervention.
   
-  ## Cloud enterprise requirements
+  ### Cloud enterprise requirements
   Cloud enterprise requirements refer to the specific needs and expectations that an organization 
 has when it comes to using cloud computing services. These requirements can vary depending on 
 the specific needs and goals of the organization, but some common examples include:
@@ -6606,7 +6640,7 @@ cloud and on-premises environments.
   Interoperability: The ability of cloud-based services to work with other software systems and 
 technologies.
   
-  Measurable metrics
+  #### Measurable metrics
   Here are some potential measurable metrics for each of the cloud enterprise requirements 
 mentioned earlier:
   
@@ -6655,7 +6689,9 @@ intervention
   
   
   
-   
+  
+
+
   ## Operational Excellence
   
   It refers to the ability to run and monitor systems to deliver business value and to continually 
@@ -6802,7 +6838,7 @@ deployments include pushing out code updates to distinct sets of users at differ
 provides businesses with the opportunity to test changes in production before completely 
 deploying them.
   
-## Automation
+### Automation
   Businesses have the potential to benefit greatly from automation since it enables them to run 
 their operations in a more effective and efficient manner. Businesses are able to free up their 
 engineers to concentrate on things that bring value to the company when manual procedures are 
@@ -6877,7 +6913,7 @@ help us.
   
   
   
-## Release engineering
+### Release engineering
   Release engineering is the activity of organising and coordinating the technical components of a 
 software release, such as version control, configuration management, build automation, testing, 
 and deployment. Release engineering is also known as release engineering and software 
@@ -6948,7 +6984,7 @@ event that it is required. Utilizing Azure services that have native methods for
 previous state is one example of the many various approaches that may be used to achieve this 
 goal. There are also many more possibilities.
   
-## Application Development
+#### Application Development
   When developing an application, the primary goal is to create a high-quality result for users by 
 considering many different components of the development process. This encompasses the 
 manner in which development is carried out, the number of environments that are required, and 
@@ -6993,7 +7029,7 @@ release from continuing development.
   Tags are produced for each release to identify a particular iteration of the programme and are 
 used interchangeably.
   
-  Workflow
+  ##### Workflow
   The overall idea of a branching strategy is to create a collaborative process known to all 
 contributors, making is clear how our code, that translates into changes ends up being used in a 
 production system.
@@ -7008,7 +7044,7 @@ release lines the develop and test, and later the stagging and production.
   Our workflow needs to make sure we have a fast cycle to increase quality.
    
   
-  Authentication and Authorization
+  ##### Authentication and Authorization
   The process of determining whether a user, system, or device is who they claim to be is known 
 as authentication. It often entails the user supplying a set of credentials, such as a username and 
 password, and the system validating that the submitted credentials match those on file. For 
@@ -7044,7 +7080,7 @@ during authentication and use it to determine if the user is authorized to acces
   In the web application, use the tokens obtained during authentication to call the Web API and 
 include the appropriate authorization headers.
   
-  Enable Azure Active Directory (AAD) authentication in a .NET Core web application 
+  ###### Enable Azure Active Directory (AAD) authentication in a .NET Core web application 
   Here is an example of how to enable Azure Active Directory (AAD) authentication in a .NET Core 
 web application:
   
@@ -7094,7 +7130,7 @@ challenge scheme:
   Run the application and try to access the protected controllers or actions, the user will be 
 prompted to sign in with their Entra ID credentials.
   
-  Enable authorization with Azure Active Directory (AAD) groups in a .NET Core Web API
+  ###### Enable authorization with Azure Active Directory (AAD) groups in a .NET Core Web API
   Here is an example of how to enable authorization with Azure Active Directory (AAD) groups in a 
 .NET Core Web API solution, assuming that there are already AAD groups named "APP1_admins" 
 and "APP1_users" configured in AAD:
@@ -7233,7 +7269,7 @@ since it has the potential to increase visibility, control, and decision-making 
 application portfolio.
   
   
-## Configuration Management
+##### Configuration Management
   From a .NET Core web application point of view, configuration management refers to the 
 process of managing the settings and parameters that control the behavior and operation of the 
 application. This includes things like database connection strings, environment-specific settings, 
@@ -7297,7 +7333,7 @@ information in a secure manner and easily distribute configuration information t
    
   
   
-  Add App Configuration to a Web Application in .NET Core.
+  ###### Add App Configuration to a Web Application in .NET Core.
   Here is an example of how to use Azure App Configuration with a .NET Core web application:
   
   First, you need to install the "Azure.Extensions.Configuration.AppConfiguration" package in your 
@@ -7408,7 +7444,7 @@ to interact with the key vault, otherwise it will fail to authenticate.
 local development process. Avoiding the need to pass secrets.
   
   
-## Monitoring
+##### Monitoring
 
   When Application Insights are enabled for a .NET Core online application or web API, in-depth 
 monitoring and debugging of the application may be performed. Monitoring performance, keeping 
@@ -7421,7 +7457,7 @@ notifications may be sent through email or via the Application Insights mobile a
 an excellent tool to have in order to guarantee that your web application or API Is functioning well 
 and to rapidly detect and address any issues that may crop up.
   
-  Add App Insights to a Web Application in .NET Core
+  ###### Add App Insights to a Web Application in .NET Core
   To enable Application Insights for a .NET Core web application or web API, you will need to first 
 install the Application Insights SDK. This can be done by adding the following package reference to 
 your projects.csproj file:
@@ -7482,7 +7518,7 @@ variables.
   This is an example of how to configure Application Insights for a Java web application.
   
   
-## Continuous integration
+#### Continuous integration
   Continuous Integration (CI) is a process in software development in which programmers 
 routinely integrate their code changes into a repository. This approach is also known as "continuous 
 delivery" Using this technique, integration problems and conflicts may be identified and resolved at 
@@ -7522,7 +7558,7 @@ process, and CD takes it one step further by automatically deploying to producti
    
   
   
-## Testing
+#### Testing
   Testing is an essential part of the release engineering process since it helps to guarantee that the 
 software in question complies with the necessary quality standards and acts in the manner that was 
 anticipated. Unit testing, integration testing, and acceptance testing are some of the types of 
@@ -7542,7 +7578,7 @@ for performance and testing for security. In general, testing helps to find and 
 software before it is made available to users. This results in a product that is more stable and 
 dependable.
   
-  Performance
+  #### Performance
   Performance is an essential part of the release engineering process, considering its importance 
 in the context of operational excellence. This relates to how effectively the programme operates in 
 terms of speed, scalability, and stability in a variety of different circumstances.
@@ -7563,7 +7599,7 @@ use, and network speed, among other potential performance-related concerns.
 that the software can manage the expected load and respond swiftly to user requests. As a result, 
 this results in a better user experience and higher levels of customer satisfaction.
   
-  Deployment
+  #### Deployment
   The process of releasing software into a production environment, where it will be utilised by 
 end-users, is referred to as deployment. In the context of operational excellence, deployment is a 
 key component of the release engineering process. In order to ensure that the software is deployed 
@@ -7587,7 +7623,7 @@ put into production, this involves overseeing the testing, integration, and stag
   Good deployment techniques, in general, assist to guarantee that software is delivered without 
 causing major disruptions to service and that it satisfies the requirements of the end-users.
   
-  Rollback
+  #### Rollback
   The term "rollback" refers to the act of reverting to an earlier version of the programme 
 following a new release if problems or errors arise as a result of the new release. In the context of 
 operational excellence, the rollback procedure is an essential part of the process of release 
@@ -7633,7 +7669,7 @@ and the impact they have on the system's functionality, as well as the speed you
 promote a deployment.
   
   
-## Monitoring
+### Monitoring
   
   In order to achieve operational excellence in software development, monitoring is a vital aspect. 
 It entails keeping an eye on and keeping track of a variety of metrics, events, and actions that take 
@@ -7793,7 +7829,8 @@ to the company and make any necessary modifications in order to achieve peak per
   
   
   
-  Motivations
+### Motivations
+
 *	Build new technical capabilities.
 *	Datacentre exit
 *	Democratization and/or self-service environments
@@ -8028,7 +8065,7 @@ reduced latency, and the ability to comply with data sovereignty regulations. Al
 efforts to outcome metrics might involve tracking the number of regions served, improvements in 
 latency for specific regions, or customer feedback on localized services.
   
-  6. Customer engagement outcomes:
+Customer engagement outcomes:
   Motivation: Improve customer experience and engagement, Market disruption with new 
 products or services.
   Expected Business Outcomes: Leveraging Azure's AI and data analytics services can lead to 
@@ -8060,7 +8097,7 @@ customers. Aligning technical efforts to outcome metrics could involve measuring
 energy consumption, carbon emissions, or tracking certifications related to environmental 
 sustainability.
   
-  Business Outcome Template:
+  ### Business Outcome Template:
   
   To achieve the expected business outcomes outlined above, organizations can follow this 
 template to align technical efforts to outcome metrics:
@@ -8091,7 +8128,7 @@ organizations to refine their approach and continuously improve their cloud tran
 journey.
   
   
-## 5R assessment
+### 5R assessment
   
   Cloud rationalization, with its five Rs (Rehost, Refactor, Rearchitect, Rebuild, Replace), is a 
 crucial process for effectively planning and executing a cloud adoption strategy. It helps 
@@ -8099,7 +8136,7 @@ organizations determine the most suitable approach for migrating or modernizing 
 the cloud. Let's delve into the usefulness of cloud rationalization for cloud adoption and how to 
 discuss it with other stakeholders:
   
-  Benefits of Cloud Rationalization
+  #### Benefits of Cloud Rationalization
   
      - Cost Optimization: Cloud rationalization helps identify the best migration strategy to 
 optimize costs. It allows organizations to choose the right cloud service and resources that align 
@@ -8121,7 +8158,7 @@ business goals and objectives.
 landscape. Choosing cloud-native options or refactoring applications for cloud compatibility 
 positions them for scalability and agility in the long term.
   
-  Engaging Other Stakeholders
+  #### Engaging Other Stakeholders
   
      - IT Teams: Engage IT teams early in the process to gather insights into the current application 
 landscape. Discuss their challenges and concerns related to migration and identify opportunities for 
@@ -8150,7 +8187,7 @@ rationalization option.
 outlines the expected benefits, risks, and alignment with the company's strategic goals. Emphasize 
 the importance of rationalization in driving successful cloud adoption.
   
-  Decision-Making Process
+  #### Decision-Making Process
   
      - Carefully evaluate each application and asset to understand its unique requirements, 
 dependencies, and constraints.
@@ -8171,7 +8208,7 @@ journey progresses, ensuring that they align with evolving business needs.
 organizations can streamline their cloud adoption efforts, maximize the benefits of the cloud, and 
 set themselves up for long-term success in the ever-evolving digital landscape.
   
-## Common strategies
+#### Common strategies
   
   The five Rs of rationalization are a set of common strategies used to determine the best 
 approach for migrating or modernizing applications and workloads in the cloud. Each "R" 
@@ -8254,7 +8291,7 @@ and the addition of "Retire", there are other strategies that you should be awar
 when planning your cloud adoption journey. These additional strategies can offer more flexibility 
 and options to optimize your applications and workloads for the cloud. Let's explore some of them:
   
-## Other strategies
+#### Other strategies
   
   Repurchase
   Repurchasing involves replacing an existing application with a different commercial off-the-shelf 
@@ -8322,12 +8359,12 @@ adoption objectives.
   
   
   
-  Target workload Strategy 
+  ### Target workload Strategy 
   Indeed, the most common target patterns for application workloads in the cloud are often 
 associated with different cloud service models, namely SaaS, PaaS, IaaS, and sometimes KaaS 
 (Containers as a Service). Let us discuss each of these target patterns:
   
-  SaaS (Software as a Service)
+  #### SaaS (Software as a Service)
   In the SaaS target pattern, applications are delivered over the internet as a service, eliminating 
 the need for users to install, maintain, or manage the underlying infrastructure and software. Users 
 access the application through a web browser, and the provider manages all aspects of software 
@@ -8336,7 +8373,7 @@ maintenance, including updates and security.
   Use Case: SaaS is suitable for applications like email services, customer relationship 
 management (CRM) systems, collaboration tools, and productivity software.
   
-  PaaS (Platform as a Service)
+  #### PaaS (Platform as a Service)
   In the PaaS target pattern, cloud providers deliver a platform allowing developers to build, 
 deploy, and manage applications without the complexity of managing the underlying infrastructure. 
 PaaS provides a development and runtime environment with built-in services for application 
@@ -8346,7 +8383,7 @@ hosting, databases, and other development tools.
 infrastructure management. It is commonly used for web application development and 
 deployment.
   
-  IaaS (Infrastructure as a Service)
+  #### IaaS (Infrastructure as a Service)
   In the IaaS target pattern, cloud providers offer virtualized computing resources over the 
 internet. Users can rent virtual machines, storage, and networking components to build, manage, 
 and maintain their own applications and software.
@@ -8354,7 +8391,7 @@ and maintain their own applications and software.
   Use Case: IaaS is suitable for organizations that require full control over their infrastructure and 
 want to lift and shift existing applications to the cloud with minimal changes.
   
-  KaaS (Containers as a Service)
+  #### KaaS (Containers as a Service)
   KaaS, also known as Container as a Service (CaaS), is a target pattern that provides a managed 
 environment for deploying and orchestrating containers. It abstracts away the complexities of 
 container orchestration, making it easier for developers to deploy and manage containerized 
@@ -8371,6 +8408,13 @@ organization's overall cloud strategy. Additionally, a combination of these targ
 used to achieve a hybrid or multi-cloud environment, where different workloads are deployed on 
 different cloud service models based on their unique needs and characteristics.
   
+
+
+
+
+
+
+
 ## Strategy execution
   
   Up to this moment you have been learning multiple concepts, principles, and some organization 
@@ -8434,7 +8478,7 @@ broadcast and communicate effectively.
   At this stage, you have a cloud governance team, plus a communication team, and a project 
 manager.
   
-## Cloud Governance repository
+### Cloud Governance repository
   Create a repository called metadata, where you will start documenting and defining all master 
 references. All the metadata that we already discuss in a previous chapter, as well the latest 
 information about tenant and subscriptions. 
@@ -8455,7 +8499,7 @@ important aspect is that is very likely that you will need to create container i
 this implies that in the same subscription you have you ADO instance, add an Azure Container 
 Registry (ACR). 
 
-  Release Flow
+  #### Release Flow
   Release flow is a branching strategy that is designed to be used in a continuous delivery 
 environment. The goal of release flow is to minimize the amount of time it takes to release new 
 features to customers, while still maintaining a high degree of stability and reliability.
@@ -8495,7 +8539,7 @@ and reliability.
   Have in mind that my intension is not to detail all of branching strategies, there are other books 
 that are highly focused on these topics.
   
-  Semantic versioning
+  #### Semantic versioning
   Semantic versioning (SemVer) is a set of rules for versioning software releases. It is a widely 
 adopted standard that provides a consistent, predictable way of versioning software releases, and 
 it makes it easier for users to understand the impact of a new release.
@@ -8524,7 +8568,7 @@ that their software is properly versioned and that new releases are properly com
 users.
   
   
-  Azure Container Registry (ACR)
+  #### Azure Container Registry (ACR)
   Azure Container Registry (ACR) is a fully managed private container registry service that allows 
 you to store, manage, and deploy Docker container images. It enables you to build, store, and 
 manage container images in a centralized, private registry. You can use ACR to host your own 
@@ -8550,7 +8594,7 @@ from within your DevOps pipeline. You can use Azure DevOps to automate the build
 deployment of your container images to various environments, such as Azure Kubernetes Service 
 (AKS) or Azure Container Instances (ACI).
   
-  Package software with Azure DevOps
+  #### Package software with Azure DevOps
   There are several ways to package software with Azure DevOps, depending on the type of 
 software and the target deployment environment. Some common ways include:
   
@@ -8582,7 +8626,7 @@ packages.
 build pipeline in Azure DevOps, so that new releases are automatically built, packaged, and 
 deployed to the desired environment with minimal manual intervention.
   
-  Cloud Governance
+### Cloud Governance
   Let's start by what do we need to set under the cloud governance. We need to be able to create 
 base landing zones, this are landing zone that allows all other product in our enterprise to move to 
 cloud.
@@ -8616,7 +8660,7 @@ their specific needs and adapt their governance approach accordingly. Additional
 many other services and features to help organizations with governance, such as Azure Policy, 
 Azure Monitor, Azure Lighthouse, and Azure Blueprints.
   
-  Entra ID (Azure Active Directory)
+  #### Entra ID (Azure Active Directory)
   Entra ID (Azure Active Directory) is a cloud-based identity and access management service that 
 allows organizations to manage and secure user identities and access to applications and resources. 
 It provides features such as user and group management, multi-factor authentication, and single 
@@ -8642,27 +8686,27 @@ Azure platform, it can be integrated with other Azure services and third-party a
 fundamental service for many other Azure services that rely on it for authentication and 
 authorization.
   
-  User management
+  #### User management
   User management refers to the process of creating, modifying, and deleting user accounts, as 
 well as managing their attributes and settings. This includes tasks such as creating new user 
 accounts, assigning roles and permissions, resetting passwords, and disabling or deleting accounts. 
 In Entra ID, user management can be performed through the Azure portal, Azure PowerShell, or 
 Entra ID Graph API.
   
-  Group management
+  #### Group management
   Group management refers to the process of creating, modifying, and deleting groups, as well as 
 managing their members and settings. This includes tasks such as creating new groups, adding or 
 removing members, and assigning roles and permissions to groups. In Entra ID, group management 
 can be performed through the Azure portal, Azure PowerShell, or Entra ID Graph API.
   
-  Roles management
+  #### Roles management
   Role-based access control (RBAC) is a method of granting access to resources based on the roles 
 of users within an organization. Roles management allows administrators to create and manage 
 roles in Entra ID and assign them to users and groups. This enables administrators to control access 
 to Azure resources based on the roles of users within the organization, rather than their individual 
 identities.
   
-  Permission management
+  #### Permission management
   Permission management refers to the process of granting or denying access to specific resources 
 for specific users or groups. This includes tasks such as granting access to Azure resources, like 
 virtual machines, storage accounts, and databases, and managing access to specific features or 
@@ -8677,14 +8721,14 @@ define the level of access that the identities have, and permission management a
 level of access to the resources.
   
   
-  Entra ID Identity Protection
+  #### Entra ID Identity Protection
   Entra ID Identity Protection is a service that helps organizations to detect and prevent identity-
 based attacks. It provides features such as risk-based conditional access, Entra ID Identity 
 Protection, and Entra ID Privileged Identity Management. It uses machine learning algorithms to 
 detect and respond to suspicious activity and provides detailed reports and alerts on potential 
 threats.
   
-  Azure Management Groups
+  #### Azure Management Groups
   Azure Management Groups is a service in Azure that allows organizations to organize and 
 manage their Azure resources in a hierarchical structure. It enables administrators to define and 
 enforce policies and compliance settings at different levels of the hierarchy, such as subscription, 
@@ -8766,48 +8810,48 @@ via an APIM, that is instantiated under DevOps group.
   
   
   
-  Azure Security Center
+  #### Azure Security Center
   Azure Security Center is a service that provides centralized security management and continuous 
 security assessment for Azure resources. It provides features such as security recommendations, 
 security assessments, threat protection, and integrated security solutions. It also provides a unified 
 view of security across Azure resources, making it easy to identify and respond to security threats.
   
-  Azure Policy
+  #### Azure Policy
   Azure Policy is a service that allows organizations to set and enforce policies for Azure resources. 
 It provides a set of built-in policy definitions and allows organizations to create custom policies. It 
 also provides features such as policy compliance assessment, policy effects analysis, and policy 
 remediation.
   
-  Azure Compliance Center
+  #### Azure Compliance Center
   Azure Compliance Center is a service that provides a centralized view of compliance for Azure 
 resources. It allows organizations to assess their compliance with regulations and standards such as 
 HIPAA, SOC 2, and PCI DSS. It also provides features such as compliance assessments, compliance 
 reports, and compliance recommendations.
   
-  Azure Cost Management
+  #### Azure Cost Management
   Azure Cost Management is a service that helps organizations to monitor and optimize their 
 Azure spend. It provides features such as cost analysis, cost alerts, and cost recommendations. It 
 also provides integration with Azure Reservations, which allows organizations to purchase reserved 
 capacity for Azure resources.
   
-  Azure Reservations
+  #### Azure Reservations
   Azure Reservations is a service that allows organizations to purchase reserved capacity for Azure 
 resources at a discounted price. It provides features such as reserved instances and Azure Hybrid 
 Benefit.
   
-  Azure Key Vault
+  #### Azure Key Vault
   Azure Key Vault is a service that allows organizations to securely store and manage 
 cryptographic keys, certificates, and secrets. It provides features such as key management, 
 certificate management, and secret management. It also provides integration with Entra ID, making 
 it easy to manage access to keys and secrets.
   
-  Azure Information Protection
+  #### Azure Information Protection
   Azure Information Protection is a service that allows organizations to classify and protect 
 sensitive information. It provides features such as data discovery, data labelling, and data 
 protection. It also provides integration with Entra ID, making it easy to manage access to sensitive 
 information.
   
-  Azure Monitor
+  #### Azure Monitor
   Azure Monitor is a service that provides monitoring and diagnostics for Azure resources. It 
 provides features such as log analytics, metrics, and alerts. It also provides integration with other 
 Azure services, making it easy to monitor the health and performance of Azure resources.
@@ -8850,7 +8894,7 @@ Azure Monitor, and Azure Automation, to get a more comprehensive view of your re
 automate the response to issues.
   
   
-## Policy, Audit and Actuals
+#### Policy, Audit and Actuals
   When referring to rules and settings that are utilised to control resources contained inside an 
 Azure subscription or resource group, the term "policies" is used in Azure. They may be used to 
 manage resource allocation, assure security, and enforce compliance with regulations. For instance, 
@@ -8886,7 +8930,7 @@ compliance.
   Auditing rules must be part of the overall Ansible Collections. 
   
   
-## Secret Management
+### Secret Management
   As a senior cloud architect, I understand the criticality of secret management in today's highly 
 interconnected and data-driven environment. Azure provides several robust options for 
 implementing effective secret management strategies, with Azure Key Vaults and RBAC models 
@@ -8953,12 +8997,12 @@ establish a secure and scalable secret management framework that safeguards sens
 information, meets regulatory requirements, and reduces the risk of unauthorized access or data 
 breaches.
   
-  Customer Managed Keys (CMK) vs Platform Managed Keys (PMKs)
+  #### Customer Managed Keys (CMK) vs Platform Managed Keys (PMKs)
   Customer Managed Keys (CMK) and Platform Managed Keys (PMKs) are two options for key 
 management in Azure Key Vault. Each approach offers distinct advantages and considerations, and 
 the choice between them depends on specific requirements and security needs.
   
-## Customer Managed Keys (CMK):
+##### Customer Managed Keys (CMK):
   Control and Ownership: With CMKs, the customer has complete control and ownership over the 
 encryption keys used to protect their data. The keys are generated and managed by the customer, 
 providing a higher level of assurance and control over key management processes.
@@ -8975,7 +9019,7 @@ implement key rotation and manage the entire key lifecycle according to their sp
 requirements and policies. This allows for greater customization and alignment with organizational 
 processes.
   
-  Platform Managed Keys (PMKs):
+  ##### Platform Managed Keys (PMKs):
   Simplified Key Management: PMKs are generated and managed by Azure Key Vault, relieving 
 customers of the burden of key generation and management tasks. This simplifies key management 
 operations, especially for organizations that do not have specialized key management expertise or 
@@ -9014,7 +9058,7 @@ utilize a hybrid approach if needed. For example, an organization might use CMKs
 sensitive data while leveraging PMKs for less sensitive resources, striking a balance between 
 control, convenience, and scalability.
   
-  Recommendation
+  ##### Recommendation
   In confidential setups, such as in the finance industry, Platform Managed Keys (PMKs) can be the 
 recommended approach for key management in Azure Key Vault. The following points outline the 
 reasons for favouring PMKs in such scenarios:
@@ -9067,7 +9111,7 @@ utilizing PMKs, finance organizations can enhance their data security posture, m
 requirements, and focus on their core financial operations without compromising on the protection 
 of sensitive information.
   
-## API Management
+### API Management
   Azure API Management is a valuable tool, addressing various challenges and enabling crucial 
 scenarios. We must consider utilizing API management:
   
@@ -9176,7 +9220,7 @@ optimizes API management, promotes agility, and ensures a scalable and efficient
 ultimately driving business growth, fostering partnerships, and facilitating digital transformation 
 initiatives.
   
-## API management strategy
+#### API management strategy
   An API management strategy, also known as an API strategy, refers to a comprehensive plan or 
 approach adopted by an IT enterprise organization to effectively manage and leverage APIs 
 (Application Programming Interfaces) for business objectives. It involves defining guidelines, 
@@ -9406,7 +9450,7 @@ resilient and scalable digital ecosystems, enabling organizations to adapt to ch
 dynamics, unlock new opportunities, and stay ahead in a rapidly evolving technological landscape.
   
   
-## API Strategy topics
+#### API Strategy topics
   API Strategy: Clearly Defined API Strategy from a Business Aspiration Perspective
   
   Objective: The objective of this API strategy is to align APIs with the business aspirations of the 
@@ -10197,17 +10241,17 @@ policies and guidelines to adapt to evolving business needs and industry standar
 collaboration between API publishers, consumers, and relevant stakeholders to promote 
 transparency, knowledge sharing, and continuous improvement.
   
-  Ideas
+  #### Ideas
   
 *	api.deixei.com
 *	iapi.deixei.com
-o	lob1.iapi.deixei.com
-o	lob2.iapi.deixei.com
-o	lob3.iapi.deixei.com
+  o	lob1.iapi.deixei.com
+  o	lob2.iapi.deixei.com
+  o	lob3.iapi.deixei.com
   
   
   
-## Data Orchestrator
+### Data Orchestrator
   In an enterprise, the availability of data orchestration capabilities is essential to enable processes 
 that are both efficient and effective in terms of data management and processing. 
   
@@ -10308,7 +10352,7 @@ utilising Azure Data Factory in conjunction with a centralised data lake and Azu
 enables data-driven decision-making and insights by providing a solution that is centralised, 
 scalable, and efficient for handling and processing data across a variety of sources and goals.
   
-## Lakehouse
+#### Lakehouse
   A lakehouse is a modern data architecture that combines the best features of a data lake and a 
 data warehouse. It aims to bridge the gap between the flexibility of a data lake and the reliability 
 and performance of a data warehouse. The concept of a lakehouse has gained popularity with the 
@@ -10353,7 +10397,7 @@ advantages of a data lake, such as flexibility, agility, and handling diverse da
 more unified and versatile platform for managing and processing data, allowing organizations to 
 derive insights and make data-driven decisions effectively.
   
-## Databricks 
+##### Databricks 
   Databricks is a cloud-based data engineering and analytics platform that provides a collaborative 
 environment for processing and analysing big data. It integrates well with Apache Spark, making it a 
 popular choice for implementing lakehouse architectures.
@@ -10385,7 +10429,7 @@ analyse, and manage data within your lakehouse architecture effectively. Databri
 powerful platform for data engineering and analytics, making it a valuable addition to your 
 lakehouse ecosystem.
   
-  Identity Management
+ ### Identity Management
   TODO
   Isolation of access to AAD features via API's that facilitate automation process. Main example is 
 the registration of an application in AAD.
@@ -10393,7 +10437,7 @@ the registration of an application in AAD.
   
   
   
-## Automation Factory
+### Automation Factory
   An automation factory is a collection of tools and procedures that, when used together, allow 
 businesses to automate the process of deploying, growing, and managing the applications that they 
 run on cloud platforms. An automation factory's primary objective is to furnish a method that is 
@@ -10432,7 +10476,7 @@ is substantially simplified. As a result, businesses can more rapidly and simply
 benefits of cloud computing. Adjusting the emphasis so that it is placed on the modification of the 
 application rather than the method of product distribution.
   
-  Handling change
+  #### Handling change
   To achieve a continuous flow of software delivery, it is essential to minimize the risk of changes 
 causing disruptions or failures to our customers. This requires a robust and well-defined process for 
 managing code changes, from the initial commit to the deployment of new features and updates.
@@ -10457,7 +10501,7 @@ ensure that the code is functioning as expected and that any issues are identifi
 Additionally, it is important to include dedicated gates, such as security and compliance checks, to 
 validate that the code adheres to the company's policies and standards.
   
-  Change risk index
+  #### Change risk index
   At the present, what we do not have access to is a method for calculating the risk of a change, 
 which will be referred to as the "change risk index."
   The "Change Risk Index" (CRI) is a statistic that is used to evaluate the risk of a code change 
@@ -10518,24 +10562,27 @@ services. This guarantees that the modification will be in accordance with the r
 company's well as the regulatory standards.
    
   
-  Use of ansible and ansible galaxy
+  #### Use of ansible and ansible galaxy
   Collection namespace per cloud provider. 
       Deixei.common_core
       Deixei.azure.core
       Deixei.gcp_core
       Deixei.aws_core
-   # Create the Deixei.common_core collection
-   ansible-galaxy collection init Deixei.common_core
-   
-   # Create the Deixei.azure.core collection, which depends on Deixei.common_core
-   ansible-galaxy collection init Deixei.azure.core --dependencies Deixei.common_core
-   
-   # Create the Deixei.gcp_core collection, which depends on Deixei.common_core
-   ansible-galaxy collection init Deixei.gcp_core --dependencies Deixei.common_core
-   
-   # Create the Deixei.aws_core collection, which depends on Deixei.common_core
-   ansible-galaxy collection init Deixei.aws_core --dependencies Deixei.common_core
-      
+
+```bash
+# Create the Deixei.common_core collection
+ansible-galaxy collection init Deixei.common_core
+
+# Create the Deixei.azure.core collection, which depends on Deixei.common_core
+ansible-galaxy collection init Deixei.azure.core --dependencies Deixei.common_core
+
+# Create the Deixei.gcp_core collection, which depends on Deixei.common_core
+ansible-galaxy collection init Deixei.gcp_core --dependencies Deixei.common_core
+
+# Create the Deixei.aws_core collection, which depends on Deixei.common_core
+ansible-galaxy collection init Deixei.aws_core --dependencies Deixei.common_core
+```
+
   Each of the above commands will create a new directory for the collection, with the appropriate 
 namespace in the name, and with the standard collection structure of directories. The --
 dependencies option is used to specify that the collection depends on another collection, in this 
@@ -10558,6 +10605,7 @@ used to create and manage Azure DevOps projects, repositories, and more.
   
   Here is an example of how to use the Azure DevOps CLI to create an Azure DevOps project and 
 then add a repository:
+```bash
    # Install Azure DevOps CLI
    az extension add --name azure-devops
    
@@ -10570,7 +10618,7 @@ then add a repository:
    
    # Add a new repository to the project
    az repos create --name "My Repository" --project "My Project" --output json
-  
+  ```
   In this example, the az extension add command is used to install the Azure DevOps CLI 
 extension. The az login command is used to authenticate with Azure DevOps. The az devops project 
 create command is used to create a new Azure DevOps project with the name "My Project" in the 
@@ -10590,14 +10638,14 @@ creating, modifying, or deleting the resource. In contrast, a cloud resource act
 changes the behaviour or configuration of the resource but does not change the resource itself. 
 Both are translated into ansible roles. 
   
-  Ansible Collection
+  #### Ansible Collection
   The material created using Ansible may be packaged and distributed using something called an 
 Ansible Collection. They provide users with a standardised and organised method for sharing and 
 reusing Ansible information like as modules, plugins, and roles throughout the Ansible ecosystem. 
 The ansible-galaxy command-line tool is used in the installation process, and collections are sent to 
 users in the form of tar or zip files.
   
-  Ansible roles
+  #### Ansible roles
   Inside a Collection, Ansible materials may be organised and shared via the utilisation of Roles. 
 Users are able to quickly incorporate and share similar actions, files, and variables across numerous 
 playbooks by making use of Roles, which are meant to be reusable and allow for this. The many 
@@ -10610,7 +10658,7 @@ Roles may depend on both other Roles and Collections. Users are able to quickly 
 common functionality across numerous playbooks when they make use of Ansible Roles. This 
 makes it much simpler for users to manage and maintain Ansible.
   
-  Ansible modules
+  #### Ansible modules
   Ansible modules are short scripts that run independently of Ansible and are used by Ansible to 
 carry out particular tasks on managed hosts. They are the fundamental components of Ansible 
 playbooks and enable a broad range of functionality, including the installation of packages, 
@@ -10632,6 +10680,8 @@ modules in a way that is reusable and organised. In order to structure and organ
 and activities in a way that is reusable, the usage of roles is essential. Modules are crucial because 
 they offer the fundamental building blocks for automating tasks, and roles are essential for this.
   Here is an example of the scaffolding code for an Ansible module:
+  
+  ```python
    #!/usr/bin/python
    
    from ansible.module_utils.basic import AnsibleModule
@@ -10663,39 +10713,42 @@ they offer the fundamental building blocks for automating tasks, and roles are e
    
    if __name__ == '__main__':
        main()
-  
-  Ansible folder structure
+  ```
+
+  #### Ansible folder structure
   This is what your folder structure will look like:
+
+  ```bash
    my_collection/
    +-- galaxy.yml
    +-- plugins/
-   �   +-- modules/
-   �   �   +-- my_module1.py
-   �   �   +-- my_module2.py
-   �   �   +-- ...
-   �   +-- ...
+       +-- modules/
+           +-- my_module1.py
+           +-- my_module2.py
+           +-- ...
+       +-- ...
    +-- roles/
-   �   +-- my_role1/
-   �   �   +-- defaults/
-   �   �   +-- files/
-   �   �   +-- handlers/
-   �   �   +-- meta/
-   �   �   +-- tasks/
-   �   �   +-- templates/
-   �   �   +-- vars/
-   �   +-- my_role2/
-   �   �   +-- ...
-   �   +-- ...
+       +-- my_role1/
+           +-- defaults/
+           +-- files/
+           +-- handlers/
+           +-- meta/
+           +-- tasks/
+           +-- templates/
+           +-- vars/
+       +-- my_role2/
+           +-- ...
+       +-- ...
    +-- tests/
        +-- molecule/
-       �   +-- default/
-       �   �   +-- molecule.yml
-       �   �   +-- prepare.yml
-       �   �   +-- cleanup.yml
-       �   �   +-- ...
-       �   +-- ...
+           +-- default/
+               +-- molecule.yml
+               +-- prepare.yml
+               +-- cleanup.yml
+               +-- ...
+           +-- ...
        +-- ...
-  
+  ```
   The top-level directory contains a galaxy.yml file, which is used to provide metadata about the 
 collection, including its name, version, and dependencies.
   
@@ -10709,7 +10762,7 @@ role directory follows the standard Ansible role layout, with subdirectories for
   
   
   
-## Ansible Telemetry
+#### Ansible Telemetry
   Because it enables you to collect data and get insights into how you use your Ansible playbooks 
 and roles, telemetry is an essential component of the Ansible playbook framework for the purpose 
 of provisioning Azure infrastructure.
@@ -10770,6 +10823,8 @@ example appinsights.py.
   
   Import the necessary modules, such as "ansible.plugins.telemetry", "applicationinsights" and 
 "applicationinsights.channel".
+
+```python
    from ansible.plugins.telemetry import TelemetryBase
    from applicationinsights import TelemetryClient, TelemetryConfiguration
    from applicationinsights.channel import AsynchronousSender
@@ -10793,20 +10848,23 @@ default config and the class created before.
            default_config={},
            telemetry_class=AppInsightsTelemetry
        )
-  
+  ```
   In the galaxy.yml file, add the plugin to the list of plugins.
    plugins:
      - name: my_collection.plugins.telemetry.appinsights
   To use the plugin, you need to add the following line to your ansible.cfg file or pass in the --
 telemetry flag to the ansible-playbook command.
+
+```bash
    [telemetry]
    module = appinsights
+```   
   You can also configure the plugin by passing the AppInsights instrumentation key.
   
   
   
   
-## Cloud resource operation
+#### Cloud resource operation
   The process of creating, modifying, or deleting a cloud resource is referred to as a "cloud 
 resource operation," and the term can be used interchangeably. The creation of a new virtual 
 machine, the deletion of an existing storage account, and the modification of the configuration of a 
@@ -10816,7 +10874,7 @@ or a user interface (UI), both of which are supplied by the cloud provider. They
 to have a direct influence on the functioning and availability of the cloud resources.
   Verbs: create, delete, update
   
-  Cloud resource action
+  #### Cloud resource action
   An action that is performed on a particular cloud resource is referred to as a "cloud resource 
 action." For example, adding a secret to a key vault or setting a new firewall rule are both examples 
 of cloud resource actions. These activities are often carried out by utilising an API or a portal that is 
@@ -10824,7 +10882,7 @@ given by the cloud provider. Although these actions do not affect the resource i
 the behaviour of the resource or its configuration. 
   Verbs: add, remove, set, get
   
-  Testing Ansible with Molecule
+  #### Testing Ansible with Molecule
   The development and testing of Ansible roles can be facilitated with the help of the open-source 
 tool known as Molecule. It offers a means through which Ansible roles may be tested in a local 
 environment and helps to ensure that roles are functioning as intended prior to their deployment in 
@@ -10849,7 +10907,7 @@ deployed to production. This helps to ensure that roles are performing as planne
 the risk of bringing problems or mistakes into production settings. Specifically, this helps to verify 
 that roles are working as expected.
   
-  Python
+  #### Python
   As you have already realized, there is an intensive use of Python, this leads to the next 
 organization level, the reusability of Python in your organization.
   One way to start to organize your Python modules in Azure DevOps is to use a mono-repo 
@@ -10859,7 +10917,7 @@ your solutions, such as your Ansible roles and your CLI tool.
   To set up a mono-repo structure, you could create a top-level directory called "python" in your 
 Azure DevOps repository, and then create subdirectories for each of your modules within it. For 
 example:
-  
+  ```
    python/
        module1/
            __init__.py
@@ -10867,6 +10925,7 @@ example:
        module2/
            __init__.py
            module2.py
+```           
   You could then use a package manager like pip to manage dependencies and easily install and 
 distribute the modules to other parts of your application.
   Use Azure DevOps Pipeline's built-in task for Python, you can use it to build, test and deploy your 
@@ -10902,10 +10961,11 @@ the latest versions of the libraries they depend on.
   
   
   
-  Specialized docker image for development
+  #### Specialized docker image for development
   Here is an example of a Dockerfile that can be used to create a container image for developing 
 Ansible roles, modules, and testing them with Molecule in WSL2. This example also includes the 
 dependency on Azure CLI.
+```bash
    FROM ubuntu:20.04
    
    # Install Ansible, Molecule and Azure CLI
@@ -10929,7 +10989,7 @@ $(lsb_release -cs) stable"
    
    # Run Ansible and Molecule commands
    CMD ["/bin/bash"]
-  
+  ```
   In this example, the Dockerfile starts from the ubuntu:20.04 image, which is a popular Linux 
 distribution for development and testing. The RUN commands are used to install Ansible, Molecule, 
 and Azure CLI. The pip3 install molecule command installs the latest version of Molecule. The 
@@ -10944,6 +11004,7 @@ command docker build -t <image-name> . to build the image.
   Here is an example of how to use PowerShell to create a container image for developing Ansible 
 roles, modules, and testing them with Molecule in Windows 11 using Rancher. This example also 
 includes the dependency on Azure CLI.
+```bash
    # Build the container image
    docker build -t ansible-molecule-azure -f Dockerfile .
    
@@ -10959,7 +11020,7 @@ azure.tar
    
    # Start a container from the imported image
    rancher container creates ansible-molecule-azure
-  
+  ```
   In this example, the docker build command is used to build the container image using the 
 Dockerfile and the -t option to tag the image with the name ansible-molecule-azure. The docker 
 save command exports the container image to a tar file named ansible-molecule-azure.tar. The Set-
@@ -10977,7 +11038,7 @@ same directory from where you are running the commands.
   Once the container is running, you can use it to develop ansible roles, modules, and test them 
 with Molecule in Windows 11. The az cli is also available for you to use.
   
-## Container Image Management
+#### Container Image Management
   Maintaining dependencies with the most recent versions is a critical step in any software 
 development process since doing so lowers the number of known vulnerabilities. This technique 
 needs to be carried on, and it must include the utilisation of container images as well as an ongoing 
@@ -11000,6 +11061,7 @@ updating these base images to limit the number of known vulnerabilities.
    
   
   Here is an example of a Dockerfile that creates a minimal, secure Ubuntu-based base image:
+  ```bash
    FROM ubuntu:latest
    
    # Set the working directory
@@ -11024,7 +11086,7 @@ updating these base images to limit the number of known vulnerabilities.
    
    # Set the default command to run when starting the container
    CMD ["bash"]
-  
+  ```
   This Dockerfile starts from the latest version of the official Ubuntu image, sets the working 
 directory, and then updates and installs only necessary packages like openssh-server, nano, curl, 
 and ca-certificates. Then it removes unnecessary files and packages and creates a non-root user 
@@ -11045,6 +11107,7 @@ Container Instances or Azure Kubernetes Service.
 version you pushed.
   Here is an example of a Dockerfile that builds on top of the "deixei_golden_ubuntu" base image 
 and adds Python 3.9:
+```bash
    FROM deixei_registry.azurecr.io/deixei_golden_ubuntu:latest
    
    # Install Python 3.9
@@ -11055,6 +11118,7 @@ and adds Python 3.9:
    
    # Set the default command to run when starting the container
    CMD ["python3.9"]
+```   
   This Dockerfile starts from the "deixei_golden_ubuntu" base image and then installs Python 3.9 
 and its development package and python3-pip . It also sets the default command to run when 
 starting the container to python3.9.
@@ -11068,7 +11132,7 @@ starting the container to python3.9.
   Note that this image is built on top of the deixei_golden_ubuntu, so it will have the same 
 security and minimal configuration, but with the added python3.9 package.
   
-  Vulnerability scanner and Webhooks
+  ##### Vulnerability scanner and Webhooks
   The Azure Container Registry (ACR) has a built-in vulnerability scanner that is referred to as the 
 ACR vulnerability scanner. This scanner may be used to discover known vulnerabilities that may 
 exist in the container images that you utilise. The following is a list of the steps to set it up:
@@ -11126,7 +11190,7 @@ pipeline, which will then automatically rebuild the image and submit it to the c
 submitted. This can be accomplished in the same way as described before.
   
   
-## Naming conventions
+#### Naming conventions
   Because it helps to maintain consistency and organisation in the naming of resources and 
 objects, having a solid naming convention is vital in the context of constructing infrastructure as 
 code (IaC) using Ansible roles. This is since it is important. This can make the code easier to 
@@ -11136,7 +11200,7 @@ aid in compliance with Azure naming standards, which can improve the overall gov
 management of Azure resources. This can be accomplished by improving the overall governance 
 and management of Azure resources.
   
-  Ansible roles
+  ##### Ansible roles
   An effective method for organising and structuring Ansible roles is to make use of a naming 
 convention such as "verb" "resource type" "iteration." The action that is being performed on the 
 resource, such as "create" or "delete," is represented by the verb that is part of the naming 
@@ -11158,7 +11222,7 @@ it possible to easily organise the many Ansible roles. For instance, it is simpl
 that are connected to storage accounts or virtual machines, as well as all roles that are connected 
 to creation or delete actions; this makes it simple to handle various architectural shifts.
   
-  Ansible actions
+  ##### Ansible actions
   When the action that is conducted on a resource influences the behaviour of the resource, it is 
 helpful to organise and arrange Ansible roles by making use of a naming convention such as "verb" 
 followed by "resource type" and "area of change" followed by "iteration."
@@ -11205,7 +11269,7 @@ readability, and maintainability of the code. Additionally, it can assist in the
 management of Azure resources by tracking the evolution of the architecture of a resource over 
 time.
   
-  Iteration
+  ##### Iteration
   The idea of iteration in operations is one of the most important factors to consider when 
 managing ongoing architectural modifications to a software product that is provided in Azure. 
 Organizations can better control the pace of change or velocity of their software product if they use 
@@ -11235,7 +11299,7 @@ manage their own landing zones over time, by using iteration numbers in the nami
 verb>resource type>iteration> to track the evolution of the architecture of resources over time. 
 This is accomplished by tracking the progression of the architecture of resources over time.
   
-  Azure resources
+  ##### Azure resources
   When naming Azure resources, one of the best practises is to use a naming convention such as 
 "name"-"stage"-"region"-"iteration," or in certain circumstances "name"-"sub name"-"stage"-
 "region"-"iteration." For example, "name"-"stage"-"region"-"iteration" This naming policy helps to 
@@ -11273,7 +11337,7 @@ maintainability, and it can also help with the governance and administration of 
 Additionally, it makes it simple to monitor the evolution of the resource over time and can facilitate 
 the administration of various variants of the same resource.
   
-  Tagging Azure resources
+  ##### Tagging Azure resources
   When it comes to tagging Azure resources, the best practise is to make use of a consistent and 
 well-defined collection of tags that are pertinent to the requirements of the company. For the 
 purposes of management and reporting, these tags can be utilised to assist in organising, 
@@ -11349,7 +11413,7 @@ include:
 *	Compliance Management Process
 *	Disaster Recovery Process
   
-  Crisis management process
+  ### Crisis management process
   The "Crisis Management Process" is a comprehensive and structured approach employed by 
 organizations to effectively respond to and mitigate the impact of unexpected and disruptive 
 events that have the potential to harm the organization's reputation, operations, or stakeholders. 
@@ -11418,7 +11482,7 @@ strategy.
   
   Here's a comparison between a contingency plan and an incident management plan:
   
-  Contingency Plan
+  #### Contingency Plan
   
   Preventive and Proactive: A contingency plan is developed in advance of a crisis or emergency 
 situation. It focuses on identifying potential risks and outlining measures to prevent or mitigate 
@@ -11439,7 +11503,7 @@ outline steps for recovery and business continuity.
   Regular Review and Update: Contingency plans are periodically reviewed and updated to ensure 
 they remain relevant and effective in addressing evolving risks and vulnerabilities.
   
-  Incident Management Plan
+  #### Incident Management Plan
   
   Reactive: An incident management plan is activated in response to an actual crisis or emergency. 
 It is a tactical plan designed to guide immediate actions when an incident occurs.
@@ -11468,7 +11532,7 @@ actions in response to a specific crisis as it unfolds. Both plans are critical 
 comprehensive crisis management strategy, with the contingency plan serving as the overarching 
 framework and the incident management plan addressing the specifics of individual incidents.
   
-  Distinction between an incident and a crisis
+  #### Distinction between an incident and a crisis
   The distinction between an incident and a crisis can be somewhat subjective and context-
 dependent, but generally, an incident becomes a crisis when it escalates in severity and has the 
 potential to significantly disrupt or harm an organization, its stakeholders, or its operations. Here 
@@ -11516,7 +11580,7 @@ response plans to ensure they are prepared to handle incidents as they evolve an
 transition into crises.
   
   
-  Change Management Process
+  ### Change Management Process
   The Change Management Process is a process that defines the steps necessary to request, 
 approve, and implement changes in the Azure environment. This process involves assessing the 
 impact of changes, testing them before implementation, and tracking them to ensure that they are 
@@ -11596,7 +11660,7 @@ production, it is to minimize the risk of a change making an undesired issue.
   
   
   
-## Incident Management Process
+### Incident Management Process
   The Incident Management Process is a process that defines the steps necessary to report, 
 investigate, and resolve incidents in the Azure environment. This process involves identifying the 
 root cause of incidents, prioritizing them based on their impact and urgency, and communicating 
@@ -11633,7 +11697,7 @@ using Azure Monitor to detect and alert on incidents, or by integrating incident
 like ServiceNow with Azure DevOps. This can help to improve incident response times and reduce 
 the risk of human error.
   
-  Configuration Management Process
+  ### Configuration Management Process
   The Configuration Management Process is a process that defines the steps necessary to manage 
 the configuration of IT resources in the Azure environment. This process involves identifying and 
 tracking changes to configuration items, ensuring that changes are properly authorized and tested, 
@@ -11674,7 +11738,7 @@ which occurs when the actual configuration of an IT resource deviates from the i
 configuration. This can be done through regular comparisons of the actual configuration 
 to the baseline configuration and implementing automated processes to correct drift.
   
-## Security Management Process
+### Security Management Process
   The Security Management Process is a process that defines the steps necessary to manage the 
 security of the Azure environment. This process involves identifying and assessing security risks, 
 implementing security controls to mitigate risks, monitoring the environment for security breaches, 
@@ -11707,7 +11771,7 @@ and update the security controls and procedures, based on changes in the Azure e
 new security threats. This can include conducting regular vulnerability assessments, penetration 
 testing, and security audits.
   
-  Compliance Management Process
+  ### Compliance Management Process
   The Compliance Management Process is a process that defines the steps necessary to ensure 
 that the Azure environment complies with relevant laws, regulations, and industry standards. This 
 process involves identifying and assessing compliance requirements, implementing controls to 
@@ -11739,7 +11803,7 @@ implementations, monitoring, and reporting should be documented thoroughly.
 Documentation should provide an audit trail to demonstrate compliance with relevant 
 requirements.
   
-## Disaster Recovery Process 
+### Disaster Recovery Process 
   This process is designed to ensure that critical IT resources are protected and that operations 
 can continue in the event of a disaster. 
   Here are the details of this process:
@@ -11768,7 +11832,7 @@ resources, creating backups of critical data, developing a disaster recovery pla
 and updating the plan regularly. The implementation of a disaster recovery process can be done 
 using various Azure tools and solutions.
   
-  Recovery Time O's
+  #### Recovery Time O's
   Just what is an RTO? "Recovery Time Objective" is what "RTO" stands for in the industry. It is a 
 term that is used in business continuity planning and disaster recovery planning to refer to the 
 maximum amount of time that a company or organisation can allow a particular process or system 
@@ -11824,9 +11888,9 @@ targets based on the requirements and demands that are peculiar to them.
   
   
   
-## Other important process
+### Other important process
   
-### Onboarding Product Teams or Members
+#### Onboarding Product Teams or Members
   The process of onboarding product teams or members involves integrating new individuals or 
 entire teams into the organization's existing structure smoothly and efficiently. This onboarding 
 process is designed to ensure that new members understand their roles, responsibilities, and the 
@@ -11849,7 +11913,7 @@ valued, and empowered. This may involve assigning a mentor or a buddy who can gu
 support them during their initial days, facilitating introductions to other team members, and 
 encouraging participation in team meetings and discussions.
   
-  Onboarding Azure Tenants
+  #### Onboarding Azure Tenants
   Onboarding Azure tenants refers to the process of setting up and configuring new Azure tenants 
 within the Azure cloud platform. An Azure tenant serves as a dedicated and isolated instance of 
 Azure services for an organization. It provides the organizational boundaries for managing and 
@@ -11873,7 +11937,7 @@ organizations to allocate resources and manage costs effectively. Subscriptions 
 with specific projects, departments, or teams, providing fine-grained control over resource 
 allocation and access management.
   
-  Onboarding Azure Subscriptions
+  #### Onboarding Azure Subscriptions
   Onboarding Azure subscriptions refers to the process of provisioning and configuring new Azure 
 subscriptions within an existing Azure tenant. Azure subscriptions act as containers for organizing 
 and managing Azure resources, including virtual machines, databases, storage accounts, and more.
@@ -11893,7 +11957,7 @@ apply them to the subscription. This includes defining tagging standards, cost m
 and compliance requirements. Additionally, organizations may configure monitoring and alerting 
 mechanisms to ensure visibility into resource usage and performance.
   
-  Onboarding Network Zones and Sections
+ ####  Onboarding Network Zones and Sections
   When onboarding network zones and sections, organizations are establishing the logical and 
 physical boundaries within their network infrastructure to ensure secure and efficient 
 communication between different components.
@@ -11913,7 +11977,7 @@ control over network traffic and performance. This may involve implementing netw
 systems, configuring traffic analysis tools, and setting up alerts and notifications for network-
 related events.
   
-  Onboarding Azure DevOps Projects
+  #### Onboarding Azure DevOps Projects
   Onboarding Azure DevOps Projects refers to the process of setting up and configuring new 
 projects within Azure DevOps, a comprehensive set of development tools provided by Microsoft. 
 Azure DevOps supports the entire development lifecycle, including project planning, source code 
@@ -11939,7 +12003,7 @@ Azure DevOps. This involves defining build definitions to automate the build pro
 tests, and generating artifacts. Release pipelines are set up to automate the deployment of the 
 application or software to various environments, such as development, testing, and production.
   
-  Onboarding Code Repositories to Azure DevOps Projects
+  #### Onboarding Code Repositories to Azure DevOps Projects
   Onboarding code repositories to Azure DevOps Projects involves migrating or setting up source 
 code repositories within Azure DevOps for version control and collaboration purposes.
   
@@ -11959,7 +12023,7 @@ workflows, integrating automated testing tools, and establishing code quality ga
 integration and automated build processes can be set up to ensure that the code is built, tested, 
 and validated regularly.
   
-  Onboarding SRE Teams or Members
+  #### Onboarding SRE Teams or Members
   Onboarding SRE (Site Reliability Engineering) teams or members involves integrating individuals 
 or teams responsible for ensuring the reliability, scalability, and performance of the organization's 
 technology systems and services.
@@ -11985,7 +12049,7 @@ guide and support new team members. Mentors help them understand the organizatio
 practices, processes, and tooling, as well as foster a collaborative and learning-oriented culture 
 within the SRE team.
   
-  Onboarding Operations Teams or Members
+  #### Onboarding Operations Teams or Members
   Onboarding operations teams or members involves integrating individuals or teams responsible 
 for managing and maintaining the organization's IT infrastructure and systems. These teams ensure 
 the smooth operation of hardware, software, and network components, and often collaborate 
@@ -12011,7 +12075,7 @@ opportunities for new operations team members. This allows them to gain practica
 assisting with routine maintenance tasks, troubleshooting issues, and participating in system 
 upgrades or migrations.
   
-  Onboarding Development Teams or Members
+  #### Onboarding Development Teams or Members
   Onboarding development teams or members involves integrating individuals or teams 
 responsible for creating and maintaining software applications and systems. These teams 
 collaborate closely with other stakeholders, such as product owners, designers, and testers, to 
@@ -12038,7 +12102,7 @@ to support new team members. Mentors provide guidance on the organization's spec
 development practices, help troubleshoot issues, and foster a collaborative and learning-oriented 
 culture within the development team.
   
-  Onboarding Security Teams or Members
+  #### Onboarding Security Teams or Members
   Onboarding security teams or members involves integrating individuals or teams responsible for 
 safeguarding the organization's systems, data, and assets from potential threats and vulnerabilities. 
 These teams play a crucial role in establishing and maintaining the organization's security posture.
@@ -12063,7 +12127,7 @@ professionals to guide new team members. Mentors help them understand the organi
 specific security practices, assist in conducting security risk assessments, and support the 
 implementation of security controls and measures.
   
-  Onboarding Network Teams or Members
+  #### Onboarding Network Teams or Members
   Onboarding network teams or members involves integrating individuals or teams responsible for 
 designing, implementing, and managing the organization's network infrastructure. These teams 
 ensure reliable connectivity, efficient data transfer, and secure communication between systems 
@@ -12089,7 +12153,7 @@ opportunities for new network team members. This allows them to gain practical e
 assisting with network configuration tasks, network performance analysis, and network 
 troubleshooting.
   
-  Offboarding
+  #### Offboarding
   Offboarding refers to the process of transitioning individuals or teams out of the organization, 
 either due to employment termination, project completion, or role changes. The offboarding 
 process aims to ensure a smooth transition while protecting the organization's assets, data, and 
@@ -12107,7 +12171,7 @@ critical information is preserved for future reference and succession planning.
 areas for improvement. These insights can help the organization enhance its onboarding and 
 retention strategies and address any concerns or issues raised by departing employees.
   
-  Billing and Cost Management
+  #### Billing and Cost Management
   Billing and cost management processes involve tracking, managing, and optimizing the expenses 
 associated with IT services, cloud resources, and other operational costs.
   
@@ -12129,7 +12193,7 @@ costs to different departments, projects, or business units. This allows for tra
 accountability in cost management and helps stakeholders understand and control their respective 
 expenses.
   
-  Security Management: Accounts, Permissions, Join-Mover-Leaver, Teams, Roles
+  #### Security Management: Accounts, Permissions, Join-Mover-Leaver, Teams, Roles
   Security management processes involve managing user accounts, permissions, and access 
 controls to ensure that the right people have the appropriate level of access to IT systems and 
 resources.
@@ -12155,7 +12219,7 @@ policies.
 monitor user activity, and enforce security policies. These teams review access rights periodically, 
 perform access audits, and investigate and address any security incidents or violations.
   
-  Curation of Architectural Patterns
+  #### Curation of Architectural Patterns
   Curation of architectural patterns involves managing and maintaining a set of predefined design 
 patterns or templates that guide the development and implementation of software systems and 
 infrastructure components.
@@ -12179,7 +12243,7 @@ based on feedback, lessons learned, and emerging technologies. Organizations pro
 collaboration and knowledge sharing among architects and development teams to contribute to 
 the evolution and improvement of the architectural patterns.
   
-  Curation of Landing Zones
+  #### Curation of Landing Zones
   Curation of landing zones involves defining and maintaining standardized environments within a 
 cloud infrastructure, such as Azure, that serve as starting points for deploying workloads and 
 applications.
@@ -12204,7 +12268,7 @@ incorporate changes in security practices, compliance requirements, or advanceme
 technologies. It also includes monitoring and maintaining the landing zones to ensure continuous 
 compliance, performance optimization, and adherence to operational standards.
   
-  Curation of Azure Resource Types
+  #### Curation of Azure Resource Types
   Curation of Azure resource types involves managing and organizing the available Azure 
 resources in a structured and standardized manner to facilitate resource provisioning, governance, 
 and management.
@@ -12228,7 +12292,7 @@ frameworks. These policies establish rules and guidelines for resource deploymen
 compliance, ensuring that resources are provisioned and managed in accordance with 
 organizational standards and best practices.
   
-  Curation of Blueprints
+  #### Curation of Blueprints
   Curation of blueprints involves managing and maintaining a set of predefined templates or 
 configurations that encapsulate best practices, policies, and guidelines for deploying Azure 
 resources and services.
@@ -12252,7 +12316,7 @@ changes in organizational standards, regulatory requirements, or Azure service u
 Organizations ensure that the blueprints align with the evolving needs of the business and provide 
 the necessary flexibility and customization options for different scenarios.
   
-  Decommission of Architectural Patterns
+  #### Decommission of Architectural Patterns
   Decommission of architectural patterns involves retiring or removing outdated or deprecated 
 design patterns or templates from the organization's repository or knowledge base.
   
@@ -12275,7 +12339,7 @@ accordingly.
 removal of the deprecated patterns. This helps ensure that teams have access to up-to-date 
 information and guidance when designing and implementing new systems.
   
-  Policy Management: Rollout, Audit, Deny, Track
+  #### Policy Management: Rollout, Audit, Deny, Track
   Policy management processes involve defining, implementing, and enforcing policies that govern 
 various aspects of IT operations, security, and compliance within the organization.
   
@@ -12301,7 +12365,7 @@ and enforcing consequences or disciplinary actions, if necessary.
 establish mechanisms to collect and analyse data on policy compliance, exceptions, and incidents. 
 This helps identify trends, areas of improvement, and opportunities for policy refinement.
   
-  Auditing
+  #### Auditing
   Auditing processes involve the systematic review and analysis of systems, processes, and 
 activities to ensure compliance, identify risks, and detect any anomalies or security breaches.
   
@@ -12325,7 +12389,7 @@ provide recommendations for remediation or improvement.
 identified risks or non-compliance issues. They establish processes for tracking and monitoring the 
 implementation of audit recommendations to ensure continuous improvement and compliance.
   
-  SDLC (Software Development Life Cycle)
+  #### SDLC (Software Development Life Cycle)
   The Software Development Life Cycle (SDLC) encompasses the processes and activities involved 
 in the development, deployment, and maintenance of software applications.
   
@@ -12357,7 +12421,7 @@ from the development environment.
 Organizations establish processes for capturing user feedback, managing change requests, and 
 addressing any issues or enhancements that arise during the software's lifecycle.
   
-  Agile
+  #### Agile
   Agile is an iterative and flexible approach to software development that emphasizes 
 collaboration, adaptability, and customer satisfaction. It aims to deliver high-quality software in 
 shorter development cycles, enabling organizations to respond quickly to changing requirements 
@@ -12379,7 +12443,7 @@ testers, designers, and product owners work together to deliver value and meet c
 teams to adapt to changing requirements and priorities, embrace feedback, and continuously refine 
 their processes and practices.
   
-  DevOps
+  #### DevOps
   DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) 
 to enhance collaboration, streamline processes, and accelerate software delivery. It aims to bridge 
 the gap between development and operations teams, enabling faster and more reliable 
@@ -12404,7 +12468,7 @@ software quality, and increased operational efficiency. DevOps enables organizat
 customer needs and market demands more effectively, leading to enhanced customer satisfaction 
 and business outcomes.
   
-  GitOps
+  #### GitOps
   GitOps is an operational model that leverages Git, a distributed version control system, as the 
 single source of truth for declarative infrastructure and application configurations. It aims to enable 
 automated, auditable, and scalable infrastructure and application management.
@@ -12430,66 +12494,11 @@ manner. This fosters transparency, accountability, and traceability in the deplo
   GitOps provides benefits such as enhanced visibility, repeatability, and audibility of 
 deployments. It simplifies the management of complex infrastructures, accelerates release cycles, 
 and improves reliability and scalability.
-  Sustainable Technology
-  Sustainable technology refers to the use of technology to create products, systems, and 
-processes that are environmentally and socially sustainable. This means that the technology is 
-designed and developed with a focus on minimizing its negative impact on the environment and 
-society, while maximizing its positive impact.
-  
-  Sustainable technology encompasses a wide range of applications and industries, including 
-renewable energy, clean transportation, sustainable agriculture, green building, waste reduction 
-and recycling, and sustainable manufacturing. Some examples of sustainable technology include 
-solar panels, wind turbines, electric cars, green buildings, biodegradable plastics, and sustainable 
-packaging.
-  
-  One of the key principles of sustainable technology is the idea of "cradle-to-cradle" design, 
-which means that products are designed to be recycled, reused, or composted at the end of their 
-life cycle, rather than being disposed of in landfills or incinerators. This approach minimizes waste 
-and pollution and promotes the circular economy.
-  
-  Sustainable technology also aims to promote social sustainability by ensuring that technology is 
-accessible, affordable, and equitable for all people, regardless of their income, gender, or location. 
-This includes developing technologies that can be used in developing countries and marginalized 
-communities, such as low-cost water purification systems or renewable energy solutions.
-  
-  Sustainable technology is an important tool for addressing the environmental and social 
-challenges facing our planet. By harnessing the power of technology to promote sustainability, we 
-can create a more equitable and resilient future for all.
-  Microsoft has made a commitment to integrate sustainability into every aspect of their business, 
-including software product development. Here are some examples of how Microsoft is proposing to 
-handle sustainable technology from a software product development point of view:
-  
-  Green software development: Microsoft is focusing on developing software in a way that 
-minimizes its environmental impact. This includes optimizing code for energy efficiency, reducing 
-the size of software updates to minimize their carbon footprint, and using cloud-based technologies 
-to reduce the need for on-premises servers.
-  
-  Sustainable data centers: Microsoft is also working to make its data centers more sustainable. 
-This includes using renewable energy to power its data centers, implementing energy-efficient 
-designs, and using AI to optimize energy usage.
-  
-  Sustainable cloud computing: Microsoft is promoting sustainable cloud computing by 
-encouraging customers to use its Azure cloud platform, which is designed to be energy efficient and 
-uses renewable energy sources. Additionally, Microsoft is developing tools to help customers 
-measure and reduce their carbon footprint.
-  
-  Sustainable supply chain: Microsoft is working with its suppliers to promote sustainability 
-throughout its supply chain. This includes setting sustainability targets for suppliers, promoting 
-ethical sourcing practices, and reducing the use of hazardous materials in product development.
-  
-  Sustainability reporting: Microsoft is committed to transparency and reporting on its 
-sustainability efforts. The company publishes an annual sustainability report that details its 
-progress and goals in areas such as carbon emissions, renewable energy, and waste reduction.
-  
-  Microsoft is taking a holistic approach to sustainability, integrating it into every aspect of its 
-business, including software product development. By prioritizing sustainability, Microsoft is 
-demonstrating its commitment to creating a more sustainable future for all.
-  
-  This is another reason of my preference to leverage Azure.  
 
 
 
-# Conclusion chapter
+
+## Conclusion chapter
   
   In conclusion, Enterprise Software Delivery is a complex and ever-evolving field that requires a 
 strategic approach to managing software development and delivery. The Roadmap for the Future 
@@ -12518,294 +12527,11 @@ practices that are essential for success in the field of Enterprise Software Del
   We are able to translate into Product Software Delivery what Henry Ford had envisioned for the 
 Ford Motor Company.
   
-  
-  
-# TODO
-  Putting all together
-  All these topics come together to form your product delivery framework of the future.
-  Mainframe: 1960s
-  COBOL: 1960
-  Objective-C: 1983
-  C++: 1983
-  Java: 1995
-  C#: 2000
-  Linux: 1991
-  Azure: 2010
-  Ansible: 2012
-  
-  Select your key technology stack and heavily invest on them.
-  
-  There is a lot more to detail about the topics of this book, thus will be future books coming to 
-you.
-  
-  As you can now realize by implementing a factory style for product delivery, optimizing your 
-company to produce more value out of technology, allowing space to invest in the next new thing. 
-By getting your basics right you are creating a stable but flexible ecosystem to produce high quality 
-software products.
-  
-  Can you select a different technology stack, absolutely you can, you will have to compensate all 
-missing capabilities, then you will be able to get a very stable ecosystem.
-  Annexes 
-  
-  Do note that all this book can be rewritten with a different technology stack, the essence will still 
-be the same. 
-  
-  Open points to write about
-  
-  Service principles strategy
-  Global SP
-  Emergency SP
-  DevOps global SP
-  DevOps high SP
-  DevOps low SP
-  Project Environment level SP's
-  Azure provides several options for managing service principals (SPs), which are identities used by 
-applications, services, and other entities to authenticate and access resources in Azure. Here is a 
-strategy for managing the SPs you have described:
-  
-  Define roles and responsibilities: Assign roles and responsibilities for managing SPs to ensure 
-that the right people have access to the right resources. For example, assign the responsibility of 
-managing the Global SP to a central IT team, while assigning the responsibility of managing DevOps 
-SPs to a DevOps team.
-  
-  Use Entra ID for managing SPs: Azure Active Directory (AD) is a cloud-based identity and access 
-management service that can be used to manage SPs. Use Entra ID to create and manage SPs for 
-your applications, services, and other entities.
-  
-  Use Azure RBAC for managing access: Use Azure Role-Based Access Control (RBAC) to manage 
-access to your SPs. Define roles with appropriate permissions and assign those roles to the 
-appropriate users or groups.
-  
-  Implement a naming convention: Implement a naming convention for your SPs to make them 
-easily identifiable and manageable. For example, use prefixes such as "global," "emergency," 
-"devops," and "project" to indicate the purpose of the SP.
-  
-  Create separate SPs for different environments: Create separate SPs for each environment, such 
-as development, staging, and production. This will help ensure that each environment has its own 
-set of SPs with appropriate access.
-  
-  Use Azure Key Vault for storing secrets: Azure Key Vault is a cloud-based service that can be used 
-to securely store and manage cryptographic keys, certificates, and secrets. Use Key Vault to store 
-secrets used by your SPs, such as passwords and API keys.
-  
-  Regularly review and update SPs: Regularly review and update your SPs to ensure that they are 
-still necessary and that the appropriate permissions are assigned. Remove SPs that are no longer 
-needed and update the permissions for SPs that require changes.
-  
-  By following this strategy, you can effectively manage your SPs in Azure and ensure that your 
-applications, services, and other entities have secure and appropriate access to the resources they 
-need.
-  
-  
-## Users' strategy
-  Humans, bots, office accounts, tech account, admin account
-  An effective user strategy is essential for efficient management of identities and access to 
-resources in Azure. Here are some ideas for a user strategy that includes humans, bots, office 
-accounts, tech accounts, and admin accounts:
-  
-  Define user roles and responsibilities: Assign roles and responsibilities for managing users to 
-ensure that the right people have access to the right resources. For example, assign the 
-responsibility of managing office accounts to the HR team, while assigning the responsibility of 
-managing tech accounts to the IT team.
-  
-  Use consistent naming conventions: Implement consistent naming conventions for users to 
-make them easily identifiable and manageable. Use prefixes or suffixes to indicate the type of user, 
-such as "bot-" for a bot user, "svc-" for a service account, or "adm-" for an administrative account.
-  
-  Use Entra ID for user management: Use Entra ID to create and manage user accounts. Entra ID 
-provides a central location to manage user identities and access to resources.
-  
-  Organize users by function: Organize users by function, such as by department or role. This will 
-help ensure that each user has the appropriate access to resources.
-  
-  Use Entra ID groups to manage access: Use Entra ID groups to manage access to resources in 
-Azure. Assign users to appropriate groups based on their function or role and assign group 
-membership to control access to resources.
-  
-  Use conditional access policies: Use conditional access policies to enforce security policies and 
-control access to resources based on user location, device, or other factors.
-  
-  Regularly review and update user accounts: Regularly review and update user accounts to 
-ensure that they are still necessary and that the appropriate access is assigned. Remove user 
-accounts that are no longer needed and update the access for user accounts that require changes.
-  
-  By following these ideas for a user strategy, you can efficiently manage identities and access to 
-resources in Azure and ensure that the right people and bots have the right access to the right 
-resources.
-  
-  AAD Group strategy
-  An Azure Active Directory (AAD) group strategy is essential for efficient management of 
-identities and access to resources in Azure. Here are some ideas for an AAD group strategy:
-  
-  Define roles and responsibilities: Assign roles and responsibilities for managing AAD groups to 
-ensure that the right people have access to the right resources. For example, assign the 
-responsibility of managing the global AAD group to a central IT team, while assigning the 
-responsibility of managing project-level AAD groups to project managers.
-  
-  Use a consistent naming convention: Implement a consistent naming convention for AAD groups 
-to make them easily identifiable and manageable. For example, use a prefix to indicate the type of 
-group, such as "grp-" for a regular group, "dl-" for a distribution list, or "sg-" for a security group. 
-You can also include the name of the team, project, or department in the group name.
-  
-  Organize groups by function: Organize AAD groups by function, such as by department, project, 
-or role. This will help ensure that each group has the appropriate members and access to resources.
-  
-  Implement a group lifecycle management process: Implement a process for managing the 
-lifecycle of AAD groups, including creating, modifying, and deleting groups. Use automation and 
-workflows to streamline the process and ensure consistency.
-  
-  Use dynamic groups where possible: Use dynamic groups to automatically assign members 
-based on predefined criteria, such as job title, department, or location. This will help ensure that 
-groups are always up-to-date and that members have the appropriate access to resources.
-  
-  Use AAD group membership to control access to resources: Use AAD group membership to 
-control access to resources in Azure, such as virtual machines, applications, and databases. Assign 
-appropriate permissions to AAD groups to control access to resources based on function or role.
-  
-  Regularly review and update AAD groups: Regularly review and update AAD groups to ensure 
-that they are still necessary and that the appropriate members and access are assigned. Remove 
-AAD groups that are no longer needed and update the membership and access for AAD groups that 
-require changes.
-  
-  By following these ideas for an AAD group strategy, you can efficiently manage identities and 
-access to resources in Azure and ensure that the right people have the right access to the right 
-resources.
-  
-  
-## Landing Zones collection
-  
-  Dynamics of developers and operations teams
-  When developers and operations teams transition to the cloud, they often bring their own 
-established working dynamics and practices. This can sometimes lead to tensions and conflicts 
-between the two groups as they navigate their respective roles and responsibilities in the cloud 
-environment. However, by fostering effective collaboration and adopting certain strategies, these 
-tensions can be resolved, and the teams can work together efficiently. Let's explore the normal 
-tensions and dynamics between developers and operations teams in the cloud and discuss ways to 
-promote effective collaboration.
-  
-  Different Priorities
-  Developers primarily focus on building and deploying applications quickly, while operations 
-teams prioritize stability, security, and scalability. This difference in priorities can lead to conflicts, 
-with developers pushing for rapid changes and operations teams advocating for caution and risk 
-mitigation.
-  
-  Solution: Establishing open communication channels and regular meetings between the teams is 
-crucial. Encouraging both groups to share their goals and concerns openly helps foster a shared 
-understanding of each other's priorities. It enables the teams to find common ground and work 
-towards a balanced approach that satisfies both speed and stability requirements.
-  
-  Communication Gaps
-  Communication breakdowns can occur due to varying technical backgrounds and terminologies 
-used by developers and operations teams. Misunderstandings and lack of clarity in requirements 
-can result in delays and suboptimal outcomes.
-  
-  Solution: Encouraging cross-team training sessions or workshops can bridge the communication 
-gap. Developers can gain a better understanding of operational concerns, and operations teams can 
-familiarize themselves with development processes and workflows. Establishing a shared glossary 
-of terms and maintaining clear documentation also helps align the teams' understanding.
-  
-  Siloed Mindset
-  Developers and operations teams may have traditionally worked in silos, leading to a lack of 
-collaboration and transparency. Siloed mindsets can hinder effective problem-solving and hinder 
-the ability to innovate.
-  
-  Solution: Foster a culture of collaboration and shared ownership. Encourage joint planning and 
-decision-making processes, such as involving operations teams in the early stages of application 
-design and development. Implementing cross-functional teams or DevOps practices that integrate 
-both development and operations functions can also break down silos and promote a collaborative 
-mindset.
-  
-  Tooling and Automation
-  Developers often embrace new technologies and tools to accelerate development, while 
-operations teams focus on stability and reliability. This divergence in tooling preferences and 
-automation practices can cause friction and compatibility issues.
-  
-  Solution: Seek opportunities for tooling standardization and automation alignment. Identify 
-common tools and technologies that work well for both developers and operations teams. 
-Encourage the teams to collaborate on the selection and implementation of shared tools, ensuring 
-they meet the requirements of both groups. Continuous integration and continuous deployment 
-(CI/CD) pipelines can also help streamline processes and foster consistency.
-  
-  Feedback Loops and Continuous Improvement
-  Developers and operations teams may not have well-established feedback loops, leading to a 
-lack of learning and continuous improvement. This can hinder the evolution of efficient and reliable 
-cloud-based systems.
-  
-  Solution: Implement mechanisms for regular feedback and retrospective sessions. Encourage the 
-teams to review and reflect on their collaborative processes, identify areas of improvement, and 
-iteratively refine their practices. Embracing a culture of learning, where feedback is valued and 
-acted upon, helps both developers and operations teams evolve and work together more 
-effectively.
-  
-  In summary, when developers and operations teams move to the cloud, tensions can arise due 
-to differing priorities, communication gaps, siloed mindsets, tooling discrepancies, and feedback 
-loop deficiencies. By fostering open communication, promoting collaboration, bridging knowledge 
-gaps, establishing shared goals, and embracing continuous improvement, these tensions can be 
-resolved, enabling the teams to work efficiently and effectively together in the cloud environment.
-  
-  Dynamics between centralized manged services and decentralization of capabilities
-  During a cloud transformation in a company, one of the key discussions revolves around the 
-dynamics between centralized managed services and the decentralization of capabilities. These two 
-approaches represent contrasting strategies for organizing and managing cloud resources within 
-the organization. Let's explore the benefits and disadvantages of each approach:
-  
-  Centralized Managed Services:
-     Benefits:
-     a. Standardization: Centralizing managed services enables the organization to establish 
-consistent standards, configurations, and best practices across the entire cloud infrastructure. This 
-promotes uniformity, simplifies management, and enhances security.
-     b. Cost Efficiency: By consolidating resources and expertise, centralized managed services can 
-optimize resource utilization and reduce costs. Central teams can negotiate favourable pricing, 
-achieve economies of scale, and implement cost-saving measures effectively.
-     c. Expertise and Specialization: A centralized team can focus on building specialized skills and 
-deep expertise in managing cloud infrastructure. They can stay updated with the latest trends, 
-technologies, and security practices, ensuring efficient operations and better support for the entire 
-organization.
-     d. Risk Mitigation: Centralized management allows for better control and governance over 
-cloud resources. It enables robust monitoring, compliance enforcement, and rapid response to 
-security incidents or operational issues.
-  
-     Disadvantages:
-     a. Bottlenecks: A centralized approach may introduce bottlenecks and delays in accessing and 
-provisioning resources. Teams may have to rely on a central team for resource allocation, leading to 
-potential delays in development or deployment.
-     b. Lack of Flexibility: Centralized management can limit the flexibility and agility of individual 
-teams or business units. They may face restrictions in terms of resource allocation, customization, 
-or experimenting with new technologies or tools.
-     c. Communication Overhead: Coordinating with a central team for every decision or change 
-can introduce communication overhead and increase response times. This can slow down decision-
-making processes and hinder the ability to quickly respond to evolving business needs.
-  
-  Decentralization of Capabilities:
-     Benefits:
-     a. Agility and Autonomy: Decentralizing capabilities empowers individual teams or business 
-units to have more control over their cloud resources. They can quickly provision, configure, and 
-manage their own environments, fostering agility, experimentation, and innovation.
-     b. Customization: With decentralized capabilities, teams can tailor their cloud infrastructure to 
-meet specific requirements and preferences. This flexibility allows them to choose tools, 
-configurations, and deployment models that align with their unique needs and optimize 
-performance.
-     c. Faster Response Time: Decentralized teams can respond swiftly to business needs, as they 
-have direct control over their resources. This reduces dependencies and enables faster 
-development, deployment, and scaling of applications or services.
-  
-     Disadvantages:
-     a. Inconsistency: Decentralization may lead to inconsistencies in configurations, security 
-practices, and governance standards across the organization. This can increase the complexity of 
-managing and securing cloud resources and potentially introduce vulnerabilities.
-     b. Duplication of Effort: Without proper coordination, decentralized teams may end up 
-duplicating efforts and investing in similar capabilities or tools. This can result in inefficiencies, 
-higher costs, and difficulties in collaboration or knowledge sharing.
-     c. Skill Variance: Decentralization assumes that teams possess the necessary skills and 
-knowledge to manage their cloud resources effectively. However, skill variance across teams can be 
-a challenge, leading to disparities in operational efficiency, security practices, and overall cloud 
-maturity.
-  
-  Ultimately, the choice between centralized managed services and decentralization of capabilities 
-depends on various factors such as organizational structure, size, complexity, and specific business 
-requirements. A balanced approach that combines centralized governance and expertise with 
-decentralized autonomy and agility can often yield the best results, leveraging the strengths of both 
-strategies while mitigating their disadvantages.
 
 
-# Copyright (c) 2023 Marcio Parente - All rights reserved.
+
+
+
+```
+Copyright (c) 2023 Marcio Parente - All rights reserved.
+```
