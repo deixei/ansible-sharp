@@ -34,6 +34,6 @@ class VarsModule(BaseVarsPlugin):
             data = cfg.data
 
         except Exception as e:
-            raise AnsibleError(f"Failed to load YAML file: {e}")
+            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load YAML file: {e}")
         
         return data

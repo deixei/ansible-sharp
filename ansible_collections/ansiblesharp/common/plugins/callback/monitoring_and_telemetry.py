@@ -627,7 +627,7 @@ class CallbackModule(CallbackBase):
 
         if OTEL_LIBRARY_IMPORT_ERROR:
             raise_from(
-                AnsibleError('The `azure-monitor-opentelemetry` must be installed to use this plugin'),
+                AnsibleError('[Ansible-Sharp ERROR]: The `azure-monitor-opentelemetry` must be installed to use this plugin'),
                 OTEL_LIBRARY_IMPORT_ERROR)
 
         self.plays_data = OrderedDict()

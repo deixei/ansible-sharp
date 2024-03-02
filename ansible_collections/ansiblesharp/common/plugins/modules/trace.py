@@ -32,8 +32,7 @@ start_info:
     type: dict
 
 '''
-from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.ansiblesharp.common.plugins.module_utils import common as Common
+
 from ansible_collections.ansiblesharp.common.plugins.module_utils.common import AnsibleSharpModule
 
 class Trace(AnsibleSharpModule):
@@ -51,18 +50,10 @@ class Trace(AnsibleSharpModule):
         self.event = self.params["event"].upper()
         self.data = self.params["data"]
 
-        self.result = dict(
-            changed=False,
-            title=self.title,
-            event=self.event,
-            data=self.data,
-            )
-
     def run(self):
         msg = f"[{self.event}]: {self.title}; Data: {self.data}"
         self.warn(msg)
-
-        self.exit_json(**self.result)
+        self.exit_success()
 
 
 def main():

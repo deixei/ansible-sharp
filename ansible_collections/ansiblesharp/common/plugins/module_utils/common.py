@@ -50,12 +50,10 @@ class AnsibleSharpModule(AnsibleModule):
             self.run()
         except Exception as e:
             self.result["failed"] = True
-            self.result["msg"] = f"Failed to execute module: {e}"
-        finally:
-            self.exit_json(**self.result)
+            self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
 
     def run(self):
-        raise NotImplementedError("You must implement the run method in your module")
+        raise NotImplementedError("[Ansible-Sharp ERROR]: You must implement the run method in your module")
 
     def exit_json(self, **kwargs):
         self.result.update(kwargs)
@@ -66,7 +64,7 @@ class AnsibleSharpModule(AnsibleModule):
         self.result["msg"] = msg
         super().fail_json(**self.result)
 
-    def exit_success(self, data=None):
+    def exit_success(self, json=None):
         self.result["changed"] = True
-        self.result["data"] = data
+        self.result["json"] = json
         super().exit_json(**self.result)

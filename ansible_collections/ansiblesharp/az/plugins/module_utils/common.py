@@ -8,6 +8,7 @@ import re
 import hmac
 from datetime import datetime
 from ansible.module_utils.basic import AnsibleModule
+from ansible.errors import AnsibleModuleError
 from collections import namedtuple
 from azure.mgmt.resource import ResourceManagementClient
 from azure.identity import ClientSecretCredential
@@ -71,7 +72,7 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
                 default_credential['expires_on'] = expires_on
 
         # Update credential dictionary values (if provided)
-        credential = azure_login_credential.get('credential')
+        credential = azure_login_credential.get('credential', default_credential['credential'])
         if credential:
             default_credential['credential']['client_id'] = credential.get('client_id', default_credential['credential']['client_id'])
             default_credential['credential']['client_secret'] = credential.get('client_secret', default_credential['credential']['client_secret'])
@@ -79,7 +80,7 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
 
     # Check if credential values are empty
     if not all(default_credential['credential'].values()):
-        raise ValueError("Azure credentials not set.")
+        raise ValueError("[Ansible-Sharp ERROR]: Azure credentials not set.")
 
     credential = ClientSecretCredential(
         client_id=default_credential['credential']['client_id'],
@@ -120,7 +121,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
             changed=False,
             failed=False,
             msg="",
-            data=None
+            json=None
         )
 
     @property
@@ -135,12 +136,12 @@ class AnsibleSharpAzureModule(AnsibleModule):
             self.run()
         except Exception as e:
             self.result["failed"] = True
-            self.result["msg"] = f"Failed to execute module: {e}"
-        finally:
-            self.exit_json(**self.result)
+            self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
+        #finally:
+        #    self.exit_json(**self.result)
 
     def run(self):
-        raise NotImplementedError("You must implement the run method in your module")
+        raise NotImplementedError("[Ansible-Sharp ERROR]: You must implement the run method in your module")
 
     def exit_json(self, **kwargs):
         self.result.update(kwargs)
@@ -151,9 +152,9 @@ class AnsibleSharpAzureModule(AnsibleModule):
         self.result["msg"] = msg
         super().fail_json(**self.result)
 
-    def exit_success(self, data=None):
+    def exit_success(self, json=None):
         self.result["changed"] = True
-        self.result["data"] = data
+        self.result["json"] = json
         super().exit_json(**self.result)
 
     def get_azure_login_credential(self):
@@ -169,28 +170,33 @@ class AnsibleSharpAzureModule(AnsibleModule):
     def init_resource_config(self):
         resource_config = self.params.get("resource_config", None)
 
+        kind = resource_config.get("kind")
+        if not kind:
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: kind is required")
+
         subscription_id = resource_config.get("subscription_id")
         if not subscription_id:
-            self.exit_fail(msg="subscription_id is required")
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: subscription_id is required")
 
         if not re.match(r'^\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$', subscription_id):
-            self.exit_fail(msg="subscription_id is not a valid GUID")
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: subscription_id is not a valid GUID")
 
         resource_location = resource_config.get("resource_location")
         if not resource_location:
-            self.exit_fail(msg="resource_location is required")
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: resource_location is required")
 
         name = resource_config.get("name")
         if not name:
-            self.exit_fail(msg="name is required")
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: name is required")
 
         resource_group_name = resource_config.get("resource_group_name")
-        if not resource_group_name:
-            self.exit_fail(msg="resource_group_name is required")
+        if kind != "resource_group":
+            if not resource_group_name:
+                raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: resource_group_name is required")
 
         tags = resource_config.get("tags")
         if not tags:
-            self.exit_fail(msg="tags is required")
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: tags is required")
 
         # Create a namedtuple class with fields for each key in the dictionary
         ResourceConfig = namedtuple("ResourceConfig", resource_config.keys())

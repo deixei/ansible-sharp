@@ -3,11 +3,11 @@ Using /home/marcio/repos/deixei/ansible-sharp/ansible_collections/ansiblesharp/c
 PLAY [Playbook for testing the trace module] ***********************************
 
 TASK [This is a trace message] *************************************************
-ok: [localhost] => {"changed": false, "data": "{'version': '1.0.0', 'kind': 'common_vars'}", "event": "WARNING", "title": "Test trace command"}
+changed: [localhost] => {"changed": true, "data": null, "json": null, "msg": ""}
 
 TASK [This is a info message] **************************************************
-ok: [localhost] => {"changed": false, "data": "{'version': '1.0.0', 'kind': 'common_vars'}", "event": "DEBUG", "title": "My default information"}
+changed: [localhost] => {"changed": true, "data": null, "json": null, "msg": ""}
 
 PLAY RECAP *********************************************************************
-localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost                  : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 

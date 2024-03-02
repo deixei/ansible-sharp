@@ -3,9 +3,7 @@
         "azure_login": {
             "azure_login_credential": {
                 "credential": {
-                    "client_id": "",
-                    "client_secret": "",
-                    "tenant_id": ""
+
                 },
                 "expires_on": 0,
                 "token": ""
@@ -22,10 +20,6 @@
                 {
                     "key": "CostCenter",
                     "value": "123456789"
-                },
-                {
-                    "key": "Department",
-                    "value": "AM/ACC"
                 },
                 {
                     "key": "Ecosystem",

@@ -1,0 +1,15 @@
+---
+- name: Playbook for testing the login module
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: Login to Azure
+    ansiblesharp.az.login:
+    register: login
+
+  - name: Checking login variable
+    ansible.builtin.assert:
+      that: "login.azure_login_credential.token != ''"
+      fail_msg: "The token is not correct"
+      success_msg: "The token is correct"

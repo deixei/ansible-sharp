@@ -1,0 +1,50 @@
+---
+- name: Playbook for testing the create resource group based on a var
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    resources:
+      rg1:
+        kind: "resource_group"
+        name: "d-we-eco1-wrk1-testname2-rg"
+        resource_location: "westeurope"
+        subscription_id: "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a"
+        tags:
+          Stage: "Development"
+          Ecosystem: "Test"
+  tasks:
+  - name: Login to Azure
+    ansiblesharp.az.login:
+    register: azure_login
+
+  - name: Show rg1 variable
+    ansiblesharp.common.trace:
+      title: "Resource Group 1"
+      event: "info"
+      data: "{{ resources.rg1 }}"
+
+  - name: Checking login variable
+    ansible.builtin.assert:
+      that: "azure_login.azure_login_credential.token != ''"
+      fail_msg: "The token is not correct"
+      success_msg: "The token is correct"
+
+  - name: Create a resource group
+    ansiblesharp.az.resource_group:
+      azure_login: "{{ azure_login }}"
+      resource_config: "{{ resources.rg1 }}"
+      state: "present"
+    register: resource_group_1
+
+  - name: Trace the resource group
+    ansiblesharp.common.trace:
+      title: "Resource Group Information"
+      event: "info"
+      data: "{{ resource_group_1.json }}"
+
+  - name: Remove a resource group
+    ansiblesharp.az.resource_group:
+      azure_login: "{{ azure_login }}"
+      resource_config: "{{ resources.rg1 }}"
+      state: "absent"      

@@ -67,7 +67,7 @@ class BaseConfig():
             with open(yaml_path, 'r') as stream:
                 data = yaml.safe_load(stream)
         except Exception as e:
-            raise AnsibleError(f"Failed to load YAML file {yaml_path}: {e}")
+            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load YAML file {yaml_path}: {e}")
         
         return data
     
