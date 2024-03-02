@@ -15,9 +15,9 @@
             "console": "integratedTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
-                "AZURE_CLIENT_ID": "change me",
-                "AZURE_SECRET": "change me",
-                "AZURE_TENANT": "change me"
+                "AZURE_TENANT": "",
+                "AZURE_CLIENT_ID": "",
+                "AZURE_SECRET": ""
             }
         }
     ]

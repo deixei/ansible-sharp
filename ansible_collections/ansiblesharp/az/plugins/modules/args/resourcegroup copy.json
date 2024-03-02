@@ -10,7 +10,7 @@
                 "expires_on": 0,
                 "token": ""
             }
-        },        
+        },
         "state": "present",
         "resource_config": {
             "kind": "resource_group",

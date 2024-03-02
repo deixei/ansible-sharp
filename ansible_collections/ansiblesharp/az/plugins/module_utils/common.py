@@ -26,6 +26,9 @@ AZURE_CREDENTIAL_ENV_MAPPING = dict(
     tenant='AZURE_TENANT'
 )
 
+def is_not_empty(value):
+    return value is not None and value != ""
+
 def get_defaults_azure_login_credential(azure_login_credential=None):
     """
     Returns a dictionary containing default values for Azure credentials,
@@ -41,9 +44,9 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
         'token': "",
         'expires_on': 0,
         'credential': {
-            'client_id': os.environ.get('AZURE_CLIENT_ID', ''),
-            'client_secret': os.environ.get('AZURE_SECRET', ''),
-            'tenant_id': os.environ.get('AZURE_TENANT', '')
+            'client_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['client_id'], ''),
+            'client_secret': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['secret'], ''),
+            'tenant_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['tenant'], '')
         }
     }
 
@@ -132,7 +135,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
             self._resource_client = ResourceManagementClient(self.credential, self.resource_config.subscription_id)
         return self._resource_client
 
-    def execute_module(self):
+    def exec_module(self):
         try:
             self.run()
         except Exception as e:
