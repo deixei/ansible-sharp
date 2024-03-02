@@ -1,0 +1,28 @@
+---
+## This is a start playbook to show you to set your playbooks
+## Author: Marcio Parente
+- name: "001 - Demo Playbook"
+  hosts: localhost
+  gather_facts: true
+  become: false
+  tasks:
+    - name: "001 - Debug Task"
+      ansible.builtin.debug:
+        msg: "Hello World"
+
+    - name: "001 - Set a Fact"
+      ansible.builtin.set_fact:
+        os_env_path: "{{ lookup('env', 'PATH') }}"
+
+    - name: "001 - Show a Fact"
+      ansible.builtin.debug:
+        msg: "The PATH is {{ os_env_path }}"
+
+    - name: "001 - Use shell module"
+      ansible.builtin.shell:
+        cmd: "echo $PATH"
+      register: shell_output
+
+    - name: "001 - Show shell output"
+      ansible.builtin.debug:
+        msg: "The Shell output is {{ shell_output }}"      

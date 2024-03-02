@@ -34,9 +34,9 @@ start_info:
 '''
 from ansible.module_utils.basic import AnsibleModule
 from ansible_collections.ansiblesharp.common.plugins.module_utils import common as Common
+from ansible_collections.ansiblesharp.common.plugins.module_utils.common import AnsibleSharpModule
 
-
-class Trace(AnsibleModule):
+class Trace(AnsibleSharpModule):
     def __init__(self):
         super(Trace, self).__init__(
             argument_spec={
@@ -58,7 +58,7 @@ class Trace(AnsibleModule):
             data=self.data,
             )
 
-    def exec_module(self):
+    def run(self):
         msg = f"[{self.event}]: {self.title}; Data: {self.data}"
         self.warn(msg)
 
@@ -67,7 +67,7 @@ class Trace(AnsibleModule):
 
 def main():
     my_module = Trace()
-    my_module.exec_module()
+    my_module.execute_module()
 
 if __name__ == '__main__':
     main()

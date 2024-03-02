@@ -1,0 +1,14 @@
+# Description: This file contains the variables that are common to all the hosts in the inventory.
+---
+project:
+  name: "project1"
+  code: "prj1"
+
+  ecosystem:
+    name: "asharp-examples"  
+    code: "asexmpl"
+
+  workload:
+    name: "workload_1"
+    code: "w1"
+    

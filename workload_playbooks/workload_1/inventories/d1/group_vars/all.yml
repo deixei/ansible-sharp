@@ -1,0 +1,23 @@
+# Description: This file contains the variables that are common to all the hosts in the inventory.
+---
+params:
+  subscription_id: "dddddd"
+  region: "westeurope"
+  stage: "d"
+  instance: "1"
+  stage_class: "l"
+  iteration: "001"
+
+
+
+workload:
+  resources:
+    my_rg_1:
+      &rg1
+      kind: resource_group
+      name: "rg1"
+
+    my_storage_1:
+      kind: storage_account
+      name: "st1"
+      resource_group: *rg1

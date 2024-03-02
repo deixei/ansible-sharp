@@ -3,7 +3,6 @@
 #
 # Copyright (c) 2024 Marcio Parente
 
-
 import yaml
 import os
 

@@ -1,0 +1,6 @@
+# For Azure Resources local connection is used
+---
+all:
+  hosts:
+    localhost:
+      ansible_connection: local

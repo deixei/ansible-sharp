@@ -1,0 +1,11 @@
+---
+## This is a basic playbook 
+## Author: Marcio Parente
+- name: "002 - Basic Playbook"
+  hosts: localhost
+  gather_facts: true
+  become: false
+  tasks:
+    - name: "002 - Debug Task"
+      ansible.builtin.debug:
+        msg: "Hello World"
