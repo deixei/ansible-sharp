@@ -99,17 +99,31 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
 
 
 class AnsibleSharpAzureModule(AnsibleModule):
-    def __init__(self, supports_check_mode=False, **kwargs,):
+    def __init__(self, bypass_checks=False, no_log=False,
+                 check_invalid_arguments=None, mutually_exclusive=None, required_together=None,
+                 required_one_of=None, add_file_common_args=False, supports_check_mode=False,
+                 required_if=None, supports_tags=True, facts_module=False, skip_exec=False, is_ad_resource=False, **kwargs,):
+        
         merged_arg_spec = dict()
         merged_arg_spec.update(COMMON_ARGS)
+
 
         self.argument_spec = merged_arg_spec
 
         super(AnsibleSharpAzureModule, self).__init__(
             argument_spec=merged_arg_spec,
-            supports_check_mode=supports_check_mode,
+            bypass_checks=bypass_checks,
+            no_log=no_log,
+            mutually_exclusive=mutually_exclusive,
+            required_together=required_together,
+            required_one_of=required_one_of,
+            add_file_common_args=add_file_common_args,
+            supports_check_mode=supports_check_mode,    
             **kwargs
         )
+        
+        self.facts_module = facts_module
+        self.check_mode = self.check_mode
 
         self.state = self.params["state"]
 
@@ -199,6 +213,8 @@ class AnsibleSharpAzureModule(AnsibleModule):
         tags = resource_config.get("tags")
         if not tags:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: tags is required")
+        else:
+            self.validate_tags(tags)
 
         # Create a namedtuple class with fields for each key in the dictionary
         ResourceConfig = namedtuple("ResourceConfig", resource_config.keys())
