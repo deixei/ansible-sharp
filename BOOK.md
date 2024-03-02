@@ -5,194 +5,81 @@ First edition 2023 - Software-Powered DevOps: Securing the Future of Enterprise 
 Copyright (c) 2023 Marcio Parente - All rights reserved.
 
 ## Starting the journey
-  
-  For the past eight years, I have been researching a concept known as "DevOps industrialization" throughout my research, I have concentrated on the idea that one day, delivery cycles for information technology products will become very similar to those that Henry Ford had envisioned for the Ford Motor Company.
-  
-  The creation of functioning software requires the completion of a number of steps that, when 
-combined, result in an operational system. We have all, up until this point, presumed that this 
-procedure is highly individualised and customised to one's own needs; nevertheless, this is not the 
-case. The proper standards that would enable us to think about functional systems outside of our 
-preferred base programming language have been absent from our organisations up to this point.
-  
-  We are now in the position to design a new form of functional system declaration that can place 
-an increased focus on the delivery of underlying capabilities. This has become possible as a result of 
-the development of cloud technology, infrastructure as code and artificial intelligent tools. 
-  
-  Although there are physical facilities, a plant, and equipment utilised in the manufacturing of 
-vehicles, there are also materials going into the production lines, and the ultimate result, which is 
-known as a product, is the output at the conclusion of the manufacturing process.
-  The product may be in its completed form, it may be an intermediate product, or it may be a 
-stage in the production process that can be employed in the manufacture of another product.
-  When it comes to the delivery of business software, we make use of a concept very much like 
-that one; the only difference is that we call these concepts by other names. Many of the solutions 
-for developer cooperation, such as GitHub, Azure DevOps, and GitLab, are analogous to traditional 
-manufacturing facilities.
-  
-  
-  Any of the above-mentioned developer collaboration tools are analogous to a production line in 
-the sense that both processes include the addition of raw materials, in this case in the form of code. 
-The final product of a pipeline, which is usually in the form of an executable binary or an artefact 
-that can be deployed.
-  
-  In the process of developing software, we are putting together a sequence of components that 
-will eventually result in functionality. Whether it is a web application, console, mobile application, 
-or API service, they all follow similar construction blocks, and in an enterprise environment, they 
-will all have the same fundamental non-functional requirements, including logging, security, 
-configuration management, secret handling, telemetry, and so on.
-  
-  In this book, I will provide an overview of the key reasons in support of the concept that the 
-distribution of software should move away from being customised and toward becoming more 
-industrialised. I'll also demonstrate a strategy that will make it easier for your company to 
-implement this procedure.
-   
-## Preparing a base of understanding.
-  
-  It is crucial to offer a few different topics and what I understand about each of them since doing 
-so will enable us to have a foundational level of comprehension. 
-  When I use terms like "DevOps" or "Automation," it is not uncommon for my interlocutor to 
-have a different idea of what I mean by such terms. Even more concerning is when they have just a 
-partial comprehension of the subject at hand.
-  Although it is not my intention to offer an authoritative description for each of the following 
-concepts, I would like to explain how I personally perceive them.
-  
-  By going thru these topics, you will start to get familiar with the necessary concepts that will 
-make our production line work.
-  
+
+For the past eight years, I have been researching a concept known as "**DevOps industrialization**" throughout my research, I have concentrated on the idea that one day, delivery cycles for information technology products will become very similar to those that Henry Ford had envisioned for the Ford Motor Company.
+
+The creation of functioning software requires the completion of a number of steps that, when combined, result in an operational system. We have all, up until this point, presumed that this procedure is highly individualised and customised to one's own needs; nevertheless, this is not the case. The proper standards that would enable us to think about functional systems outside of our preferred base programming language have been absent from our organisations up to this point.
+
+We are now in the position to design a new form of functional system declaration that can place an increased focus on the delivery of underlying capabilities. This has become possible as a result of the development of cloud technology, infrastructure as code and artificial intelligent tools.
+
+Although there are physical facilities, a plant, and equipment utilised in the manufacturing of vehicles, there are also materials going into the production lines, and the ultimate result, which is known as a product, is the output at the conclusion of the manufacturing process.
+The product may be in its completed form, it may be an intermediate product, or it may be a stage in the production process that can be employed in the manufacture of another product.
+When it comes to the delivery of business software, we make use of a concept very much like that one; the only difference is that we call these concepts by other names. Many of the solutions for developer cooperation, such as GitHub, Azure DevOps, and GitLab, are analogous to traditional manufacturing facilities.
+
+Any of the above-mentioned developer collaboration tools are analogous to a production line in the sense that both processes include the addition of raw materials, in this case in the form of code. The final product of a pipeline, which is usually in the form of an executable binary or an artefact that can be deployed.
+
+In the process of developing software, we are putting together a sequence of components that will eventually result in functionality. Whether it is a web application, console, mobile application, or API service, they all follow similar construction blocks, and in an enterprise environment, they will all have the same fundamental non-functional requirements, including logging, security, configuration management, secret handling, telemetry, and so on.
+
+In this book, I will provide an overview of the key reasons in support of the concept that the distribution of software should move away from being customised and toward becoming more industrialised. I'll also demonstrate a strategy that will make it easier for your company to implement this procedure.
+
+## Preparing a base of understanding
+
+It is crucial to offer a few different topics and what I understand about each of them since doing so will enable us to have a foundational level of comprehension.   When I use terms like "DevOps" or "Automation," it is not uncommon for my interlocutor to have a different idea of what I mean by such terms. Even more concerning is when they have just a partial comprehension of the subject at hand.
+Although it is not my intention to offer an authoritative description for each of the following concepts, I would like to explain how I personally perceive them.
+
+By going thru these topics, you will start to get familiar with the necessary concepts that will make our production line work.
+
 ### DevOps
-  The interaction and collaboration between software developers and specialists in information 
-technology operations is the core emphasis of the DevOps technique for the creation of software. 
-With the intention of increasing both speed and efficiency while also improving stability and 
-dependability. 
-  A new meaning for the term "SecDevOps" has emerged because of the incorporation of security 
-processes into the DevOps workflow. We have reached a stage where I am starting to see actual 
-organisations using BizDevOps, which is an acronym that stands for Business-Security-
-Development-Operations. This is an exciting development. This is because Agile concepts are 
-increasingly being implemented into the day-to-day operations of businesses. By expanding the 
-flow of software distribution from the corporation to the end users, you achieve the goal of 
-vertically integrating your business operations. In a word, BizSecDevOps is the crucial base for 
-consistently and reliably delivering the expectations of stakeholders and customers. I'm going to 
-refer to this collection of people as a product team.
-  
-  What are the key differences between a Product team and a DevOps team? Product design is 
-typically carried out in conjunction with the business and the DevOps teams. The overall group is 
-called a product team, while another team called the DevOps team is responsible for developing, 
-maintaining, and operating the product.
-  
-  If you want to put DevOps into practise, you will almost probably need to make use of Scrum, 
-which is one of the several ways that I will quickly describe below. 
-  Scrum is a framework for the agile development of software that helps you to manage and 
-enhance difficult projects in a manner that is flexible and adaptive. The core concept is to rely on a 
-flow that is iterative and incremental, to concentrate on collaboration, self-organization, and 
-continual improvement, and to prioritise these.
-  
-  Scrum serves as the foundation for DevOps, and as a result, we need to incorporate principles of 
-business management and security into our operations. To begin, there is a mandate that the 
-outcome of each iteration, it must explicitly address any and all security risks; in the majority of 
-instances, this is accomplished by adding a line of text to the Definition of Done (DoD). This exposes 
-developers and IT operators to the need to solve the security vulnerabilities; in many situations, 
-this requires accepting a greater cost for both development and operations to address the problem. 
-Most of the time, the company will be the one to oversee the process of assessing how secure a 
-system feels. 
-  Yes, security is not a fact, is a feeling. The feeling of being protected and safe is what I mean 
-when I talk about security; I'm not talking about an ironclad promise of protection here. This 
-indicates that even if steps have been made to assure safety, if individuals do not feel comfortable, 
-then their impression of security has not been accomplished. This is true even if measures have 
-been taken to ensure safety, measures need to be visible and explain to stakeholders for then to 
-understand the risk.
-  
-  Business is now able to drive the continual flow of changes and adaptations in relation to its 
-purpose and goals by utilising a hierarchical structure and raising scrum user stories at an early 
-stage.
-  The foundation of scrum for business or, to be more precise, scrum for the delivery of a product, 
-is the core structure that consists of initiatives, epics, features, stories, and tasks. Collaboration in 
-business is accomplished with using initiatives, epics, and features. The DevOps team is responsible 
-for managing features, stories, and tasks.
-  
-  Why should I consider product development in addition to developing software rather than only 
-doing software development? It can't merely be a software factory if you want to establish a 
-factory that produces items that can be sold for a profit in the first place; it needs to be something 
-else entirely. A client (sometimes we call them users) is provided with object that has value or 
-usefulness as a result of the execution of a process, and this object may be developed or made. 
-Instructions are compiled into a product known as software, which has several applications due to 
-its open-ended nature. 
-  Software is a sort of product. 
-  After including components such as marketing, sales, user feedback, user assistance, service 
-accessibility, documentation, and other components, you may consider the result to be a software 
-product.
-  
-  When you are using scrum for the development of your product, you can now add all of the 
-work items to your product backlog. A portfolio backlog is essentially a collection of individual 
-product backlogs. You will eventually reach a point in your expansion where you will need to handle 
-numerous products rather than one. This is typically a situation in which you will have an edge. At 
-this stage, when industrialization and vertical integration have a considerable influence on how you 
-do business, the entire argument of this book is made.
-  
-  In a business environment, there will always be several products on the market at the same 
-time, each of which will be in a different stage of its lifecycle. While some are being used and others 
-are being invested in, a part of the larger group is being decommissioned.
-  
-  Defining a set of capabilities is an essential step in gaining a knowledge of one's own 
-organisation from the perspective of enterprise architecture. The capabilities possessed by your 
-products should also be shared among them and utilised wherever possible.
-  
-  What is the best method for me to put all this together so that it can be automated? The level of 
-abstraction of the capability that is being provided may be determined by the size of the building 
-block that is being used, which is defined as part of a collection of building blocks that can be 
-connected to one another.
-  
-  Let's investigate what Ford did in his production line, with a process call vertical integration.
-  Vertical integration is the process by which a company brings together multiple phases of 
-production and distribution under the canopy of a single corporate entity rather than outsourcing 
-or purchasing from third parties outside of the organisation. This might comprise the purchase of 
-raw materials, manufacture, distribution, and retail sales of the finished product.
-  
-  In the context of software development and DevOps, vertical integration occurs because of an 
-organisation managing the entirety of the software development process in-house, from the initial 
-design and coding to the subsequent testing and deployment, rather than outsourcing any part of 
-the process to third-party vendors. This can assist to guarantee that a high degree of quality and 
-control is maintained over the end product, as well as shorter development timeframes and a 
-process that is more streamlined.
-  
-  The production line that was established by Ford Motor Company in the early 20th century is a 
-great example of the notion of vertical integration, which can be observed there as well. Forging, 
-machining, and assembly are just some of the processes that Ford consolidated under one roof so 
-that it could eliminate the need to get components from third-party vendors. This enabled Ford to 
-have better control over the production process, which in turn enabled the company to decrease 
-costs, enhance productivity, and improve the quality of the vehicles it produced.
-  
-  Vertical integration is a powerful strategy for companies that want to streamline their 
-operations, reduce costs, and increase control over their production processes, regardless of 
-whether the context is software development or traditional manufacturing. In general, vertical 
-integration can be a very effective strategy.
-  
-  The expansion of a company's business activities into new markets or sectors that are operating 
-at the same level of the production or distribution process is an example of horizontal integration, 
-which is a strategy that is referred to as a business strategy. This might entail purchasing firms that 
-provide comparable or complementary items, merging with companies that generate such 
-products, or engaging into partnerships to work on joint ventures.
-  
-  In the context of the creation of software products, "horizontal integration" can refer to either 
-expanding into new fields of software development or purchasing other software firms that offer 
-products that are comparable to the developing their own. This may assist businesses in increasing 
-their market share, diversifying their product portfolios, and entering new markets by maximising 
-the use of their current resources and skills.
-  
-  Although it is possible for horizontal integration to be an effective technique for the creation of 
-software products, vertical integration is typically seen as being superior in this regard. This is since 
-horizontal integration could result in a lack of control over the quality and consistency of the final 
-product. This is because different teams could be working on different aspects of the development 
-process, which could potentially lead to conflicting approaches and standards. Additionally, 
-horizontal integration may result in a lack of alignment with the overall aims and vision of the 
-organisation since separate product lines may have distinct priorities and strategies. This is because 
-different product lines may have different customers.
-  
-  Vertical integration, on the other hand, enables businesses to keep a greater level of control 
-over the entirety of the product development process, from design to deployment. This, in turn, 
-can help to ensure that the final product possesses a higher level of both quality and consistency. 
-Vertical integration Additionally, vertical integration can help to align all aspects of the product 
-development process with the overall vision and goals of the company, which can lead to a product 
-development strategy that is more cohesive and efficient. This can be accomplished by 
-incorporating the company into its own supply chain.
+
+The interaction and collaboration between software developers and specialists in information technology operations is the core emphasis of the DevOps technique for the creation of software. With the intention of increasing both speed and efficiency while also improving stability and dependability. 
+
+A new meaning for the term "SecDevOps" has emerged because of the incorporation of security processes into the DevOps workflow. We have reached a stage where I am starting to see actual organisations using BizDevOps, which is an acronym that stands for **Business-Security-Development-Operations**. This is an exciting development. This is because Agile concepts are increasingly being implemented into the day-to-day operations of businesses. By expanding the flow of software distribution from the corporation to the end users, you achieve the goal of vertically integrating your business operations. In a word, BizSecDevOps is the crucial base for consistently and reliably delivering the expectations of stakeholders and customers. I'm going to refer to this collection of people as a product team.
+
+What are the key differences between a Product team and a DevOps team? Product design is typically carried out in conjunction with the business and the DevOps teams. The overall group is called a product team, while another team called the DevOps team is responsible for developing, maintaining, and operating the product.
+
+If you want to put DevOps into practise, you will almost probably need to make use of Scrum, which is one of the several ways that I will quickly describe below.   Scrum is a framework for the agile development of software that helps you to manage and enhance difficult projects in a manner that is flexible and adaptive. The core concept is to rely on a flow that is iterative and incremental, to concentrate on collaboration, self-organization, and continual improvement, and to prioritise these.
+
+Scrum serves as the foundation for DevOps, and as a result, we need to incorporate principles of business management and security into our operations. To begin, there is a mandate that the outcome of each iteration, it must explicitly address any and all security risks; in the majority of instances, this is accomplished by adding a line of text to the Definition of Done (DoD). This exposes developers and IT operators to the need to solve the security vulnerabilities; in many situations, this requires accepting a greater cost for both development and operations to address the problem. Most of the time, the company will be the one to oversee the process of assessing how secure a system feels. 
+
+**Yes, security is not a fact, is a feeling.** The feeling of being protected and safe is what I mean when I talk about security; I'm not talking about an ironclad promise of protection here. This indicates that even if steps have been made to assure safety, if individuals do not feel comfortable, then their impression of security has not been accomplished. This is true even if measures have been taken to ensure safety, measures need to be visible and explain to stakeholders for then to understand the risk.
+
+Business is now able to drive the continual flow of changes and adaptations in relation to its purpose and goals by utilising a hierarchical structure and raising scrum user stories at an early stage.
+The foundation of scrum for business or, to be more precise, scrum for the delivery of a product, is the core structure that consists of initiatives, epics, features, stories, and tasks. Collaboration in business is accomplished with using initiatives, epics, and features. The DevOps team is responsible for managing features, stories, and tasks.
+
+Why should I consider product development in addition to developing software rather than only doing software development? It can't merely be a software factory if you want to establish a factory that produces items that can be sold for a profit in the first place; it needs to be something else entirely. A client (sometimes we call them users) is provided with object that has value or usefulness as a result of the execution of a process, and this object may be developed or made. Instructions are compiled into a product known as software, which has several applications due to its open-ended nature. 
+
+Software is a sort of product. 
+
+After including components such as marketing, sales, user feedback, user assistance, service accessibility, documentation, and other components, you may consider the result to be a software product.
+
+When you are using scrum for the development of your product, you can now add all of the work items to your product backlog. A portfolio backlog is essentially a collection of individual product backlogs. You will eventually reach a point in your expansion where you will need to handle numerous products rather than one. This is typically a situation in which you will have an edge. At this stage, when industrialization and vertical integration have a considerable influence on how you do business, the entire argument of this book is made.
+
+In a business environment, there will always be several products on the market at the same time, each of which will be in a different stage of its lifecycle. While some are being used and others are being invested in, a part of the larger group is being decommissioned.
+
+Defining a set of capabilities is an essential step in gaining a knowledge of one's own organisation from the perspective of enterprise architecture. The capabilities possessed by your products should also be shared among them and utilised wherever possible.
+
+What is the best method for me to put all this together so that it can be automated? The level of abstraction of the capability that is being provided may be determined by the size of the building block that is being used, which is defined as part of a collection of building blocks that can be connected to one another.
+
+Let's investigate what Ford did in his production line, with a process call vertical integration.
+
+Vertical integration is the process by which a company brings together multiple phases of production and distribution under the canopy of a single corporate entity rather than outsourcing or purchasing from third parties outside of the organisation. This might comprise the purchase of raw materials, manufacture, distribution, and retail sales of the finished product.
+
+In the context of software development and DevOps, vertical integration occurs because of an organisation managing the entirety of the software development process in-house, from the initial design and coding to the subsequent testing and deployment, rather than outsourcing any part of the process to third-party vendors. This can assist to guarantee that a high degree of quality and control is maintained over the end product, as well as shorter development timeframes and a process that is more streamlined.
+
+The production line that was established by Ford Motor Company in the early 20th century is a great example of the notion of vertical integration, which can be observed there as well. Forging, machining, and assembly are just some of the processes that Ford consolidated under one roof so that it could eliminate the need to get components from third-party vendors. This enabled Ford to have better control over the production process, which in turn enabled the company to decrease costs, enhance productivity, and improve the quality of the vehicles it produced.
+
+Vertical integration is a powerful strategy for companies that want to streamline their operations, reduce costs, and increase control over their production processes, regardless of whether the context is software development or traditional manufacturing. In general, vertical integration can be a very effective strategy.
+
+The expansion of a company's business activities into new markets or sectors that are operating at the same level of the production or distribution process is an example of horizontal integration, which is a strategy that is referred to as a business strategy. This might entail purchasing firms that 
+provide comparable or complementary items, merging with companies that generate such products, or engaging into partnerships to work on joint ventures.
+
+In the context of the creation of software products, "horizontal integration" can refer to either expanding into new fields of software development or purchasing other software firms that offer products that are comparable to the developing their own. This may assist businesses in increasing their market share, diversifying their product portfolios, and entering new markets by maximising the use of their current resources and skills.
+
+Although it is possible for horizontal integration to be an effective technique for the creation of software products, vertical integration is typically seen as being superior in this regard. This is since horizontal integration could result in a lack of control over the quality and consistency of the final product. This is because different teams could be working on different aspects of the development process, which could potentially lead to conflicting approaches and standards. Additionally, horizontal integration may result in a lack of alignment with the overall aims and vision of the organisation since separate product lines may have distinct priorities and strategies. This is because different product lines may have different customers.
+
+Vertical integration, on the other hand, enables businesses to keep a greater level of control over the entirety of the product development process, from design to deployment. This, in turn, can help to ensure that the final product possesses a higher level of both quality and consistency. 
+
+Vertical integration Additionally, vertical integration can help to align all aspects of the product development process with the overall vision and goals of the company, which can lead to a product development strategy that is more cohesive and efficient. This can be accomplished by incorporating the company into its own supply chain.
   
 ### Build of materials and recipes
 
@@ -869,40 +756,21 @@ employing. As we continue to explore this issue, vendor lock will become the pri
 driver; yet, at the same time, we will be presented with the opportunity to use open-source 
 software as a means of escaping this situation.
   
-  The use of an infrastructure-as-code (IaC) façade enables designers to isolate complexity and 
-grow in a consistent manner while being open to making improvements in a standardised manner. 
-When attempting to switch from one design to another without creating large interruptions, this 
-might be a very important consideration.
+  The use of an infrastructure-as-code (IaC) façade enables designers to isolate complexity and grow in a consistent manner while being open to making improvements in a standardised manner. When attempting to switch from one design to another without creating large interruptions, this might be a very important consideration.
   
-  Having an infrastructure-as-code (IaC) façade, for example, may make the transition from a 
-monolithic design to a micro segmented architecture that much easier for a company that wants to 
-make the switch. The façade gives architects and designers the ability to make alterations to the 
-underlying infrastructure while preserving the integrity of the system's higher-level components 
-and interfaces. Build of material (BOM) may stay unchanged, and the adjustments can be 
-performed in a shorter amount of time and with a smaller amount of interruption.
+  Having an infrastructure-as-code (IaC) façade, for example, may make the transition from a monolithic design to a micro segmented architecture that much easier for a company that wants to make the switch. The façade gives architects and designers the ability to make alterations to the underlying infrastructure while preserving the integrity of the system's higher-level components and interfaces. Build of material (BOM) may stay unchanged, and the adjustments can be performed in a shorter amount of time and with a smaller amount of interruption.
   
-  Alterations can be made in software development and infrastructure-as-code (IaC) using a 
-method that is standardised thanks to the technology façade, which can also provide this service. 
-Designers can have a clear knowledge of the methods required to make changes to the system if 
-they have various recipes or patterns for pushing architectural modifications. This can assist 
-guarantee that modifications are made regularly, and that the system continues to be dependable 
-and stable even after the changes are made.
+  Alterations can be made in software development and infrastructure-as-code (IaC) using a method that is standardised thanks to the technology façade, which can also provide this service. Designers can have a clear knowledge of the methods required to make changes to the system if they have various recipes or patterns for pushing architectural modifications. This can assist guarantee that modifications are made regularly, and that the system continues to be dependable and stable even after the changes are made.
   
-  When a business is planning to make big changes to their technology infrastructure, this is a 
-useful tool to have. The designers can evolve the system while still retaining its stability and 
-dependability if they first isolate the complexity of the system and then provide a consistent way to 
-make modifications.
+  When a business is planning to make big changes to their technology infrastructure, this is a useful tool to have. The designers can evolve the system while still retaining its stability and dependability if they first isolate the complexity of the system and then provide a consistent way to make modifications.
   
 ## Vendor lock opens and closes your innovative growth
 
-  The term "vendor lock-in" refers to the situation in which an organisation becomes dependent 
-on a particular vendor or technology, making it difficult or expensive to switch to a different vendor 
-or technology. This is because the organisation has welcome locked in to using that vendor or 
-technology. This can make it more difficult for the company to accept new methods or technology, 
-which in turn can make it more difficult for the company to innovate and to expand.
+  The term "vendor lock-in" refers to the situation in which an organisation becomes dependent on a particular vendor or technology, making it difficult or expensive to switch to a different vendor or technology. This is because the organisation has welcome locked in to using that vendor or technology. This can make it more difficult for the company to accept new methods or technology, which in turn can make it more difficult for the company to innovate and to expand.
   
   Locking in a vendor can affect an organization's potential for creative growth in several different 
 ways, including the following:
+
 -	Constrained manoeuvrability: Because it may be difficult or expensive to transition from 
 the present vendor, vendor lock-in can limit an organization's freedom to explore new 
 technologies or methods, which can limit the organization's overall options. The capability 
@@ -12458,79 +12326,40 @@ production environments.
 DevOps. Shared goals, shared responsibilities, and shared tools are established to foster 
 collaboration and eliminate silos.
   
-  DevOps also promotes a culture of measurement and feedback. Monitoring and logging 
-practices are implemented to gain insights into system performance and identify issues proactively. 
-Feedback loops are established to capture user feedback, measure system behaviour, and drive 
-continuous improvement.
+  DevOps also promotes a culture of measurement and feedback. Monitoring and logging practices are implemented to gain insights into system performance and identify issues proactively. Feedback loops are established to capture user feedback, measure system behaviour, and drive continuous improvement.
   
-  By adopting DevOps practices, organizations can achieve faster time-to-market, improved 
-software quality, and increased operational efficiency. DevOps enables organizations to respond to 
-customer needs and market demands more effectively, leading to enhanced customer satisfaction 
-and business outcomes.
+  By adopting DevOps practices, organizations can achieve faster time-to-market, improved software quality, and increased operational efficiency. DevOps enables organizations to respond to customer needs and market demands more effectively, leading to enhanced customer satisfaction and business outcomes.
   
-  #### GitOps
-  GitOps is an operational model that leverages Git, a distributed version control system, as the 
-single source of truth for declarative infrastructure and application configurations. It aims to enable 
-automated, auditable, and scalable infrastructure and application management.
-  
-  In GitOps, the desired state of the infrastructure and applications is defined in Git repositories. 
-Infrastructure configurations, application code, and deployment specifications are stored as 
-version-controlled files.
-  
-  The GitOps workflow follows a pull-based approach. Changes made to the Git repositories 
-trigger a reconciliation process, where the system compares the current state with the desired 
-state defined in the repositories. The system then automatically applies the necessary changes to 
-bring the system into the desired state.
-  
-  GitOps promotes a declarative approach to infrastructure and application management. Instead 
-of manually making changes to servers or infrastructure components, changes are made to the 
-configuration files stored in Git. This ensures that infrastructure and application deployments are 
-reproducible, auditable, and version controlled.
-  
-  The use of Git as the single source of truth also enables collaboration and versioning. Multiple 
-team members can work on the same codebase, review changes, and merge them in a controlled 
-manner. This fosters transparency, accountability, and traceability in the deployment process.
-  
-  GitOps provides benefits such as enhanced visibility, repeatability, and audibility of 
-deployments. It simplifies the management of complex infrastructures, accelerates release cycles, 
-and improves reliability and scalability.
+#### GitOps
 
+GitOps is an operational model that leverages Git, a distributed version control system, as the single source of truth for declarative infrastructure and application configurations. It aims to enable automated, auditable, and scalable infrastructure and application management.
 
+In GitOps, the desired state of the infrastructure and applications is defined in Git repositories. Infrastructure configurations, application code, and deployment specifications are stored as version-controlled files.
 
+The GitOps workflow follows a pull-based approach. Changes made to the Git repositories trigger a reconciliation process, where the system compares the current state with the desired state defined in the repositories. The system then automatically applies the necessary changes to bring the system into the desired state.
+
+GitOps promotes a declarative approach to infrastructure and application management. Instead of manually making changes to servers or infrastructure components, changes are made to the configuration files stored in Git. This ensures that infrastructure and application deployments are reproducible, auditable, and version controlled.
+
+The use of Git as the single source of truth also enables collaboration and versioning. Multiple team members can work on the same codebase, review changes, and merge them in a controlled manner. This fosters transparency, accountability, and traceability in the deployment process.
+
+GitOps provides benefits such as enhanced visibility, repeatability, and audibility of deployments. It simplifies the management of complex infrastructures, accelerates release cycles, and improves reliability and scalability.
 
 ## Conclusion chapter
-  
-  In conclusion, Enterprise Software Delivery is a complex and ever-evolving field that requires a 
-strategic approach to managing software development and delivery. The Roadmap for the Future 
-presented in this book, Software-Powered DevOps, offers a comprehensive guide to securing the 
-future of enterprise industrialization through automation and product delivery. This book delves 
-into key concepts and practices necessary for success in the field.
-  
-  The book also covers the importance of moving from one cloud provider to another, the 
-advantages and disadvantages of different service architectures, and the critical role of automation 
-in software delivery. The book also emphasizes the importance of open-source technologies, and 
-the benefits of using AI and delivery pipeline to improve overall business value.
-  
-  Additionally, the book covers the importance of understanding the concepts of landing zones, 
-blueprints, code templates, scaffolding, and reference architectures. It also provides a guide to best 
-practices for reducing toil, encouraging adoption, and providing a delightful developer experience. 
-The book also provides a detailed look at the use of Azure and Azure DevOps, as well as the role of 
-the Spotify model in managing roles and communication in a DevOps environment.
-  
-  Finally, the book demonstrates the practical application of the concepts and practices discussed 
-throughout the book. Highlights the importance of automation, release engineering, and cloud 
-governance in achieving success in the field of Enterprise Software Delivery.
-  
-  This book is a roadmap for the future, providing a comprehensive guide to the key concepts and 
-practices that are essential for success in the field of Enterprise Software Delivery.
-  
-  We are able to translate into Product Software Delivery what Henry Ford had envisioned for the 
-Ford Motor Company.
-  
 
+In conclusion, Enterprise Software Delivery is a complex and ever-evolving field that requires a strategic approach to managing software development and delivery. The Roadmap for the Future presented in this book, Software-Powered DevOps, offers a comprehensive guide to securing the future of enterprise industrialization through automation and product delivery. This book delves into key concepts and practices necessary for success in the field.
 
+The book also covers the importance of moving from one cloud provider to another, the advantages and disadvantages of different service architectures, and the critical role of automation in software delivery. The book also emphasizes the importance of open-source technologies, and the benefits of using AI and delivery pipeline to improve overall business value.
 
+Additionally, the book covers the importance of understanding the concepts of landing zones, blueprints, code templates, scaffolding, and reference architectures. It also provides a guide to best practices for reducing toil, encouraging adoption, and providing a delightful developer experience. 
+The book also provides a detailed look at the use of Azure and Azure DevOps, as well as the role of the Spotify model in managing roles and communication in a DevOps environment.
 
+Finally, the book demonstrates the practical application of the concepts and practices discussed throughout the book. Highlights the importance of automation, release engineering, and cloud governance in achieving success in the field of Enterprise Software Delivery.
+
+This book is a roadmap for the future, providing a comprehensive guide to the key concepts and practices that are essential for success in the field of Enterprise Software Delivery.
+
+We are able to translate into Product Software Delivery what Henry Ford had envisioned for the Ford Motor Company.
+
+## Copyright
 
 ```
 Copyright (c) 2023 Marcio Parente - All rights reserved.
