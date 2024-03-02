@@ -15,6 +15,9 @@ from azure.mgmt.resource import ResourceManagementClient
 from azure.identity import ClientSecretCredential
 from azure.mgmt.core.tools import parse_resource_id, resource_id, is_valid_resource_id
 
+from azure.mgmt.storage import StorageManagementClient
+
+
 COMMON_ARGS={
                 "azure_login": {"type": "dict", "required": True},
                 "state": {"type": "str", "choices": ["present", "absent"], "default": "present"},
@@ -126,19 +129,24 @@ class AnsibleSharpAzureModule(AnsibleModule):
         self.check_mode = self.check_mode
 
         self.state = self.params["state"]
-
-        self.init_resource_config()
-
-        self.credential_data, self.credential = self.get_azure_login_credential()
-
-        self._resource_client = None
-
         self.result = dict(
             changed=False,
             failed=False,
             msg="",
             json=None
         )
+        self.init_resource_config()
+
+        self.credential_data, self.credential = self.get_azure_login_credential()
+
+        self._resource_client = None
+        self._storage_client = None
+
+
+
+    @property
+    def resource_message_id(self):
+        return f"Resource group '{self.resource_config.resource_group_name}'; Subscription ID '{self.resource_config.subscription_id}'; Location '{self.resource_config.resource_location}':"
 
     @property
     def rm_client(self):
@@ -146,6 +154,17 @@ class AnsibleSharpAzureModule(AnsibleModule):
         if not self._resource_client:
             self._resource_client = ResourceManagementClient(self.credential, self.resource_config.subscription_id)
         return self._resource_client
+
+    @property
+    def storage_client(self):
+        self.log('Getting storage client...')
+        if not self._storage_client:
+            self._storage_client = StorageManagementClient(self.credential, self.resource_config.subscription_id, api_version="2023-01-01")
+        return self._storage_client
+    
+    @property
+    def storage_models(self):
+        return StorageManagementClient.models("2023-01-01")
 
     def exec_module(self):
         try:
@@ -232,10 +251,10 @@ class AnsibleSharpAzureModule(AnsibleModule):
         '''
         if not self.facts_module:
             if not isinstance(tags, dict):
-                self.fail("Tags must be a dictionary of string:string values.")
+                self.exit_fail("Tags must be a dictionary of string:string values.")
             for key, value in tags.items():
                 if not isinstance(value, str):
-                    self.fail("Tags values must be strings. Found {0}:{1}".format(str(key), str(value)))
+                    self.exit_fail("Tags values must be strings. Found {0}:{1}".format(str(key), str(value)))
 
     def update_tags(self, tags):
         '''

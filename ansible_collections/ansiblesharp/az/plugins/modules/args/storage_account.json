@@ -3,18 +3,16 @@
         "azure_login": {
             "azure_login_credential": {
                 "credential": {
-                    "client_id": "",
-                    "client_secret": "",
-                    "tenant_id": ""
+
                 },
                 "expires_on": 0,
                 "token": ""
             }
-        },
+        },        
         "state": "present",
         "resource_config": {
-            "kind": "resource_group",
-            "name": "d-we-eco1-wrk1-name1-rg",
+            "kind": "storage_account",
+            "name": "dweeco1wrk1name1st",
             "resource_group_name": "d-we-eco1-wrk1-name1-rg",
             "resource_location": "westeurope",
             "subscription_id": "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a",

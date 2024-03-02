@@ -16,28 +16,13 @@
             "resource_group_name": "d-we-eco1-wrk1-name1-rg",
             "resource_location": "westeurope",
             "subscription_id": "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a",
-            "tags": [
-                {
-                    "key": "CostCenter",
-                    "value": "123456789"
-                },
-                {
-                    "key": "Ecosystem",
-                    "value": "eco_1"
-                },
-                {
-                    "key": "Workload",
-                    "value": "wrk_1"
-                },
-                {
-                    "key": "Owner",
-                    "value": "marcio"
-                },
-                {
-                    "key": "Stage",
-                    "value": "Development"
-                }
-            ]
+            "tags": {
+                "CostCenter": "123456789",
+                "Ecosystem": "eco_1",
+                "Workload": "wrk_1",
+                "Owner": "marcio",
+                "Stage": "Development"
+            }
         }
     }
 }

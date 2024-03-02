@@ -3,3 +3,4 @@ azure-common
 azure-core
 azure-identity
 azure-mgmt-resource
+azure-mgmt-storage
