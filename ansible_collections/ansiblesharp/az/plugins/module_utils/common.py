@@ -16,7 +16,9 @@ from azure.identity import ClientSecretCredential
 from azure.mgmt.core.tools import parse_resource_id, resource_id, is_valid_resource_id
 
 from azure.mgmt.storage import StorageManagementClient
+from azure.core.exceptions import ResourceNotFoundError
 
+AZURE_RG_OBJECT_CLASS = 'ResourceGroup'
 
 COMMON_ARGS={
                 "azure_login": {"type": "dict", "required": True},
@@ -102,7 +104,7 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
 
 
 class AnsibleSharpAzureModule(AnsibleModule):
-    def __init__(self, bypass_checks=False, no_log=False,
+    def __init__(self, derived_arg_spec=None, bypass_checks=False, no_log=False,
                  check_invalid_arguments=None, mutually_exclusive=None, required_together=None,
                  required_one_of=None, add_file_common_args=False, supports_check_mode=False,
                  required_if=None, supports_tags=True, facts_module=False, skip_exec=False, is_ad_resource=False, **kwargs,):
@@ -110,6 +112,8 @@ class AnsibleSharpAzureModule(AnsibleModule):
         merged_arg_spec = dict()
         merged_arg_spec.update(COMMON_ARGS)
 
+        if derived_arg_spec:
+            merged_arg_spec["resource_config"].update(derived_arg_spec)
 
         self.argument_spec = merged_arg_spec
 
@@ -129,6 +133,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
         self.check_mode = self.check_mode
 
         self.state = self.params["state"]
+
         self.result = dict(
             changed=False,
             failed=False,
@@ -166,7 +171,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
     def storage_models(self):
         return StorageManagementClient.models("2023-01-01")
 
-    def exec_module(self):
+    def exec_module(self, **kwargs):
         try:
             self.run()
         except Exception as e:
@@ -234,6 +239,20 @@ class AnsibleSharpAzureModule(AnsibleModule):
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: tags is required")
         else:
             self.validate_tags(tags)
+
+        for key in list(self.argument_spec["resource_config"].keys()):
+            try:
+                value = resource_config[key]
+            except KeyError:
+                # TODO: get default value form cloud vars
+                value = resource_config.get(key, "")
+
+            if hasattr(resource_config, key):
+                setattr(resource_config, key, value)
+            else:
+                resource_config[key] = value
+
+
 
         # Create a namedtuple class with fields for each key in the dictionary
         ResourceConfig = namedtuple("ResourceConfig", resource_config.keys())
@@ -321,10 +340,17 @@ class AnsibleSharpAzureModule(AnsibleModule):
         :param resource_group: name of a resource group
         :return: resource group object
         '''
+        item = None
+        result = None
+
         try:
-            return self.rm_client.resource_groups.get(resource_group)
-        except Exception as exc:
-            self.fail("Error retrieving resource group {0} - {1}".format(resource_group, str(exc)))
+            item = self.rm_client.resource_groups.get(resource_group)
+        except ResourceNotFoundError as exc:
+            return None
+
+        result = self.serialize_obj(item, AZURE_RG_OBJECT_CLASS)
+
+        return result
 
     def parse_resource_to_dict(self, resource):
         '''

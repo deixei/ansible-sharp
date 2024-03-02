@@ -13,11 +13,9 @@
                 "${fileDirname}/args/${fileBasenameNoExtension}.json",
             ],
             "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/user.vars.env",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}",
-                "AZURE_TENANT": "",
-                "AZURE_CLIENT_ID": "",
-                "AZURE_SECRET": ""
+                "PYTHONPATH": "${workspaceFolder}"
             }
         }
     ]
