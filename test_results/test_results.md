@@ -28,6 +28,13 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 ```
 
+## Suite 'az' Case: 'case_2' - Test: 'test_006_resourcegroup_info.ansible.yml'
+
+```txt
+PLAY RECAP *********************************************************************
+localhost                  : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+```
+
 ## Suite 'az' Case: 'case_2' - Test: 'test_005_resourcegroup_var.ansible.yml'
 
 ```txt
@@ -51,6 +58,6 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 
 ## Summary
 
-Total: 7
-Pass: 7
+Total: 8
+Pass: 8
 Fail: 0 
