@@ -6,12 +6,14 @@ import time
 import os
 import re
 import hmac
+import copy
 from datetime import datetime
 from ansible.module_utils.basic import AnsibleModule
 from ansible.errors import AnsibleModuleError
 from collections import namedtuple
 from azure.mgmt.resource import ResourceManagementClient
 from azure.identity import ClientSecretCredential
+from azure.mgmt.core.tools import parse_resource_id, resource_id, is_valid_resource_id
 
 COMMON_ARGS={
                 "azure_login": {"type": "dict", "required": True},
@@ -204,3 +206,150 @@ class AnsibleSharpAzureModule(AnsibleModule):
         # Create an instance of the Config class with values from the dictionary
         self.resource_config = ResourceConfig(**resource_config)
 
+
+    def validate_tags(self, tags):
+        '''
+        Check if tags dictionary contains string:string pairs.
+
+        :param tags: dictionary of string:string pairs
+        :return: None
+        '''
+        if not self.facts_module:
+            if not isinstance(tags, dict):
+                self.fail("Tags must be a dictionary of string:string values.")
+            for key, value in tags.items():
+                if not isinstance(value, str):
+                    self.fail("Tags values must be strings. Found {0}:{1}".format(str(key), str(value)))
+
+    def update_tags(self, tags):
+        '''
+        Call from the module to update metadata tags. Returns tuple
+        with bool indicating if there was a change and dict of new
+        tags to assign to the object.
+
+        :param tags: metadata tags from the object
+        :return: bool, dict
+        '''
+        tags = tags or dict()
+        new_tags = copy.copy(tags) if isinstance(tags, dict) else dict()
+        param_tags = self.module.params.get('tags') if isinstance(self.module.params.get('tags'), dict) else dict()
+        append_tags = self.module.params.get('append_tags') if self.module.params.get('append_tags') is not None else True
+        changed = False
+        # check add or update
+        for key, value in param_tags.items():
+            if not new_tags.get(key) or new_tags[key] != value:
+                changed = True
+                new_tags[key] = value
+        # check remove
+        if not append_tags:
+            for key, value in tags.items():
+                if not param_tags.get(key):
+                    new_tags.pop(key)
+                    changed = True
+        return changed, new_tags
+
+    def has_tags(self, obj_tags, tag_list):
+        '''
+        Used in fact modules to compare object tags to list of parameter tags. Return true if list of parameter tags
+        exists in object tags.
+
+        :param obj_tags: dictionary of tags from an Azure object.
+        :param tag_list: list of tag keys or tag key:value pairs
+        :return: bool
+        '''
+
+        if not obj_tags and tag_list:
+            return False
+
+        if not tag_list:
+            return True
+
+        matches = 0
+        result = False
+        for tag in tag_list:
+            tag_key = tag
+            tag_value = None
+            if ':' in tag:
+                tag_key, tag_value = tag.split(':')
+            if tag_value and obj_tags.get(tag_key) == tag_value:
+                matches += 1
+            elif not tag_value and obj_tags.get(tag_key):
+                matches += 1
+        if matches == len(tag_list):
+            result = True
+        return result
+
+    def get_resource_group(self, resource_group):
+        '''
+        Fetch a resource group.
+
+        :param resource_group: name of a resource group
+        :return: resource group object
+        '''
+        try:
+            return self.rm_client.resource_groups.get(resource_group)
+        except Exception as exc:
+            self.fail("Error retrieving resource group {0} - {1}".format(resource_group, str(exc)))
+
+    def parse_resource_to_dict(self, resource):
+        '''
+        Return a dict of the give resource, which contains name and resource group.
+
+        :param resource: It can be a resource name, id or a dict contains name and resource group.
+        '''
+        resource_dict = parse_resource_id(resource) if not isinstance(resource, dict) else resource
+        resource_dict['resource_group'] = resource_dict.get('resource_group', self.resource_group)
+        resource_dict['subscription_id'] = resource_dict.get('subscription_id', self.subscription_id)
+        return resource_dict
+
+    def serialize_obj(self, obj, class_name, enum_modules=None):
+        '''
+        Return a JSON representation of an Azure object.
+
+        :param obj: Azure object
+        :param class_name: Name of the object's class
+        :param enum_modules: List of module names to build enum dependencies from.
+        :return: serialized result
+        '''
+        return obj.as_dict()
+
+    def get_poller_result(self, poller, wait=5):
+        '''
+        Consistent method of waiting on and retrieving results from Azure's long poller
+
+        :param poller Azure poller object
+        :return object resulting from the original request
+        '''
+        try:
+            delay = wait
+            while not poller.done():
+                self.log("Waiting for {0} sec".format(delay))
+                poller.wait(timeout=delay)
+            return poller.result()
+        except Exception as exc:
+            self.log(str(exc))
+            raise
+
+    def get_multiple_pollers_results(self, pollers, wait=0.05):
+        '''
+        Consistent method of waiting on and retrieving results from multiple Azure's long poller
+
+        :param pollers list of Azure poller object
+        :param wait Period of time to wait for the long running operation to complete.
+        :return list of object resulting from the original request
+        '''
+
+        def _continue_polling():
+            return not all(poller.done() for poller in pollers)
+
+        try:
+            while _continue_polling():
+                for poller in pollers:
+                    if poller.done():
+                        continue
+                    self.log("Waiting for {0} sec".format(wait))
+                    poller.wait(timeout=wait)
+            return [poller.result() for poller in pollers]
+        except Exception as exc:
+            self.log(str(exc))
+            raise
