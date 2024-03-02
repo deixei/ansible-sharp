@@ -1,3 +1,5 @@
-opentelemetry-distro
-azure-monitor-opentelemetry
-azure-devops
+azure-cli-core
+azure-common
+azure-core
+azure-identity
+azure-mgmt-resource

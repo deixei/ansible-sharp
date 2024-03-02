@@ -1,0 +1,49 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+        "azure_login": {
+            "azure_login_credential": {
+                "credential": {
+                    "client_id": "",
+                    "client_secret": "",
+                    "tenant_id": ""
+                },
+                "expires_on": 0,
+                "token": ""
+            }
+        },
+        "state": "present",
+        "resource_config": {
+            "kind": "resource_group",
+            "name": "d-we-eco1-wrk1-name1-rg",
+            "resource_group_name": "d-we-eco1-wrk1-name1-rg",
+            "resource_location": "westeurope",
+            "subscription_id": "00000000-0000-0000-0000-000000000000",
+            "tags": [
+                {
+                    "key": "CostCenter",
+                    "value": "123456789"
+                },
+                {
+                    "key": "Department",
+                    "value": "AM/ACC"
+                },
+                {
+                    "key": "Ecosystem",
+                    "value": "eco_1"
+                },
+                {
+                    "key": "Workload",
+                    "value": "wrk_1"
+                },
+                {
+                    "key": "Owner",
+                    "value": "marcio"
+                },
+                {
+                    "key": "Stage",
+                    "value": "Development"
+                }
+            ]
+        }
+    }
+}
