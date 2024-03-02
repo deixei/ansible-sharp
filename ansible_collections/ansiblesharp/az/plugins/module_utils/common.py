@@ -5,11 +5,12 @@
 import time
 import os
 import re
+import hmac
+from datetime import datetime
 from ansible.module_utils.basic import AnsibleModule
 from collections import namedtuple
-from azure.identity import ClientSecretCredential
 from azure.mgmt.resource import ResourceManagementClient
-
+from azure.identity import ClientSecretCredential
 
 COMMON_ARGS={
                 "azure_login": {"type": "dict", "required": True},
@@ -27,6 +28,15 @@ AZURE_CREDENTIAL_ENV_MAPPING = dict(
 )
 
 def is_not_empty(value):
+    """
+    Check if a value is not empty.
+
+    Args:
+        value: The value to check.
+
+    Returns:
+        True if the value is not None and not an empty string, False otherwise.
+    """
     return value is not None and value != ""
 
 def get_defaults_azure_login_credential(azure_login_credential=None):
@@ -37,50 +47,38 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
     :param azure_login_credential: An AzureLoginCredential object containing values to update defaults (optional).
     :return: A dictionary containing default values for Azure credentials.
     """
-    renew_token = False
-
     # Set default values for credential dictionary
     default_credential = {
         'token': "",
         'expires_on': 0,
         'credential': {
-            'client_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['client_id'], ''),
-            'client_secret': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['secret'], ''),
-            'tenant_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING['tenant'], '')
+            'client_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('client_id', ''), ''),
+            'client_secret': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('secret', ''), ''),
+            'tenant_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('tenant', ''), '')
         }
     }
 
     # Update defaults with values from AzureLoginCredential object (if provided)
-    if azure_login_credential != None:
-
+    if azure_login_credential:
         # Update token and expires_on values (if provided)
-        if azure_login_credential['token'] is not None and azure_login_credential['token'] != "":
-            default_credential['token'] = azure_login_credential['token']
+        token = azure_login_credential.get('token')
+        expires_on = azure_login_credential.get('expires_on')
 
-        if azure_login_credential['expires_on'] != 0:
-            default_credential['expires_on'] = azure_login_credential['expires_on']
-            # Get the current time in seconds
-            current_time = time.time()
-
-            # Check if `expires_on` has expired
-            if default_credential.get("expires_on", 0) < current_time:
-                # Token has expired, renew it
-                renew_token = True
+        if token and expires_on:
+            current_time = datetime.now().timestamp()
+            if expires_on > current_time:
+                default_credential['token'] = token
+                default_credential['expires_on'] = expires_on
 
         # Update credential dictionary values (if provided)
-        if azure_login_credential['credential'] != None:
-
-            if azure_login_credential['credential']['client_id']:
-                default_credential['credential']['client_id'] = azure_login_credential['credential']['client_id']
-
-            if azure_login_credential['credential']['client_secret']:
-                default_credential['credential']['client_secret'] = azure_login_credential['credential']['client_secret']
-
-            if azure_login_credential['credential']['tenant_id']:
-                default_credential['credential']['tenant_id'] = azure_login_credential['credential']['tenant_id']
+        credential = azure_login_credential.get('credential')
+        if credential:
+            default_credential['credential']['client_id'] = credential.get('client_id', default_credential['credential']['client_id'])
+            default_credential['credential']['client_secret'] = credential.get('client_secret', default_credential['credential']['client_secret'])
+            default_credential['credential']['tenant_id'] = credential.get('tenant_id', default_credential['credential']['tenant_id'])
 
     # Check if credential values are empty
-    if not default_credential['credential']['client_id'] or not default_credential['credential']['client_secret'] or not default_credential['credential']['tenant_id']:
+    if not all(default_credential['credential'].values()):
         raise ValueError("Azure credentials not set.")
 
     credential = ClientSecretCredential(
@@ -89,13 +87,10 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
         tenant_id=default_credential['credential']['tenant_id']
     )
 
-    if renew_token==True or default_credential.get("expires_on", 0) == 0:
-
+    if not hmac.compare_digest(default_credential.get('token', ''), '') or default_credential.get('expires_on', 0) == 0:
         token = credential.get_token("https://management.azure.com/.default")
-
         default_credential['token'] = token.token
         default_credential['expires_on'] = token.expires_on
-
 
     return default_credential, credential
 
@@ -119,7 +114,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
 
         self.credential_data, self.credential = self.get_azure_login_credential()
 
-        self._resource_client = None        
+        self._resource_client = None
 
         self.result = dict(
             changed=False,
