@@ -9,6 +9,8 @@ import os
 from ansible.errors import AnsibleError
 from jinja2 import Template
 
+CLOUD_CONFIG_FILE = "cloud_vars.yml"
+
 class CloudConfig():
     """
     Class representing the Cloud Config.
@@ -49,16 +51,9 @@ class CloudConfig():
 
     def get_data(self):
         current_path = os.path.dirname(os.path.abspath(__file__))
-        yaml_path = os.path.join(current_path,"..","vars", "cloud_vars.yml")
+        yaml_path = os.path.join(current_path,"..","vars", CLOUD_CONFIG_FILE)
 
         data = {}
-
-        try:
-            # Load the YAML file as a string
-            with open(yaml_path, 'r') as file:
-                yaml_string = file.read()
-        except Exception as e:
-            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to read file {yaml_path}: {e}")
 
         try:
             with open(yaml_path, 'r') as stream:
@@ -66,6 +61,7 @@ class CloudConfig():
         except Exception as e:
             raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load YAML file {yaml_path}: {e}")
         
+        yaml_string = str(variables)
         # Create a template from the string
         template = Template(yaml_string)
 

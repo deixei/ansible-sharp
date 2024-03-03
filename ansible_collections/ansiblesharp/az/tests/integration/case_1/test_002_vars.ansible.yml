@@ -28,3 +28,14 @@
       fail_msg: "The kind is not correct"
       success_msg: "The kind is correct"
 
+  - name: Trace the common_vars
+    ansiblesharp.common.trace:
+      title: "common_vars Information"
+      event: "info"
+      data: "{{ common_vars }}"
+
+  - name: Trace the cloud_vars
+    ansiblesharp.common.trace:
+      title: "cloud_vars Information"
+      event: "info"
+      data: "{{ cloud_vars }}"

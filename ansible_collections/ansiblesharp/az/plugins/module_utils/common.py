@@ -22,7 +22,6 @@ from azure.core.exceptions import ResourceNotFoundError
 
 from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import CloudConfig
 
-
 try:
     from ansible.module_utils.ansible_release import __version__ as ANSIBLE_VERSION
 except Exception:
@@ -133,6 +132,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
         self.argument_spec = merged_arg_spec
 
         self._cloud_config = CloudConfig()
+       
 
         super(AnsibleSharpAzureModule, self).__init__(
             argument_spec=merged_arg_spec,

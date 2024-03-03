@@ -60,6 +60,14 @@ def compare_cors(cors1, cors2):
             return False
     return True
 
+DOCUMENTATION = '''
+---
+module: storage_account
+short_description: This is my module
+extends_documentation_fragment:
+- ansible_collections.my_namespace.my_collection.plugins.vars.cloud_vars.yml
+'''
+
 class StorageAccount(AnsibleSharpAzureModule):
     def __init__(self, **kwargs):
 
