@@ -2,6 +2,8 @@
 #
 # Copyright (c) 2024 Marcio Parente
 
+DEBUG=True
+
 import time
 import os
 import re
@@ -18,7 +20,20 @@ from azure.mgmt.core.tools import parse_resource_id, resource_id, is_valid_resou
 from azure.mgmt.storage import StorageManagementClient
 from azure.core.exceptions import ResourceNotFoundError
 
+from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import CloudConfig
+
+
+try:
+    from ansible.module_utils.ansible_release import __version__ as ANSIBLE_VERSION
+except Exception:
+    ANSIBLE_VERSION = 'unknown'
+
 AZURE_RG_OBJECT_CLASS = 'ResourceGroup'
+
+AZURE_SUCCESS_STATE = "Succeeded"
+AZURE_FAILED_STATE = "Failed"
+
+ANSIBLE_USER_AGENT = 'AnsibleSharp/{0}'.format(ANSIBLE_VERSION)
 
 COMMON_ARGS={
                 "azure_login": {"type": "dict", "required": True},
@@ -117,6 +132,8 @@ class AnsibleSharpAzureModule(AnsibleModule):
 
         self.argument_spec = merged_arg_spec
 
+        self._cloud_config = CloudConfig()
+
         super(AnsibleSharpAzureModule, self).__init__(
             argument_spec=merged_arg_spec,
             bypass_checks=bypass_checks,
@@ -154,6 +171,10 @@ class AnsibleSharpAzureModule(AnsibleModule):
         return f"Resource group '{self.resource_config.resource_group_name}'; Subscription ID '{self.resource_config.subscription_id}'; Location '{self.resource_config.resource_location}':"
 
     @property
+    def cloud_vars(self):
+        return self._cloud_config.cloud_vars
+
+    @property
     def rm_client(self):
         self.log('Getting resource manager client')
         if not self._resource_client:
@@ -172,13 +193,15 @@ class AnsibleSharpAzureModule(AnsibleModule):
         return StorageManagementClient.models("2023-01-01")
 
     def exec_module(self, **kwargs):
-        try:
+        if DEBUG:
             self.run()
-        except Exception as e:
-            self.result["failed"] = True
-            self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
-        #finally:
-        #    self.exit_json(**self.result)
+        else:
+            try:
+                self.run()
+            except Exception as e:
+                self.result["failed"] = True
+                self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
+
 
     def run(self):
         raise NotImplementedError("[Ansible-Sharp ERROR]: You must implement the run method in your module")
@@ -214,6 +237,10 @@ class AnsibleSharpAzureModule(AnsibleModule):
         if not kind:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: kind is required")
 
+        resource_default_values = self.cloud_vars["resources"][kind]
+        if not resource_default_values:
+            raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: Ansible Sharp Vars does not recognize the kind of resource")
+
         subscription_id = resource_config.get("subscription_id")
         if not subscription_id:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: subscription_id is required")
@@ -234,7 +261,11 @@ class AnsibleSharpAzureModule(AnsibleModule):
             if not resource_group_name:
                 raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: resource_group_name is required")
 
-        tags = resource_config.get("tags")
+        default_tags = resource_default_values.get("tags")
+        current_tags = resource_config.get("tags")
+        # Merge dict current_tags with default_tags
+        tags = current_tags if current_tags else dict()
+        tags.update(default_tags) 
         if not tags:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: tags is required")
         else:
@@ -245,7 +276,9 @@ class AnsibleSharpAzureModule(AnsibleModule):
                 value = resource_config[key]
             except KeyError:
                 # TODO: get default value form cloud vars
-                value = resource_config.get(key, "")
+                default_v = resource_default_values.get(key, None)
+
+                value = resource_config.get(key, default_v)
 
             if hasattr(resource_config, key):
                 setattr(resource_config, key, value)
@@ -286,8 +319,8 @@ class AnsibleSharpAzureModule(AnsibleModule):
         '''
         tags = tags or dict()
         new_tags = copy.copy(tags) if isinstance(tags, dict) else dict()
-        param_tags = self.module.params.get('tags') if isinstance(self.module.params.get('tags'), dict) else dict()
-        append_tags = self.module.params.get('append_tags') if self.module.params.get('append_tags') is not None else True
+        param_tags = self.resource_config.tags if isinstance(self.resource_config.tags, dict) else dict()
+        append_tags = self.resource_config.tags if self.resource_config.tags is not None else True
         changed = False
         # check add or update
         for key, value in param_tags.items():

@@ -1,3 +1,38 @@
+defaults:
+  location: &location westeurope
+
+  properties: &properties
+    kind: ""
+    name: ""
+    resource_group_name: ""
+    resource_location: *location
+    subscription_id: "00000000-0000-0000-0000-000000000000"
+    tags:
+        CDK: AnsibleSharp
+
+
 cloud_vars:
   version: 1.0.0
   kind: cloud_vars
+
+  test_case1: "{{ defaults.location }}"
+
+  resources:
+    resource_group: 
+      <<: *properties
+      kind: resource_group
+      
+    storage_account: 
+      <<: *properties
+      kind: storage_account
+      account_kind: "StorageV2"
+      account_type: "Standard_LRS"
+      access_tier: "Hot"
+      minimum_tls_version: "TLS1_2"
+      https_only: true
+      public_network_access: "Enabled"
+      allow_blob_public_access: false
+      is_hns_enabled: true
+      large_file_shares_state: "Disabled"
+      enable_nfs_v3: false
+

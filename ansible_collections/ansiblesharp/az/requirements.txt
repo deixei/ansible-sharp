@@ -1,6 +1,8 @@
+pytest
 azure-cli-core
 azure-common
 azure-core
 azure-identity
 azure-mgmt-resource
 azure-mgmt-storage
+azure-storage-blob

@@ -16,4 +16,5 @@
         "Marcio",
         "Parente"
     ],
+    "python.envFile": "${workspaceFolder}/user.vars.env"
 }

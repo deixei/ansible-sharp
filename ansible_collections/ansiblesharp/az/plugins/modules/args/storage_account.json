@@ -20,7 +20,7 @@
                 "CostCenter": "123456789",
                 "Ecosystem": "eco_1",
                 "Workload": "wrk_1",
-                "Owner": "marcio",
+                "Owner": "change_marcio",
                 "Stage": "Development"
             }
         }
