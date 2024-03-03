@@ -25,7 +25,7 @@ class Test_CloudConfig(unittest.TestCase):
         defaults = self.context.defaults
         self.assertEqual(defaults['location'], "westeurope")
 
-    def test_resoure_group_kind(self):
+    def test_resource_group_kind(self):
         resource_group = self.context.cloud_vars["resources"]['resource_group']
         self.assertEqual(resource_group['resource_location'], "westeurope")
         self.assertEqual(resource_group['tags']['CDK'], "AnsibleSharp")
