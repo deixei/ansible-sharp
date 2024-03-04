@@ -20,6 +20,7 @@ PYTHONPATH=~/.ansible/collections/ansible_collections
 AZURE_CLIENT_ID=change_me
 AZURE_SECRET=change_me
 AZURE_TENANT=change_me
+SUBSCRIPTION_ID=???
 ```
 
 ## Build and Install collections
