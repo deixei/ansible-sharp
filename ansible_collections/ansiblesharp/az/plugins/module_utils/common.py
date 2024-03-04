@@ -25,6 +25,16 @@ try:
 except Exception:
     ANSIBLE_VERSION = 'unknown'
 
+from collections.abc import MutableMapping
+
+def merge_dict(dst, src):
+    for k, v in src.items():
+        if isinstance(v, MutableMapping):
+            dst[k] = merge_dict(dst.get(k, {}), v)
+        else:
+            dst[k] = v
+    return dst
+
 AZURE_RG_OBJECT_CLASS = 'ResourceGroup'
 
 AZURE_SUCCESS_STATE = "Succeeded"
@@ -240,6 +250,8 @@ class AnsibleSharpAzureModule(AnsibleModule):
         if not resource_default_values:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: Ansible Sharp Vars does not recognize the kind of resource")
 
+        resource_config = merge_dict(resource_config, resource_default_values)
+
         subscription_id = resource_config.get("subscription_id")
         if not subscription_id:
             raise AnsibleModuleError(message="[Ansible-Sharp ERROR]: subscription_id is required")
@@ -285,7 +297,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
                 resource_config[key] = value
 
 
-
+        
         # Create a namedtuple class with fields for each key in the dictionary
         ResourceConfig = namedtuple("ResourceConfig", resource_config.keys())
 

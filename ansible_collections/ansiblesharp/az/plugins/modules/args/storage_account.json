@@ -41,6 +41,14 @@
                     "account_kind": "StorageV2",
                     "access_tier": "Hot",
                     "minimum_tls_version": "TLS1_2",
+                    "encryption":{
+                        "require_infrastructure_encryption": true,
+                        "key_source": "Microsoft.Storage",
+                        "services": {
+                            "blob":{"enabled": true},
+                            "file":{"enabled": true}
+                        }
+                    },
                     "tags": {
                         "CDK": "AnsibleSharp"
                     }
