@@ -13,10 +13,13 @@ Getting context, read the book: [ENTERPRISE SOFTWARE DELIVERY: A ROADMAP FOR THE
 
 ## Configuration
 
-Add a ".env" file with this content
+Add a "user.vars.env" file with this content
 
 ```bash
 PYTHONPATH=~/.ansible/collections/ansible_collections
+AZURE_CLIENT_ID=change_me
+AZURE_SECRET=change_me
+AZURE_TENANT=change_me
 ```
 
 ## Build and Install collections

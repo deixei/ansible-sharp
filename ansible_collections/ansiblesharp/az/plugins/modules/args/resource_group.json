@@ -23,6 +23,15 @@
                 "Owner": "marcio",
                 "Stage": "Development"
             }
+        },
+        "cloud_vars":{
+            "version": "1.0.0",
+            "kind": "cloud_vars"
+
+        },
+        "common_vars":{
+            "version": "1.0.0",
+            "kind": "common_vars"
         }
     }
 }

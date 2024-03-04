@@ -35,4 +35,14 @@ cloud_vars:
       is_hns_enabled: true
       large_file_shares_state: "Disabled"
       enable_nfs_v3: false
+      encryption:
+        require_infrastructure_encryption: true
+        key_source: "Microsoft.Storage"
+        services:
+          blob:
+            enabled: true
+          file:
+            enabled: true
+          queue: null
+          table: null
 

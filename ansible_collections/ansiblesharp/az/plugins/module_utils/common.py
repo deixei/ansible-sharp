@@ -20,8 +20,6 @@ from azure.mgmt.core.tools import parse_resource_id, resource_id, is_valid_resou
 from azure.mgmt.storage import StorageManagementClient
 from azure.core.exceptions import ResourceNotFoundError
 
-from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import CloudConfig
-
 try:
     from ansible.module_utils.ansible_release import __version__ as ANSIBLE_VERSION
 except Exception:
@@ -40,7 +38,9 @@ COMMON_ARGS={
                 "resource_config": {
                     "type": "dict",
                     "required": True
-                }
+                },
+                "cloud_vars": {"type": "dict"},
+                "common_vars": {"type": "dict"}
             }
 
 AZURE_CREDENTIAL_ENV_MAPPING = dict(
@@ -131,9 +131,6 @@ class AnsibleSharpAzureModule(AnsibleModule):
 
         self.argument_spec = merged_arg_spec
 
-        self._cloud_config = CloudConfig()
-       
-
         super(AnsibleSharpAzureModule, self).__init__(
             argument_spec=merged_arg_spec,
             bypass_checks=bypass_checks,
@@ -145,11 +142,13 @@ class AnsibleSharpAzureModule(AnsibleModule):
             supports_check_mode=supports_check_mode,    
             **kwargs
         )
-        
-        self.facts_module = facts_module
-        self.check_mode = self.check_mode
 
         self.state = self.params["state"]
+
+        self._cloud_vars = self.params["cloud_vars"]
+        self._common_vars = self.params["common_vars"]
+
+        self.facts_module = facts_module
 
         self.result = dict(
             changed=False,
@@ -172,7 +171,7 @@ class AnsibleSharpAzureModule(AnsibleModule):
 
     @property
     def cloud_vars(self):
-        return self._cloud_config.cloud_vars
+        return self._cloud_vars
 
     @property
     def rm_client(self):

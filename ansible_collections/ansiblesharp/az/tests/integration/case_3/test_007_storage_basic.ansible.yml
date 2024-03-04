@@ -3,13 +3,15 @@
   hosts: localhost
   connection: local
   gather_facts: false
+
   vars:
+
     resources:
       rg1:
         kind: "resource_group"
         name: "d-we-eco1-wrk1-testname3-rg"
         resource_location: "westeurope"
-        subscription_id: "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a"
+        subscription_id: "{{ lookup('env', 'SUBSCRIPTION_ID') }}"
         tags:
           Stage: "Development"
           Ecosystem: "Test"
@@ -18,12 +20,25 @@
         name: "dweeco1wrk1tn1st"
         resource_group_name: "d-we-eco1-wrk1-testname3-rg"
         resource_location: "westeurope"
-        subscription_id: "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a"
+        subscription_id: "{{ lookup('env', 'SUBSCRIPTION_ID') }}"
         tags:
           Stage: "Development"
           Ecosystem: "Test"
 
   tasks:
+
+  - name: Trace the common_vars
+    ansiblesharp.common.trace:
+      title: "common_vars Information"
+      event: "info"
+      data: "{{ common_vars }}"
+
+  - name: Trace the cloud_vars
+    ansiblesharp.common.trace:
+      title: "cloud_vars Information"
+      event: "info"
+      data: "{{ cloud_vars }}"
+
   - name: Login to Azure
     ansiblesharp.az.login:
     register: azure_login
@@ -42,6 +57,8 @@
 
   - name: Create a resource group
     ansiblesharp.az.resource_group:
+      cloud_vars: "{{ cloud_vars }}"
+      common_vars: "{{ common_vars }}"
       azure_login: "{{ azure_login }}"
       resource_config: "{{ resources.rg1 }}"
       state: "present"
@@ -55,6 +72,8 @@
 
   - name: Create a storage account
     ansiblesharp.az.storage_account:
+      cloud_vars: "{{ cloud_vars }}"
+      common_vars: "{{ common_vars }}"    
       azure_login: "{{ azure_login }}"
       resource_config: "{{ resources.st1 }}"
       state: "present"
