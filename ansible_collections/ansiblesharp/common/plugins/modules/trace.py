@@ -33,7 +33,10 @@ start_info:
 
 '''
 
-from ansible_collections.ansiblesharp.common.plugins.module_utils.common import AnsibleSharpModule
+from ansible_collections.ansiblesharp.common.plugins.module_utils.ansible_sharp_module import AnsibleSharpModule
+
+from ansible_collections.ansiblesharp.common.plugins.module_utils.common_config import CommonConfig
+
 
 class Trace(AnsibleSharpModule):
     def __init__(self):
@@ -45,6 +48,7 @@ class Trace(AnsibleSharpModule):
             }
         )
 
+        self._config = CommonConfig()
 
         self.title = self.params["title"]
         self.event = self.params["event"].upper()
@@ -54,7 +58,10 @@ class Trace(AnsibleSharpModule):
         msg = f"[{self.event}]: {self.title}; Data: {self.data}"
         self.warn(msg)
         self.exit_success()
-
+    
+    @property
+    def config(self):
+        return self._config.data
 
 def main():
     my_module = Trace()

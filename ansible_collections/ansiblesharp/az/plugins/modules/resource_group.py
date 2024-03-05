@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2024 Marcio Parente
 
-from ansible_collections.ansiblesharp.az.plugins.module_utils.common import AnsibleSharpAzureModule
+from ansible_collections.ansiblesharp.az.plugins.module_utils.ansible_sharp_azure_module import AnsibleSharpAzureModule
 
 
 class ResourceGroup(AnsibleSharpAzureModule):

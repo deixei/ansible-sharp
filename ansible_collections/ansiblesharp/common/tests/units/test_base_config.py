@@ -4,12 +4,12 @@
 
 import unittest
 
-from ansible_collections.ansiblesharp.common.plugins.module_utils.base_config import BaseConfig
+from ansible_collections.ansiblesharp.common.plugins.module_utils.common_config import CommonConfig
 
-class Test_BaseConfig(unittest.TestCase):
+class Test_CommonConfig(unittest.TestCase):
 
     def setUp(self):
-        self.context = BaseConfig()
+        self.context = CommonConfig()
 
     def test_data_foundation(self):
         data = self.context.data

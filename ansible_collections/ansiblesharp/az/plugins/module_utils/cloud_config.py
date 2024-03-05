@@ -9,7 +9,48 @@ import os
 from ansible.errors import AnsibleError
 from jinja2 import Template
 
-CLOUD_CONFIG_FILE = "cloud_vars.yml"
+# using the cloud_vars.yaml file in vs code and copying the content to the CLOUD_VARS variable
+CLOUD_VARS = '''
+defaults:
+  location: &location westeurope
+
+  properties: &properties
+    kind: ""
+    name: ""
+    resource_group_name: ""
+    resource_location: *location
+    subscription_id: "00000000-0000-0000-0000-000000000000"
+    tags:
+        CDK: AnsibleSharp
+cloud_vars:
+  version: 1.0.0
+  kind: cloud_vars
+  test_case1: "{{ defaults.location }}"
+  resources:
+    resource_group: 
+      <<: *properties
+      kind: resource_group
+    storage_account: 
+      <<: *properties
+      kind: storage_account
+      account_kind: "StorageV2"
+      account_type: "Standard_LRS"
+      access_tier: "Hot"
+      minimum_tls_version: "TLS1_2"
+      https_only: true
+      public_network_access: "Enabled"
+      allow_blob_public_access: false
+      is_hns_enabled: true
+      large_file_shares_state: "Disabled"
+      enable_nfs_v3: false
+      encryption:
+        require_infrastructure_encryption: true
+        key_source: "Microsoft.Storage"
+        services:
+          blob:
+            enabled: true
+
+'''
 
 class CloudConfig():
     """
@@ -50,16 +91,11 @@ class CloudConfig():
         return self.data.get('defaults', {})
 
     def get_data(self):
-        current_path = os.path.dirname(os.path.abspath(__file__))
-        yaml_path = os.path.join(current_path,"..","vars", CLOUD_CONFIG_FILE)
-
         data = {}
-
         try:
-            with open(yaml_path, 'r') as stream:
-                variables = yaml.safe_load(stream)
+            variables = yaml.safe_load(CLOUD_VARS)
         except Exception as e:
-            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load YAML file {yaml_path}: {e}")
+            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load CLOUD_VARS: {e}")
         
         yaml_string = str(variables)
         # Create a template from the string

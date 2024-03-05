@@ -32,6 +32,8 @@ dx ansible build --name "/ansiblesharp"
 ## Run test cases
 
 ```bash
+mkdir ~/testing
+cd ~/testing
 dx ansible test --name "/ansiblesharp"
 ```
 
@@ -85,11 +87,9 @@ Contains several workload examples, each workload contains many playbooks.
                 "${fileDirname}/args/${fileBasenameNoExtension}.json",
             ],
             "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/user.vars.env",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}",
-                "AZURE_CLIENT_ID": "change me",
-                "AZURE_SECRET": "change me",
-                "AZURE_TENANT": "change me"
+                "PYTHONPATH": "${workspaceFolder}"
             }
         }
     ]
@@ -100,7 +100,6 @@ Contains several workload examples, each workload contains many playbooks.
 
 ```json
 {
-    "python.envFile": "${workspaceFolder}/.env",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
@@ -118,5 +117,6 @@ Contains several workload examples, each workload contains many playbooks.
         "Marcio",
         "Parente"
     ],
+    "python.envFile": "${workspaceFolder}/user.vars.env"
 }
 ```

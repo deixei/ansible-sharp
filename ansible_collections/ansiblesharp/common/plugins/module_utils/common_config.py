@@ -9,7 +9,29 @@ import os
 
 from ansible.errors import AnsibleError
 
-class BaseConfig():
+
+COMMON_VARS = '''
+common_vars:
+  version: 1.0.0
+  kind: common_vars
+  validation:
+    stages:
+      d: ["Development", "dev", 0, "l"]
+      t: ["Testing", "tst", 1, "l"]
+      s: ["Staging", "stg", 2, "h"]
+      p: ["Production", "prd", 3, "h"]
+      g: ["Global", "glb", 4, "h"]
+    stage_classifications:
+      l: ["Lower", "lw", 0]
+      h: ["Higher", "hr", 1]
+
+  central_data:
+    url: "http://localhost:8080"
+    
+'''
+
+
+class CommonConfig():
     """
     Class representing the Base Config.
 
@@ -19,8 +41,8 @@ class BaseConfig():
         data: Property method that returns the loaded data. If the data is not loaded yet, it calls the `get_data` method to load it.
         get_data: Method that loads the data from the YAML file and returns it.
     Examples:
-        baseconfig = BaseConfig()
-        baseconfig.data
+        CommonConfig = CommonConfig()
+        CommonConfig.data
 
         common_vars:
             version: 1.0.0
@@ -58,16 +80,12 @@ class BaseConfig():
         return self.common_vars["validation"]["stage_classifications"]
     
     def get_data(self):
-        current_path = os.path.dirname(os.path.abspath(__file__))
-        yaml_path = os.path.join(current_path,"..","vars", "common_vars.yml")
-
         data = {}
 
         try:
-            with open(yaml_path, 'r') as stream:
-                data = yaml.safe_load(stream)
+            data = yaml.safe_load(COMMON_VARS)
         except Exception as e:
-            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load YAML file {yaml_path}: {e}")
+            raise AnsibleError(f"[Ansible-Sharp ERROR]: Failed to load 'COMMON_VARS': {e}")
         
         return data
     

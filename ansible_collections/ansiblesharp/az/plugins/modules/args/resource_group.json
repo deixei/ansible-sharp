@@ -15,7 +15,7 @@
             "name": "d-we-eco1-wrk1-name1-rg",
             "resource_group_name": "d-we-eco1-wrk1-name1-rg",
             "resource_location": "westeurope",
-            "subscription_id": "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a",
+            "subscription_id": "b2d8970e-7acf-45f2-a76b-2770d6fb1b35",
             "tags": {
                 "CostCenter": "123456789",
                 "Ecosystem": "eco_1",
@@ -23,15 +23,6 @@
                 "Owner": "marcio",
                 "Stage": "Development"
             }
-        },
-        "cloud_vars":{
-            "version": "1.0.0",
-            "kind": "cloud_vars"
-
-        },
-        "common_vars":{
-            "version": "1.0.0",
-            "kind": "common_vars"
         }
     }
 }

@@ -4,7 +4,7 @@
 
 import unittest
 
-from ansible_collections.ansiblesharp.common.plugins.module_utils.base_config import BaseConfig
+from ansible_collections.ansiblesharp.common.plugins.module_utils.common_config import CommonConfig
 from ansible_collections.ansiblesharp.common.plugins.callback.monitoring_and_telemetry import TaskData, HostData, PlaybookData, PlayData
 
 class Test_MonAndTelemetry(unittest.TestCase):

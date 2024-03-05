@@ -4,7 +4,7 @@
 
 from ansible.errors import AnsibleError
 from ansible.plugins.vars import BaseVarsPlugin
-from ansible_collections.ansiblesharp.common.plugins.module_utils.base_config import BaseConfig
+from ansible_collections.ansiblesharp.common.plugins.module_utils.common_config import CommonConfig
 
 class VarsModule(BaseVarsPlugin):
     """
@@ -30,7 +30,7 @@ class VarsModule(BaseVarsPlugin):
         data = {}
 
         try:
-            cfg = BaseConfig()
+            cfg = CommonConfig()
             data = cfg.data
 
         except Exception as e:

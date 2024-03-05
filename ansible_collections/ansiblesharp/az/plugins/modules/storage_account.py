@@ -3,7 +3,8 @@
 # Copyright (c) 2024 Marcio Parente
 
 import copy
-from ansible_collections.ansiblesharp.az.plugins.module_utils.common import AnsibleSharpAzureModule, AZURE_SUCCESS_STATE
+from ansible_collections.ansiblesharp.az.plugins.module_utils.ansible_sharp_azure_module import AnsibleSharpAzureModule
+from ansible_collections.ansiblesharp.az.plugins.module_utils.common import AZURE_SUCCESS_STATE
 from ansible.module_utils._text import to_native
 
 from azure.storage.blob import BlobServiceClient
@@ -22,21 +23,17 @@ static_website_spec = dict(
     error_document404_path=dict(type='str'),
 )
 
-
 file_spec = dict(
     enabled=dict(type='bool')
 )
-
 
 queue_spec = dict(
     enabled=dict(type='bool')
 )
 
-
 table_spec = dict(
     enabled=dict(type='bool')
 )
-
 
 blob_spec = dict(
     enabled=dict(type='bool')
@@ -64,8 +61,7 @@ DOCUMENTATION = '''
 ---
 module: storage_account
 short_description: This is my module
-extends_documentation_fragment:
-- ansible_collections.my_namespace.my_collection.plugins.vars.cloud_vars.yml
+
 '''
 
 class StorageAccount(AnsibleSharpAzureModule):
@@ -202,7 +198,8 @@ class StorageAccount(AnsibleSharpAzureModule):
             blob_mgmt_props = self.storage_client.blob_services.get_service_properties(self.resource_config.resource_group_name, self.resource_config.name)
             if self.resource_config.account_kind != "FileStorage":
                 blob_client_props = self.get_blob_service_client(self.resource_config.resource_group_name, self.resource_config.name).get_service_properties()
-        except Exception:
+        except Exception as e:
+            self.log(msg='Error attempting to get account properties: {0}'.format(str(e)))
             pass
 
         if account_obj:
@@ -640,12 +637,14 @@ class StorageAccount(AnsibleSharpAzureModule):
         except Exception as e:
             self.log('Error creating storage account.')
             self.exit_fail("Failed to create account: {0}".format(str(e)))
+
         if self.resource_config.network_acls:
             self.set_network_acls()
         if self.resource_config.blob_cors:
             self.set_blob_cors()
         if self.resource_config.static_website:
             self.update_static_website()
+
         return self.get_account()
 
     def delete_account(self):

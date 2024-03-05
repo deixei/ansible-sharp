@@ -26,19 +26,6 @@
           Ecosystem: "Test"
 
   tasks:
-
-  - name: Trace the common_vars
-    ansiblesharp.common.trace:
-      title: "common_vars Information"
-      event: "info"
-      data: "{{ common_vars }}"
-
-  - name: Trace the cloud_vars
-    ansiblesharp.common.trace:
-      title: "cloud_vars Information"
-      event: "info"
-      data: "{{ cloud_vars }}"
-
   - name: Login to Azure
     ansiblesharp.az.login:
     register: azure_login
@@ -57,8 +44,6 @@
 
   - name: Create a resource group
     ansiblesharp.az.resource_group:
-      cloud_vars: "{{ cloud_vars }}"
-      common_vars: "{{ common_vars }}"
       azure_login: "{{ azure_login }}"
       resource_config: "{{ resources.rg1 }}"
       state: "present"
@@ -72,8 +57,6 @@
 
   - name: Create a storage account
     ansiblesharp.az.storage_account:
-      cloud_vars: "{{ cloud_vars }}"
-      common_vars: "{{ common_vars }}"    
       azure_login: "{{ azure_login }}"
       resource_config: "{{ resources.st1 }}"
       state: "present"

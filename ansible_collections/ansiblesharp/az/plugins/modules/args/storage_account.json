@@ -12,10 +12,10 @@
         "state": "present",
         "resource_config": {
             "kind": "storage_account",
-            "name": "dweeco1wrk1name1st",
+            "name": "dweeco1wrk1name2st",
             "resource_group_name": "d-we-eco1-wrk1-name1-rg",
             "resource_location": "westeurope",
-            "subscription_id": "2c5ca7ca-dfbe-4384-ba12-83e81e7d494a",
+            "subscription_id": "b2d8970e-7acf-45f2-a76b-2770d6fb1b35",
             "tags": {
                 "CostCenter": "123456789",
                 "Ecosystem": "eco_1",
@@ -23,42 +23,6 @@
                 "Owner": "change_marcio",
                 "Stage": "Development"
             }
-        },
-        "cloud_vars":{
-            "version": "1.0.0",
-            "kind": "cloud_vars",
-            "resources": {
-                "resource_group": {
-                    "kind": "resource_group",
-                    "location": "westeurope",
-                    "tags": {
-                        "CDK": "AnsibleSharp"
-                    }
-                },
-                "storage_account": {
-                    "kind": "storage_account",
-                    "account_type": "Standard_LRS",
-                    "account_kind": "StorageV2",
-                    "access_tier": "Hot",
-                    "minimum_tls_version": "TLS1_2",
-                    "encryption":{
-                        "require_infrastructure_encryption": true,
-                        "key_source": "Microsoft.Storage",
-                        "services": {
-                            "blob":{"enabled": true},
-                            "file":{"enabled": true}
-                        }
-                    },
-                    "tags": {
-                        "CDK": "AnsibleSharp"
-                    }
-                }
-            }
-
-        },
-        "common_vars":{
-            "version": "1.0.0",
-            "kind": "common_vars"
         }
     }
 }
