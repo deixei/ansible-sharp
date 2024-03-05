@@ -43,6 +43,18 @@ AZURE_CREDENTIAL_ENV_MAPPING = dict(
     tenant='AZURE_TENANT'
 )
 
+def is_empty(value):
+    """
+    Check if a value is empty.
+
+    Args:
+        value: The value to check.
+
+    Returns:
+        True if the value is None or an empty string, False otherwise.
+    """
+    return value is None or value == ""
+
 def is_not_empty(value):
     """
     Check if a value is not empty.
