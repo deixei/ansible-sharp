@@ -1,0 +1,45 @@
+---
+- name: Playbook for testing AZ CLI commands (query only)
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    common:
+      resource_group_name: "d-we-eco1-wrk1-testname1-rg"
+      location: "westeurope"
+      subscription_id: "{{ lookup('env', 'SUBSCRIPTION_ID') }}"
+      tags:
+        Stage: "Development"
+        Ecosystem: "Test"
+
+    resources:
+      rg1:
+        kind: "resource_group"
+        name: "{{ common.resource_group_name }}"
+        resource_location: "{{ common.location }}"
+        subscription_id: "{{ common.subscription_id }}"
+        tags: "{{ common.tags }}"
+      st1:
+        kind: "storage_account"
+        name: "dweeco1wrk1tn2st"
+        resource_group_name: "{{ common.resource_group_name }}"
+        resource_location: "{{ common.location }}"
+        subscription_id: "{{ common.subscription_id }}"
+        tags: "{{ common.tags }}"
+
+  tasks:
+  - name: Login to Azure
+    ansiblesharp.az.login:
+    register: azure_login
+
+  - name: Test az account list
+    ansiblesharp.az.az_cli:
+      cmd: "account list"
+    register: az_account_list
+
+  - name: Show account list variable
+    ansiblesharp.common.trace:
+      title: "Account List"
+      event: "info"
+      data: "{{ az_account_list }}"
