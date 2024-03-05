@@ -25,7 +25,7 @@ class AzureCliCommand:
             raise Exception("[AnsibleSharp ERROR]: Azure CLI command is empty")
 
         # Construct Azure CLI command to execute.
-        command = f'"{self.az_path}" {cmd}'
+        command = f'"{self.az_path}" {cmd} --output json'
         
         try:
             # Execute Azure CLI command and get the result.
