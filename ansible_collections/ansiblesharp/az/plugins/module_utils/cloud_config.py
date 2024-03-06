@@ -51,6 +51,33 @@ cloud_vars:
 
 '''
 
+AZURE_CREDENTIAL_ENV_MAPPING = dict(
+    client_id='AZURE_CLIENT_ID',
+    secret='AZURE_SECRET',
+    tenant='AZURE_TENANT',
+    subscription_id='SUBSCRIPTION_ID'
+)
+
+class EnviromentVariables:
+    def env_config(self, name, default=None):
+        return os.environ.get(name, default),
+
+    @property
+    def subscription_id(self) -> str:
+        return self.env_config(AZURE_CREDENTIAL_ENV_MAPPING.get('subscription_id', 'SUBSCRIPTION_ID'), '')
+
+    @property
+    def client_id(self) -> str:
+        return self.env_config(AZURE_CREDENTIAL_ENV_MAPPING.get('client_id', 'AZURE_CLIENT_ID'), '')
+    
+    @property
+    def client_secret(self) -> str:
+        return self.env_config(AZURE_CREDENTIAL_ENV_MAPPING.get('secret', 'AZURE_SECRET'), '')
+
+    @property
+    def tenant_id(self) -> str:
+        return self.env_config(AZURE_CREDENTIAL_ENV_MAPPING.get('tenant', 'AZURE_TENANT'), '')
+
 class CloudConfig():
     """
     Class representing the Cloud Config.
@@ -71,6 +98,10 @@ class CloudConfig():
         data['version'] # 1.0.0
 
     """
+
+    @property
+    def env_vars(self) -> EnviromentVariables:
+        return EnviromentVariables()
 
     def __init__(self):
         self._data = {}

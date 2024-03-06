@@ -9,16 +9,17 @@ import sys
 
 
 from ansible_collections.ansiblesharp.az.plugins.module_utils import common
-from ansible_collections.ansiblesharp.az.plugins.module_utils.common import AZURE_CREDENTIAL_ENV_MAPPING
+from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import EnviromentVariables
 
 
 class Login(AnsibleModule):
     def __init__(self):
+        env_vars = EnviromentVariables()
         super(Login, self).__init__(
             argument_spec={
-                "client_id": {"type": "str", "default": os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('client_id', ''), '')},
-                "client_secret": {"type": "str", "default": os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('secret', ''), '')},
-                "tenant_id": {"type": "str", "default": os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('tenant', ''), '')},
+                "client_id": {"type": "str", "default": env_vars.client_id},
+                "client_secret": {"type": "str", "default": env_vars.client_secret},
+                "tenant_id": {"type": "str", "default": env_vars.tenant_id},
                 "azure_login_credential": {"type": "dict", "required": False},
             }
         )

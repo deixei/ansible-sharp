@@ -5,6 +5,7 @@ import os
 import hmac
 from datetime import datetime
 from azure.identity import ClientSecretCredential
+from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import EnviromentVariables
 
 try:
     from ansible.module_utils.ansible_release import __version__ as ANSIBLE_VERSION
@@ -36,12 +37,6 @@ COMMON_ARGS={
                     "required": True
                 }
             }
-
-AZURE_CREDENTIAL_ENV_MAPPING = dict(
-    client_id='AZURE_CLIENT_ID',
-    secret='AZURE_SECRET',
-    tenant='AZURE_TENANT'
-)
 
 def is_empty(value):
     """
@@ -75,14 +70,16 @@ def get_defaults_azure_login_credential(azure_login_credential=None):
     :param azure_login_credential: An AzureLoginCredential object containing values to update defaults (optional).
     :return: A dictionary containing default values for Azure credentials.
     """
+    env_var = EnviromentVariables()
+
     # Set default values for credential dictionary
     default_credential = {
         'token': "",
         'expires_on': 0,
         'credential': {
-            'client_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('client_id', ''), ''),
-            'client_secret': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('secret', ''), ''),
-            'tenant_id': os.environ.get(AZURE_CREDENTIAL_ENV_MAPPING.get('tenant', ''), '')
+            'client_id': env_var.client_id,
+            'client_secret': env_var.client_secret,
+            'tenant_id': env_var.tenant_id        
         }
     }
 
