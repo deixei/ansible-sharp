@@ -16,6 +16,9 @@ class AzCliModule(AnsibleSharpModule):
             argument_spec={
                 "cmd": {"type": "str", "required": True, "alias": "command"},
                 "trace": {"type": "bool", "default": False},
+                "query": {"type": "str"},
+                "output": {"type": "str", "options": ["json", "yaml"], "default": "json"},
+                "subscription": {"type": "str"}
             }
         )
 
@@ -23,9 +26,12 @@ class AzCliModule(AnsibleSharpModule):
 
         self.command = self.params["cmd"]
         self.trace_flag = self.params["trace"]
+        self.query = self.params.get("query", None)
+        self.output = self.params.get("output", None)
+        self.subscription = self.params.get("subscription", None)
 
     def run(self):
-        return_data = self._engine.run(self.command)
+        return_data = self._engine.run(cmd=self.command, output_format=self.output,query= self.query,subscription= self.subscription)
 
         if self.trace_flag:
             msg_str = json.dumps(return_data, indent=4)
@@ -35,7 +41,7 @@ class AzCliModule(AnsibleSharpModule):
 
 def main():
     my_module = AzCliModule()
-    my_module.execute_module()
+    my_module.exec_module()
 
 if __name__ == '__main__':
     main()    

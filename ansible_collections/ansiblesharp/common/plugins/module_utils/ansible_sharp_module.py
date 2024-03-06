@@ -2,6 +2,8 @@
 #
 # Copyright (c) 2024 Marcio Parente
 
+DEBUG=True
+
 import time
 import base64
 
@@ -21,13 +23,16 @@ class AnsibleSharpModule(AnsibleModule):
             data=None
         )
 
-    def execute_module(self):
-        try:
+    def exec_module(self, **kwargs):
+        if DEBUG:
             self.run()
-        except Exception as e:
-            self.result["failed"] = True
-            self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
-
+        else:
+            try:
+                self.run()
+            except Exception as e:
+                self.result["failed"] = True
+                self.result["msg"] = f"[Ansible-Sharp ERROR]: Failed to execute module: {e}"
+                
     def run(self):
         raise NotImplementedError("[Ansible-Sharp ERROR]: You must implement the run method in your module")
 

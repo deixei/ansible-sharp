@@ -65,7 +65,7 @@ class Trace(AnsibleSharpModule):
 
 def main():
     my_module = Trace()
-    my_module.execute_module()
+    my_module.exec_module()
 
 if __name__ == '__main__':
     main()
