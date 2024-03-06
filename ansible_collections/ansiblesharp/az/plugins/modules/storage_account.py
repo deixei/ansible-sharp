@@ -328,8 +328,6 @@ class StorageAccount(AnsibleSharpAzureModule):
         except Exception as exc:
             self.exit_fail("Error creating blob service client for storage account {0} - {1}".format(storage_account_name, str(exc)))
 
-
-
     def failover_account(self):
 
         if str(self.account_dict['sku_name']) not in ["Standard_GZRS", "Standard_GRS", "Standard_RAGZRS", "Standard_RAGRS"]:
@@ -366,8 +364,6 @@ class StorageAccount(AnsibleSharpAzureModule):
 
     def sort_list_of_dicts(self, rule_set, dict_key):
         return sorted(rule_set, key=lambda i: i[dict_key])
-
-
 
     def update_account(self):
         self.log('Update storage account {0}'.format(self.resource_config.name))

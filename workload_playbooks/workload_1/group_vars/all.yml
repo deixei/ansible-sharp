@@ -1,5 +1,9 @@
 # Description: This file contains the variables that are common to all the hosts in the inventory.
 ---
+project_defaults:
+  region: "westeurope"
+  iteration: "001"
+
 project:
   name: "project1"
   code: "prj1"
@@ -12,3 +16,31 @@ project:
     name: "workload_1"
     code: "w1"
     
+  
+
+  stages:
+    d1:
+      name: "dev"
+      subscription_id: "dddddd"
+      region: "{{ project_defaults.region }}"
+      stage: "d"
+      instance: "1"
+      stage_class: "l"
+      iteration: "{{ project_defaults.iteration }}"
+    t1:
+      name: "test"
+      subscription_id: "dddddd"
+      region: "{{ project_defaults.region }}"
+      stage: "t"
+      instance: "1"
+      stage_class: "l"
+      iteration: "{{ project_defaults.iteration }}"
+    p1:
+      name: "prod"
+      subscription_id: "dddddd"
+      region: "{{ project_defaults.region }}"
+      stage: "p"
+      instance: "1"
+      stage_class: "h"
+      iteration: "{{ project_defaults.iteration }}"
+      

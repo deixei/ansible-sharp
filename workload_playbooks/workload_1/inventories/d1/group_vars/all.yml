@@ -1,14 +1,6 @@
 # Description: This file contains the variables that are common to all the hosts in the inventory.
 ---
-params:
-  subscription_id: "dddddd"
-  region: "westeurope"
-  stage: "d"
-  instance: "1"
-  stage_class: "l"
-  iteration: "001"
-
-
+params: "{{ project.stages.d1 }}"
 
 workload:
   resources:
