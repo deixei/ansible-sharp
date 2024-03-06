@@ -59,8 +59,8 @@ AZURE_CREDENTIAL_ENV_MAPPING = dict(
 )
 
 class EnviromentVariables:
-    def env_config(self, name, default=None):
-        return os.environ.get(name, default),
+    def env_config(self, name, default=None) -> str:
+        return os.environ.get(name, default)
 
     @property
     def subscription_id(self) -> str:
