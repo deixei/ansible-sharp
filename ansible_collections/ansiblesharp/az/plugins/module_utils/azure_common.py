@@ -2,12 +2,14 @@
 #
 # Copyright (c) 2024 Marcio Parente
 import os
-
+from typing import Dict, List, Optional, Union
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.managementgroups import ManagementGroupsAPI as ManagementGroupsClient
 from azure.mgmt.resource.subscriptions import SubscriptionClient
 from azure.cli.core.cloud import Cloud, AZURE_PUBLIC_CLOUD
-
+from azure.mgmt.resourcegraph import ResourceGraphClient
+from azure.mgmt.resourcegraph.models import *
+from collections import namedtuple
 from ansible_collections.ansiblesharp.az.plugins.module_utils.common import get_defaults_azure_login_credential
 
 from ansible_collections.ansiblesharp.az.plugins.module_utils.cloud_config import CloudConfig
@@ -68,7 +70,47 @@ class AzureCommonBase():
         if not self._subscription_client:
             self._subscription_client = SubscriptionClient(self.credential, base_url=self._cloud_environment.endpoints.resource_manager)
         return self._subscription_client
-     
+    
+    def get_management_groups(self):
+        return self.run_query("managementgroups | project id, displayName, type, tenantId, details | limit 2")
+
+    def run_query(self,
+            query: str,
+            subscriptions: Optional[List[str]] = None,
+            management_groups: Optional[List[str]] = None):
+        
+        resourcegraph_client = ResourceGraphClient(
+            credential=self.credential
+        )
+        # Basic query up to 2 pieces of object array
+        query = QueryRequest(
+                query=query,
+                subscriptions=subscriptions,
+                management_groups=management_groups,
+                options=QueryRequestOptions(
+                    result_format=ResultFormat.object_array
+                )
+            )
+        query_response = resourcegraph_client.resources(query)
+   
+        return query_response
+
+    def run_query_named(self,
+            name: str,
+            query: str,
+            subscriptions: Optional[List[str]] = None,
+            management_groups: Optional[List[str]] = None,):
+
+        query_return_data = self.run_query(query, subscriptions, management_groups).data
+
+        res = list()
+        for item in query_return_data:
+            Item = namedtuple(name, item.keys())
+            data_object = Item(**item)
+            res.append(data_object)
+    
+        return res
+    
 
 class Resource(AzureCommonBase):
     def __init__(self, resource_name: str, resource_type: str, resource_location: str, azure_login: dict = None):
@@ -79,11 +121,10 @@ class Resource(AzureCommonBase):
 
 
     def get_properties(self):
-        return {
-            "resource_name": self.resource_name,
-            "resource_type": self.resource_type,
-            "resource_location": self.resource_location
-        }
+        q = '''resources
+                | where name == "{self.resource_name}" and location == "{self.resource_location}"
+            '''
+        return self.run_query(q).data
       
 
 class ResourceGroup(AzureCommonBase):
@@ -130,20 +171,15 @@ class ResourceGroup(AzureCommonBase):
         return self.resources.keys()          
 
 class Subscription(AzureCommonBase):
-    def __init__(self, subscription_id: str, subscription_name: str, subscription_state: str, azure_login: dict = None):
+    def __init__(self, id: str, name: str, subscription_id: str, subscription_object: dict, azure_login: dict = None):
         super().__init__(azure_login)
         self.subscription_id = subscription_id
-        self.subscription_name = subscription_name
-        self.subscription_state = subscription_state
+        self.name = name
+        self.id = id
 
-        self._resource_groups = OrderedDict()
+        self.object = subscription_object
 
-    @property
-    def resource_groups(self):
-        if not self._resource_groups:
-            self.load()
-
-        return self._resource_groups
+        self.resource_groups = OrderedDict()
 
     def load(self):
         # TODO: Load resource groups
@@ -174,33 +210,38 @@ class Tenant(AzureCommonBase):
         self.tenant_id = tenant_id
         self.tenant_name = tenant_name
 
-        self._subscriptions = OrderedDict()
+        self.subscriptions = list()
+        self.managementgroups = list()
 
-    @property
-    def subscriptions(self):
-        if not self._subscriptions:
-            self.load()
+    def load_managementgroups(self):
+        query = '''resourcecontainers
+                | where type == "microsoft.management/managementgroups"
+            '''
+        self.managementgroups = self.run_query_named("ManagementGroup", query)
 
-        return self._subscriptions
 
-    def load(self):
-        for subscription in self.subscription_client.subscriptions.list():
-            obj = Subscription(
-                subscription_id=subscription.subscription_id, 
-                subscription_name=subscription.display_name, 
-                subscription_state=subscription.state,
-                azure_login=self.azure_login)
-            
-            self.add_subscription(obj)
+    def load_subscriptions(self):
+        query = '''resourcecontainers
+                | where type == "microsoft.resources/subscriptions"
+                | project name, id, subscriptionId, properties, ['tags']
+                | sort by name asc
+            '''
+        self.subscriptions = self.run_query_named("Subscription", query)
 
-    def add_subscription(self, subscription: Subscription):
-        self.subscriptions[subscription.subscription_id] = subscription
+
+    def load_subscriptions_by_managementgroup(self, managementgroup_name: str):
+        query = f'''resourcecontainers
+                | where type == 'microsoft.resources/subscriptions'
+                | mv-expand managementGroupParent = properties.managementGroupAncestorsChain
+                | where managementGroupParent.name =~ '{managementgroup_name}'
+                | project name, id, subscriptionId, properties, ['tags']
+                | sort by name asc
+            '''
+        self.subscriptions = self.run_query_named("Subscription", query)
+
 
     def get_subscription(self, subscription_id: str):
-        return self.subscriptions[subscription_id]
-    
-    def get_subscriptions(self):
-        return self.subscriptions.values()
+        return [subscription for subscription in self.subscriptions if subscription.subscription_id == subscription_id][0]
     
     def get_subscription_ids(self):
         return self.subscriptions.keys()
@@ -214,7 +255,6 @@ class AzureMapping(AzureCommonBase):
         super().__init__(azure_login)
 
         self.tenant = Tenant(tenant_id=self.cloud_config.env_vars.tenant_id, tenant_name=self.cloud_config.env_vars.tenant_id, azure_login=azure_login)
-        self.tenant.load()
 
     def print_tenant(self):
         for subscription in self.tenant.get_subscriptions():
@@ -227,3 +267,10 @@ class AzureMapping(AzureCommonBase):
                     print(f"Resource Location: {resource.resource_location}")
                     print("")
 
+
+
+class AzureResourceGraph():
+    def __init__(self, azure_login: dict = None):
+        self.azure_login = azure_login
+
+    
