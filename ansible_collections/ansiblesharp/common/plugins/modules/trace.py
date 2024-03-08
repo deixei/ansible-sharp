@@ -34,7 +34,6 @@ start_info:
 '''
 
 from ansible_collections.ansiblesharp.common.plugins.module_utils.ansible_sharp_module import AnsibleSharpModule
-
 from ansible_collections.ansiblesharp.common.plugins.module_utils.common_config import CommonConfig
 
 
