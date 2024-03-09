@@ -30,7 +30,9 @@ class ExecutiveReport(AnsibleSharpModule):
                             "options": {
                                 "title": {"type": "str", "required": True},
                                 "headers": {"type": "list", "required": True},
-                                "rows": {"type": "list", "required": True},
+                                "rows": {"type": "list", "default": []},
+                                "data": {"type": "dict", "default": {}},
+                                "fields": {"type": "list", "default": []}
                             }
                         },
                         
@@ -57,6 +59,10 @@ class ExecutiveReport(AnsibleSharpModule):
 
         self.state = self.params["state"]
         self.file_path = self.params["file_path"]
+
+        # make sure the file_path is a valid path and that the directory exists, and if not create it
+        if not os.path.exists(os.path.dirname(self.file_path)):
+            os.makedirs(os.path.dirname(self.file_path))
 
         # check if file_path is valid and if it does not exist ans state is start create the file, if it is "add" or "end" and the file does not exist, raise an error
         if self.state == "start":
@@ -113,6 +119,13 @@ class ExecutiveReport(AnsibleSharpModule):
 
                     for row in rows:
                         file.write(" | ".join(row) + "\n")
+
+                    table_data = report_table.get("data", [])
+                    for row in table_data:
+                        #for field in report_table.get("fields", []):
+                        row_text = " | ".join([row[field] for field in report_table.get("fields", [])])
+                        file.write(f"{row_text}\n")
+
 
                     file.write("\n")
 

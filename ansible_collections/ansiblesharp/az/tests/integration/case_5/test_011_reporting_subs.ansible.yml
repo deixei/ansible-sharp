@@ -1,0 +1,72 @@
+---
+- name: Playbook for testing a report with subscription information
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    report_path: "{{ lookup('env', 'HOME') }}/ansible_reports/rpt2.md"
+    common:
+      subscription_id: "{{ lookup('env', 'SUBSCRIPTION_ID') }}"
+
+  tasks:
+  - name: Login to Azure
+    ansiblesharp.az.login:
+    register: azure_login
+
+  - name: Query Resource Group
+    ansiblesharp.az.resource_graph_query:
+      query: > 
+        resourcecontainers 
+        | where type == 'microsoft.resources/subscriptions' 
+        | extend firstMgName = tostring(properties.managementGroupAncestorsChain[0].name)
+        | project id,subscriptionId, name, tags_str=tostring(tags), quotaId=tostring(properties.subscriptionPolicies.quotaId), firstMgName
+        | sort by name asc
+      name: "Subscription"
+    register: rg_query
+
+  - name: Show Subscription Query data
+    ansiblesharp.common.trace:
+      title: "Subscriptions"
+      event: "info"
+      data: "{{ rg_query.json }}"
+
+  - name: Start Report
+    ansiblesharp.common.executive_report:
+      state: "start"
+      file_path: "{{ report_path }}"
+      report:
+        - section:
+            level: "1"
+            title: "Digital Operational Resilience Act (DORA)"
+            paragraphs:
+              - "The Digital Operational Resilience Act (DORA) is a legislative initiative proposed by the European Union to enhance the operational resilience of the financial sector against cyber threats and other operational risks. When structuring documents to address DORA requirements, it's crucial to ensure compliance with the regulation's key provisions and objectives."
+              - "The variables are loaded from the common_vars module."
+        - section:
+            level: "2"
+            title: "Executive Summary"
+            paragraphs:
+              - "This section contains the default variables for the project."
+              - "The variables are loaded from the common_vars module."
+        - table:
+            title: "Project Defaults"
+            headers:
+              - "Version"
+              - "Kind"
+            rows:
+              - - "Region"
+                - "{{ common_vars.version }}"
+              - - "Iteration"
+                - "{{ common_vars.kind }}"
+        - table:
+            title: "Subscription Information"
+            headers:
+              - "Sub Id"
+              - "Name"
+              - "Tags"
+              - "Quota"
+              - "MG Name"
+            data: "{{ rg_query.json }}"
+            fields: ["subscriptionId", "name", "tags_str", "quotaId", "firstMgName"]
+      
+    

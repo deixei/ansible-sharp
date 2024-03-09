@@ -1,0 +1,85 @@
+---
+- name: Playbook for testing a Report
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    report_path: "{{ lookup('env', 'HOME') }}/ansible_reports/rpt1.md"
+  tasks:
+
+  - name: Start Report
+    ansiblesharp.common.executive_report:
+      state: "start"
+      file_path: "{{ report_path }}"
+      report:
+        - section:
+            level: "1"
+            title: "Digital Operational Resilience Act (DORA)"
+            paragraphs:
+              - "The Digital Operational Resilience Act (DORA) is a legislative initiative proposed by the European Union to enhance the operational resilience of the financial sector against cyber threats and other operational risks. When structuring documents to address DORA requirements, it's crucial to ensure compliance with the regulation's key provisions and objectives."
+              - "The variables are loaded from the common_vars module."
+        - section:
+            level: "2"
+            title: "Executive Summary"
+            paragraphs:
+              - "This section contains the default variables for the project."
+              - "The variables are loaded from the common_vars module."
+        - table:
+            title: "Project Defaults"
+            headers:
+              - "Version"
+              - "Kind"
+            rows:
+              - - "Region"
+                - "{{ common_vars.version }}"
+              - - "Iteration"
+                - "{{ common_vars.kind }}"
+      
+
+
+  - name: Add Content to Report
+    ansiblesharp.common.executive_report:
+      state: "add"
+      file_path: "{{ report_path }}"
+      report:
+        - section:
+            level: "2"
+            title: "Introduction"
+            paragraphs:
+              - "Explain the significance of DORA for the financial sector."
+              - "Provide background information on the regulation and its objectives."
+              - "Discuss the potential impact of DORA on the financial sector and the need for compliance."
+        - section:
+            level: "2"
+            title: "Scope and Applicability"
+            paragraphs:
+              - "Explain the significance of DORA for the financial sector."
+              - "Provide background information on the regulation and its objectives."
+              - "Discuss the potential impact of DORA on the financial sector and the need for compliance."              
+        - section:
+            level: "2"
+            title: "Key Requirements Overview"
+            paragraphs:
+              - "Explain the significance of DORA for the financial sector."
+              - "Provide background information on the regulation and its objectives."
+              - "Discuss the potential impact of DORA on the financial sector and the need for compliance."    
+        - section:
+            level: "2"
+            title: "Compliance Assessment Methodology"
+            paragraphs:
+              - "Explain the significance of DORA for the financial sector."
+              - "Provide background information on the regulation and its objectives."
+              - "Discuss the potential impact of DORA on the financial sector and the need for compliance."                          
+
+
+
+  - name: End Report
+    ansiblesharp.common.executive_report:
+      state: "end"
+      file_path: "{{ report_path }}"
+      report:
+        - section:
+          title: "References"
+          items:
+            - "https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora"
+            - "https://www.esma.europa.eu/policy-activities/mifid-ii/mifid-ii-and-mifir-review"

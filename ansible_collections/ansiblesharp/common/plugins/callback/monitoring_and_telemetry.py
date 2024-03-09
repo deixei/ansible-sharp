@@ -395,7 +395,7 @@ class OpenTelemetrySource(object):
         )
         
 
-        exporter = AzureMonitorTraceExporter.from_connection_string(ascAttributes.INSTRUMENTATION_KEY_CONNECTION_STRING)
+        exporter = AzureMonitorTraceExporter.from_connection_string(MonitoringAttributes.INSTRUMENTATION_KEY_CONNECTION_STRING)
         processor = BatchSpanProcessor(exporter)
         
         #processor = BatchSpanProcessor(SpanExporter())
@@ -772,7 +772,7 @@ class CallbackModule(CallbackBase):
         if asc_TRACE:
             self.trace_display()
 
-        self._display.display("asc Common OpenTelemetry callback plugin finished with {0} errors".format(self.errors))
+        self._display.display("Ansible Sharp Monitoring and Telemetry callback plugin finished with {0} errors".format(self.errors))
 
     def v2_runner_on_async_failed(self, result, **kwargs):
         self.errors += 1

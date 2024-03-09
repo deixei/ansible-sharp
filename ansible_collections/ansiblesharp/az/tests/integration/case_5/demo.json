@@ -1,0 +1,114 @@
+[
+    ['Deixei Production Subscription', '/subscriptions/023a88cf-55ab-49ae-9f3c-969a135d0ada', '023a88cf-55ab-49ae-9f3c-969a135d0ada',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Genesis -
+Global', 'name': 'gen-g-mg'
+                },
+                {'displayName': 'Genesis', 'name': 'gen-mg'
+                },
+                {'displayName': 'Root', 'name': 'root-mg'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            }, 'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['deixei.com.main.NonPROD.001',
+'/subscriptions/7271e5a2-f670-4c78-9ef7-2b8b282e7071', '7271e5a2-f670-4c78-9ef7-2b8b282e7071',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'NonProduction', 'name': 'nonproduction'
+                },
+                {'displayName': 'InternalRoot', 'name':
+'root'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            },
+'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['deixei.com.main.PROD.001', '/subscriptions/00234aab-7b51-4ebd-a022-019a7b404476', '00234aab-7b51-4ebd-a022-019a7b404476',
+        {'managementGroupAncestorsChain': [
+                {'displayName':
+'Production', 'name': 'production'
+                },
+                {'displayName': 'InternalRoot', 'name': 'root'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId':
+'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            }, 'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['dx-gen-h001-sub', '/subscriptions/daa4ab75-acb0-42f1-aab9-afe2dba48fa9',
+'daa4ab75-acb0-42f1-aab9-afe2dba48fa9',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Genesis - Global', 'name': 'gen-g-mg'
+                },
+                {'displayName': 'Genesis', 'name': 'gen-mg'
+                },
+                {'displayName': 'Root', 'name': 'root-mg'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            },
+'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['mundomagno-high001', '/subscriptions/6c2f6372-8f01-4eda-8a42-98a2be5867ee', '6c2f6372-8f01-4eda-8a42-98a2be5867ee',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Tenant Root
+Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            }, 'managedByTenants': [], 'state': 'Enabled'
+        },
+None
+    ],
+    ['mundomagno-low001', '/subscriptions/ab918c92-2a15-42da-a615-0555bd78dbca', 'ab918c92-2a15-42da-a615-0555bd78dbca',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Tenant Root Group', 'name':
+'8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            }, 'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['test.np.001.sub', '/subscriptions/2c5ca7ca-dfbe-4384-ba12-83e81e7d494a', '2c5ca7ca-dfbe-4384-ba12-83e81e7d494a',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Test Organization', 'name': 'test-org-mg'
+                },
+                {'displayName':
+'External Organizations', 'name': 'ext-mg'
+                },
+                {'displayName': 'Root', 'name': 'root-mg'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId':
+'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            }, 'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ],
+    ['test.pr.001.sub', '/subscriptions/3f5c2c3f-d1f0-4b88-9c65-0151985ef940',
+'3f5c2c3f-d1f0-4b88-9c65-0151985ef940',
+        {'managementGroupAncestorsChain': [
+                {'displayName': 'Test Organization', 'name': 'test-org-mg'
+                },
+                {'displayName': 'External Organizations', 'name': 'ext-mg'
+                },
+                {'displayName': 'Root', 'name':
+'root-mg'
+                },
+                {'displayName': 'Tenant Root Group', 'name': '8208b59b-5359-49e1-917d-4e7a2800e807'
+                }
+            ], 'subscriptionPolicies': {'locationPlacementId': 'Public_2014-09-01', 'spendingLimit': 'Off', 'quotaId': 'PayAsYouGo_2014-09-01'
+            },
+'managedByTenants': [], 'state': 'Enabled'
+        }, None
+    ]
+]
