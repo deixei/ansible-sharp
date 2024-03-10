@@ -123,7 +123,7 @@ class ExecutiveReport(AnsibleSharpModule):
                     table_data = report_table.get("data", [])
                     for row in table_data:
                         #for field in report_table.get("fields", []):
-                        row_text = " | ".join([row[field] for field in report_table.get("fields", [])])
+                        row_text = " | ".join([str(row[field]) for field in report_table.get("fields", [])])
                         file.write(f"{row_text}\n")
 
 

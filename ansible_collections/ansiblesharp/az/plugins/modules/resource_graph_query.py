@@ -8,7 +8,6 @@ from ansible_collections.ansiblesharp.az.plugins.module_utils.azure_common impor
 class ResourceGraphQuery(AnsibleSharpModule):
     def __init__(self, **kwargs):
         self.argument_spec = dict(
-            name=dict(type='str', required=True),
             query=dict(type='str', required=True),
             subscriptions=dict(type='list', elements='str'),
             management_groups=dict(type='list', elements='str')
@@ -18,7 +17,6 @@ class ResourceGraphQuery(AnsibleSharpModule):
             argument_spec=self.argument_spec,
             **kwargs)
         
-        self.name = self.params["name"]
         self.query = self.params["query"]
         self.subscriptions = self.params.get("subscriptions", [])
         self.management_groups = self.params.get("management_groups", [])

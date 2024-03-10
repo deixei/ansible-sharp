@@ -1,6 +1,5 @@
 {
     "ANSIBLE_MODULE_ARGS": {
-        "name": "Subscription",       
         "query": "resourcecontainers | where type == 'microsoft.resources/subscriptions' | project name, id, subscriptionId, properties, ['tags'] | sort by name asc"
     }
 }

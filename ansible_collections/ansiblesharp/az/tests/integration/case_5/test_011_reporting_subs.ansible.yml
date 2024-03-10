@@ -16,13 +16,12 @@
 
   - name: Query Resource Group
     ansiblesharp.az.resource_graph_query:
-      query: > 
-        resourcecontainers 
-        | where type == 'microsoft.resources/subscriptions' 
+      query: >
+        resourcecontainers
+        | where type == 'microsoft.resources/subscriptions'
         | extend firstMgName = tostring(properties.managementGroupAncestorsChain[0].name)
         | project id,subscriptionId, name, tags_str=tostring(tags), quotaId=tostring(properties.subscriptionPolicies.quotaId), firstMgName
         | sort by name asc
-      name: "Subscription"
     register: rg_query
 
   - name: Show Subscription Query data
@@ -68,5 +67,24 @@
               - "MG Name"
             data: "{{ rg_query.json }}"
             fields: ["subscriptionId", "name", "tags_str", "quotaId", "firstMgName"]
-      
-    
+
+  - name: Query Resource Count
+    ansiblesharp.az.resource_graph_query:
+      query: >
+        resources
+        | summarize c=count() by type
+        | order by type asc
+    register: r_count_query
+
+  - name: Add Information to Report
+    ansiblesharp.common.executive_report:
+      state: "add"
+      file_path: "{{ report_path }}"
+      report:
+        - table:
+            title: "Resource Count"
+            headers:
+              - "Type"
+              - "Count"
+            data: "{{ r_count_query.json }}"
+            fields: ["type", "c"]
