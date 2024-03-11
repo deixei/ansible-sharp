@@ -27,6 +27,7 @@ common_vars:
 
   central_data:
     url: "http://localhost:8080"
+    ado_organization: "deixeicom"
     
 '''
 
