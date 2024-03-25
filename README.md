@@ -9,7 +9,7 @@ About me: [Marcio Parente](./ABOUTME.md)
 
 dx CLI: [dx](https://github.com/deixei/dx)
 
-Getting context, buy the book: [ENTERPRISE SOFTWARE DELIVERY: A ROADMAP FOR THE FUTURE]([./BOOK.md](https://www.amazon.de/-/en/Marcio-Parente/dp/B0CXTJZJ2X/ref=sr_1_2?crid=2WMPLAVA97359&dib=eyJ2IjoiMSJ9.uZ-anerlZaumQP_1MA3O82nuH7ArezxsMcK6KBZODqea9iaGz2-gYgIkJM-WjtN5IS6VTx5WR5iKzPgtzuiV-5x1GOJmqPAqhnxrd6cf8tztn4_asv3ZH_lowYizmFgSUN_dIez0twxJbu8FW3TtM8PcdqJlwrM5t0v-35s5C8sY56A0pTilntkej-vciGxkFw1ft_kbEdw7cSl6nzvTGVbi3kvRvg15JVx10B5rp80.ugVg-pG2AoXr7gUwn9QuYygFkcvyno9Vnhiipm-CmQg&dib_tag=se&keywords=enterprise+software+delivery&qid=1711349518&sprefix=%2Caps%2C82&sr=8-2))
+Getting context, buy the book: [ENTERPRISE SOFTWARE DELIVERY: A ROADMAP FOR THE FUTURE](https://www.amazon.de/-/en/Marcio-Parente/dp/B0CXTJZJ2X/ref=sr_1_2?crid=2WMPLAVA97359&dib=eyJ2IjoiMSJ9.uZ-anerlZaumQP_1MA3O82nuH7ArezxsMcK6KBZODqea9iaGz2-gYgIkJM-WjtN5IS6VTx5WR5iKzPgtzuiV-5x1GOJmqPAqhnxrd6cf8tztn4_asv3ZH_lowYizmFgSUN_dIez0twxJbu8FW3TtM8PcdqJlwrM5t0v-35s5C8sY56A0pTilntkej-vciGxkFw1ft_kbEdw7cSl6nzvTGVbi3kvRvg15JVx10B5rp80.ugVg-pG2AoXr7gUwn9QuYygFkcvyno9Vnhiipm-CmQg&dib_tag=se&keywords=enterprise+software+delivery&qid=1711349518&sprefix=%2Caps%2C82&sr=8-2)
 
 ## Configuration
 
