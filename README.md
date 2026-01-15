@@ -1,15 +1,21 @@
 # ansible-sharp
 
-Sharping the edges of Ansible for Azure and SecDevOps, with a strong integration with Change Management.
+Sharpening the edges of Ansible for Azure and SecDevOps, with strong integration with Change Management.
 
 - [deixei.com](http://www.deixei.com)
-- [linkedin](https://www.linkedin.com/company/deixei/)
+- [LinkedIn](https://www.linkedin.com/company/deixei/)
+- About me: [Marcio Parente](./ABOUTME.md)
+- dx CLI: [dx](https://github.com/deixei/dx)
+- Context: [ENTERPRISE SOFTWARE DELIVERY: A ROADMAP FOR THE FUTURE](https://www.amazon.de/-/en/Marcio-Parente/dp/B0CXTJZJ2X/ref=sr_1_2?crid=2WMPLAVA97359&dib=eyJ2IjoiMSJ9.uZ-anerlZaumQP_1MA3O82nuH7ArezxsMcK6KBZODqea9iaGz2-gYgIkJM-WjtN5IS6VTx5WR5iKzPgtzuiV-5x1GOJmqPAqhnxrd6cf8tztn4_asv3ZH_lowYizmFgSUN_dIez0twxJbu8FW3TtM8PcdqJlwrM5t0v-35s5C8sY56A0pTilntkej-vciGxkFw1ft_kbEdw7cSl6nzvTGVbi3kvRvg15JVx10B5rp80.ugVg-pG2AoXr7gUwn9QuYygFkcvyno9Vnhiipm-CmQg&dib_tag=se&keywords=enterprise+software+delivery&qid=1711349518&sprefix=%2Caps%2C82&sr=8-2)
 
-About me: [Marcio Parente](./ABOUTME.md)
+## Install
 
-dx CLI: [dx](https://github.com/deixei/dx)
+1. Install the [dx CLI](https://github.com/deixei/dx).
+2. Build and install the collections:
 
-Getting context, buy the book: [ENTERPRISE SOFTWARE DELIVERY: A ROADMAP FOR THE FUTURE](https://www.amazon.de/-/en/Marcio-Parente/dp/B0CXTJZJ2X/ref=sr_1_2?crid=2WMPLAVA97359&dib=eyJ2IjoiMSJ9.uZ-anerlZaumQP_1MA3O82nuH7ArezxsMcK6KBZODqea9iaGz2-gYgIkJM-WjtN5IS6VTx5WR5iKzPgtzuiV-5x1GOJmqPAqhnxrd6cf8tztn4_asv3ZH_lowYizmFgSUN_dIez0twxJbu8FW3TtM8PcdqJlwrM5t0v-35s5C8sY56A0pTilntkej-vciGxkFw1ft_kbEdw7cSl6nzvTGVbi3kvRvg15JVx10B5rp80.ugVg-pG2AoXr7gUwn9QuYygFkcvyno9Vnhiipm-CmQg&dib_tag=se&keywords=enterprise+software+delivery&qid=1711349518&sprefix=%2Caps%2C82&sr=8-2)
+```bash
+dx ansible build --name "/ansiblesharp"
+```
 
 ## Configuration
 
@@ -23,12 +29,6 @@ AZURE_TENANT=change_me
 SUBSCRIPTION_ID=???
 ```
 
-## Build and Install collections
-
-```bash
-dx ansible build --name "/ansiblesharp"
-```
-
 ## Run test cases
 
 ```bash
@@ -37,9 +37,9 @@ cd ~/testing
 dx ansible test --name "/ansiblesharp"
 ```
 
-## Executing a play with dx
+## Usage
 
-Loads your configuration variables that where configure with [dx](https://github.com/deixei/dx) and executes
+Load your configuration variables configured with [dx](https://github.com/deixei/dx) and execute a playbook:
 
 ```bash
 dx ansible play -n play.ansible.yml -i inventories/d1
@@ -50,6 +50,14 @@ With full debug flags:
 ```bash
 dx ansible play -n play.ansible.yml -i inventories/d1 -v vvv
 ```
+
+## Contributing
+
+Please see [CONTRIBUTING.md](./CONTRIBUTING.md) and follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## License
+
+Licensed under the terms in [LICENSE](./LICENSE).
 
 ## Structure
 
