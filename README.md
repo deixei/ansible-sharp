@@ -61,7 +61,7 @@ Licensed under the terms in [LICENSE](./LICENSE).
 
 ## Structure
 
-This repos is made in a way that allows you to continually develop your playbooks along the development of the collections.
+This repository is made in a way that allows you to continually develop your playbooks along the development of the collections.
 
 once you are just using the ansible sharp collection, you only need the workloads to serve as reference.
 
